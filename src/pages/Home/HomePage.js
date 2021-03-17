@@ -1,5 +1,13 @@
 import React from 'react'
-import { CardIntro, CardSale, CardInfo, CardSecureInfo, CardRoadmap, CardExtendInfo } from './Card'
+import {
+	CardIntro,
+	CardSale,
+	CardInfo,
+	CardSecureInfo,
+	CardRoadmap,
+	CardExtendInfo,
+	CardChart,
+} from './Card'
 import './Homepage.css'
 
 export const HomePage = () => {
@@ -11,6 +19,7 @@ export const HomePage = () => {
 			<CardSecureInfo />
 			<CardRoadmap />
 			<CardExtendInfo />
+			<CardChart />
 		</div>
 	)
 }

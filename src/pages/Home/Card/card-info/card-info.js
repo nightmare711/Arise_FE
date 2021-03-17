@@ -59,7 +59,9 @@ export const InfoLiquidity = () => {
 	return (
 		<div className='card card-value info-liquidity info-token'>
 			<span className='title-primary'>Liquidity Locked</span>
-			<div className='percent-chart'>85%</div>
+			<div className='percent-chart'>
+				<div className='bg-st'>85%</div>
+			</div>
 			<div className='footer-card'>
 				<div className='info-detail'>
 					<div className='left-txt'>

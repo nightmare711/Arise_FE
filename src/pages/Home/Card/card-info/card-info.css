@@ -91,5 +91,17 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    border:5px solid #E4752E; 
+    background:conic-gradient( 
+        #E4752E 100deg,
+        rgba(53, 7, 71, 0.3) 0 180deg, 
+        #E4752E 0)
+}
+.bg-st {
+    width:130px;
+    height:130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: white;
 }

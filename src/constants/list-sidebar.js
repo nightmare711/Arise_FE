@@ -180,3 +180,33 @@ export const listRoadmap = [
 		content: '',
 	},
 ]
+export const listTokenDetail = [
+	{
+		color: '#C1501F',
+		title: 'Presale',
+	},
+	{
+		color: '#D21C7D',
+		title: 'Liquidity/ Listing',
+	},
+	{
+		color: '#833A13',
+		title: 'Development',
+	},
+	{
+		color: '#BB7BDA',
+		title: 'Team',
+	},
+	{
+		color: '#DAAA8F',
+		title: 'Airdrop',
+	},
+	{
+		color: '#FEC113',
+		title: 'Vault & Liquidity fund',
+	},
+	{
+		color: '#842F74',
+		title: 'Marketing/Advisor/Partnership',
+	},
+]
