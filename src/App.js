@@ -1,25 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Navbar, Sidebar, PaddingContent } from 'components'
+import { HomePage } from 'pages'
+import { Switch, Route } from 'react-router-dom'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	// const wallet = useWallet()
+	// const burnedBalance = useBurnedBalance(getCakeAddress())
+	// const supply = useTotalSupply()
+	// var totalSupply = supply ? getBalanceNumber(supply) - getBalanceNumber(burnedBalance) : 0
+
+	return (
+		<>
+			<Navbar />
+			<Sidebar />
+			<PaddingContent>
+				<Switch>
+					<Route path='/'>
+						<HomePage />
+					</Route>
+				</Switch>
+			</PaddingContent>
+			{/* <h1>Wallet</h1>
+			{wallet.status === 'connected' ? (
+				<div>
+					<div>Account: {wallet.account}</div>
+					<div>Balance: {wallet.balance}</div>
+					<button onClick={() => wallet.reset()}>disconnect</button>
+				</div>
+			) : (
+				<div>
+					Connect:
+					<button
+						onClick={async () => {
+							let x = await wallet.connect()
+							console.log('connect', x)
+						}}
+					>
+						MetaMask
+					</button>
+					<button onClick={() => wallet.connect('frame')}>Frame</button>
+					<button onClick={() => wallet.connect('portis')}>Portis</button>
+				</div>
+			)} */}
+		</>
+	)
 }
 
-export default App;
+export default App

@@ -1,0 +1,95 @@
+.card-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+.card-value {
+    background-color: white;
+    padding:15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card .illustrate {
+    margin-top:30px;
+}
+.card .title-secondary {
+    font-size: 14px;
+    color:black;
+    font-weight: 600;
+}
+.card .btn-primary {
+    margin-bottom:30px;
+    padding:5px 60px;
+    background-color: #E4752E;
+    font-size: 22px;
+    font-weight: 550;
+    color: white;
+    border-radius: 10px;
+}
+.card .btn-primary .icon {
+    margin-right: 10px;
+}
+.footer-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top:30px;
+    font-weight: 600;
+    font-size: 18px;
+    width: 100%;
+}
+.card .footer-card .info-detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding:0px 20px;
+}
+.card .footer-card .info-detail .left-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card .footer-card .info-detail .label {
+    font-size: 14px;
+    line-height: 16px;
+    color: #868686;
+    font-weight: 500;
+}
+.card .footer-card .info-detail .right-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.info-token {
+    justify-content: space-between;
+}
+.info-token .card-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.info-token .price {
+    color: #E4752E;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.info-liquidity .percent-chart {
+    font-size:40px;
+    font-weight: 600;
+    color:#E4752E;
+    width:150px;
+    height:150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border:5px solid #E4752E; 
+}

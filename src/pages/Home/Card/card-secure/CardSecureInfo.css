@@ -1,0 +1,14 @@
+.card-secure-info {
+    display: flex;
+    flex-direction: row;
+    padding:20px 130px;
+}
+.card-secure-info .txt-frame {
+    display: flex;
+    flex-direction: column;
+    margin-left:40px;
+}
+.card-secure-info .txt-frame .content {
+    font-size: 17px;
+    font-weight: 400;
+}

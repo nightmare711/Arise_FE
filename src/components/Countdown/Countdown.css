@@ -1,0 +1,42 @@
+.countdown {
+   
+}
+.countdown .list-item {
+    display: flex;
+    flex-direction: row;
+    background-color: #E4752E;
+    color:white;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top:20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+}
+.countdown .list-item li {
+    font-size: 60px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 900;
+    align-items: center;
+    justify-content: center;
+    
+}
+.countdown .list-item li:not(:last-child) {
+    margin-right:55px;
+}
+.countdown .list-item li span {
+    line-height: 50px;
+    margin:0;
+    padding: 0;
+}
+.countdown .list-item li .item {
+    font-weight:900;
+    font-size: 60px;
+}
+.countdown .list-item li .label {
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 20px;
+    margin:0;
+    padding:0;
+    margin-top:20px;
+}

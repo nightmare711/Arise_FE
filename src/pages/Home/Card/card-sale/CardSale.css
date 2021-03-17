@@ -1,0 +1,82 @@
+
+.card-sale {
+    position: relative;
+    padding:30px;
+}
+.card-sale .watermark {
+    position:absolute;
+}
+.card-sale .watermark.watermark-top {
+    top:35px;
+    left:35px;
+}
+.card-sale .watermark-bottom {
+    bottom:35px;
+    right:35px;
+    transform: rotate(30deg)
+}
+.card-sale .watermark img {
+    width: 80px;
+    height: 90px;
+    
+}
+.card-sale .watermark .point {
+    border-radius: 50%;
+    background-color: #E4752E;
+    position:absolute;
+}
+.card-sale .watermark .point.point-1 {
+    bottom: 5px;
+    left:5px;
+    width:9px;
+    height:9px;
+}
+.card-sale .watermark .point.point-2 {
+    width:15px;
+    height:15px;
+    top:25%;
+    right:0px;
+}
+.card-sale .watermark .point.point-3 {
+    width:13px;
+    height:13px;
+    top:-10px;
+    left:0;
+}
+.card-sale .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.title-primary {
+    font-size:28px;
+    font-weight: 500;
+    color:#808080;
+    font-family: 'Roboto';
+}
+.card-sale .content .cap {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.card-sale .content .cap .cap-item {
+    padding:10px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card-sale .content .cap .cap-item .head {
+    text-align: center;
+    font-size: 21px;
+    font-weight: 400;
+    color:#808080;
+}
+.card-sale .content .cap .cap-item .content {
+    font-size: 30px;
+    font-weight: 700;
+}
+.card-sale .content .cap .soft-cap {
+    border-right: 1.5px solid #C4C4C4;
+}
