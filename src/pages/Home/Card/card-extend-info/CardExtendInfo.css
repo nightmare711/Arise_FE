@@ -2,8 +2,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-gap: 10px;
     background-color: transparent;
+    padding-left:20px;
+}
+.card-extend-info::-webkit-scrollbar {
+    display: none;
 }
 .card-extend-info .card-extend {
     padding:40px;
@@ -38,4 +41,37 @@
     position: absolute;
     bottom: 20px;
     right:20px;
+}
+@media only screen and (max-width: 1200px) {
+    .card-extend-info {
+        grid-gap: 10px;
+        width:100%;
+        overflow: scroll;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .card-extend-info {
+        grid-gap: 0px;
+        
+    }
+}
+@media only screen and (max-width: 865px) {
+    .card-info {
+        padding-left: 0px;
+    }
+    .card-extend-info {
+        padding:0px;
+    }
+    .card-grid {
+        margin-right:20px;
+        
+    }
+    .card-extend {
+        min-width:300px;
+        margin-left:7px !important;
+        margin-bottom: 7px;
+    }
+}
+@media only screen and (max-width: 520px) {
+    
 }

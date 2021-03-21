@@ -1,9 +1,3 @@
-body {
-    font-family: 'Roboto';
-    background-color: #E5E5E5;
-    padding: 0;
-    margin:0;
-}
 
 .navbar {
     position: fixed;
@@ -20,6 +14,12 @@ body {
     left:0;
     z-index: 10;
 }
+.navbar .menu-btn {
+    display: none;
+    font-size:30px;
+    color:#E4752E;
+    cursor: pointer;
+}
 .navbar .btn-primary {
     background-color:  #E4752E;
     padding:8px 35px;
@@ -29,4 +29,24 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 17px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer;
+}
+@media only screen and (max-width: 865px) {
+    .navbar .menu-btn {
+        display: block;
+    }
+}
+@media only screen and (max-width: 520px) {
+    .navbar img {
+        width:170px;
+    }
+    .navbar .btn-primary {
+        padding:6px 18px;
+        font-size: 15px;
+     }
+     .navbar {
+         padding: 0px 20px;
+     }
+     .navbar .menu-btn {
+         font-size:20px;
+     }
 }

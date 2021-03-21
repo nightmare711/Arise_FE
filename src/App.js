@@ -1,5 +1,6 @@
 import React from 'react'
-import { Navbar, Sidebar, PaddingContent } from 'components'
+import { DataContext } from 'contexts/DataContext'
+import { Navbar, Sidebar, PaddingContent, Overlay } from 'components'
 import { HomePage } from 'pages'
 import { Switch, Route } from 'react-router-dom'
 
@@ -8,9 +9,18 @@ function App() {
 	// const burnedBalance = useBurnedBalance(getCakeAddress())
 	// const supply = useTotalSupply()
 	// var totalSupply = supply ? getBalanceNumber(supply) - getBalanceNumber(burnedBalance) : 0
-
+	const data = React.useContext(DataContext)
+	React.useEffect(() => {
+		if (data.isOpenSidebar) {
+			data.setIsOpenOverlay(true)
+		} else {
+			data.setIsOpenOverlay(false)
+		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [data.isOpenSidebar])
 	return (
 		<>
+			{data.isOpenOverlay ? <Overlay /> : null}
 			<Navbar />
 			<Sidebar />
 			<PaddingContent>

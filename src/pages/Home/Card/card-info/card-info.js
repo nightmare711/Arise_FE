@@ -16,7 +16,7 @@ export const CardInfo = () => {
 
 const InfoChart = () => {
 	return (
-		<div className='card card-value info-chart'>
+		<div className='card-grid card-value info-chart'>
 			<span className='title-primary'>BBOO Price Chart</span>
 			<img className='illustrate' src={ChartImg} alt='Illustrate' />
 			<div className='footer-card'>
@@ -30,7 +30,7 @@ const InfoChart = () => {
 }
 const InfoToken = () => {
 	return (
-		<div className='card card-value info-token'>
+		<div className='card-grid card-value info-token'>
 			<div className='card-heading'>
 				<span className='title-primary'>ARI Token Information</span>
 				<span className='title-secondary'>Trade ARI Token Pancake Swap</span>
@@ -57,7 +57,7 @@ const InfoToken = () => {
 }
 export const InfoLiquidity = () => {
 	return (
-		<div className='card card-value info-liquidity info-token'>
+		<div className='card-grid card-value info-liquidity info-token'>
 			<span className='title-primary'>Liquidity Locked</span>
 			<div className='percent-chart'>
 				<div className='bg-st'>85%</div>

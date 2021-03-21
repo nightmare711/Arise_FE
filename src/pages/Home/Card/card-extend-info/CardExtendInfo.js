@@ -38,7 +38,7 @@ export const CardExtendInfo = () => {
 }
 const CardContent = ({ title, content }) => {
 	return (
-		<div className='card card-extend card-instant'>
+		<div className='card-grid card-extend card-instant'>
 			<span className='title-info'>{title}</span>
 			<span className='content'>{content}</span>
 			<div className='question'>?</div>

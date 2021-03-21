@@ -1,6 +1,10 @@
+
+
 .card-info {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    padding-left: 30px;
+    padding-top: 10px;
     grid-gap: 30px;
 }
 .card-value {
@@ -10,16 +14,17 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-left: 7px !important;
 }
-.card .illustrate {
+.card-grid .illustrate {
     margin-top:30px;
 }
-.card .title-secondary {
+.card-grid .title-secondary {
     font-size: 14px;
     color:black;
     font-weight: 600;
 }
-.card .btn-primary {
+.card-grid .btn-primary {
     margin-bottom:30px;
     padding:5px 60px;
     background-color: #E4752E;
@@ -28,7 +33,7 @@
     color: white;
     border-radius: 10px;
 }
-.card .btn-primary .icon {
+.card-grid .btn-primary .icon {
     margin-right: 10px;
 }
 .footer-card {
@@ -41,26 +46,26 @@
     font-size: 18px;
     width: 100%;
 }
-.card .footer-card .info-detail {
+.card-grid .footer-card .info-detail {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
     padding:0px 20px;
 }
-.card .footer-card .info-detail .left-txt {
+.card-grid .footer-card .info-detail .left-txt {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.card .footer-card .info-detail .label {
+.card-grid .footer-card .info-detail .label {
     font-size: 14px;
     line-height: 16px;
     color: #868686;
     font-weight: 500;
 }
-.card .footer-card .info-detail .right-txt {
+.card-grid .footer-card .info-detail .right-txt {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -104,4 +109,63 @@
     justify-content: center;
     border-radius: 50%;
     background-color: white;
+}
+@media only screen and (max-width: 1200px) {
+    .card-info {
+        width: 100%;
+        height:auto;
+        overflow: scroll;
+        padding-bottom:10px;
+        grid-gap: 0px;
+    }
+    .card-info::-webkit-scrollbar {
+        display: none;
+    }
+    .card-grid {
+        min-width: 350px;
+    }
+    
+}
+@media only screen and (max-width: 1000px) {
+    .card-grid {
+        min-width: 270px;
+    }
+}
+@media only screen and (max-width: 865px) {
+    .card-info {
+        padding-left: 0px;
+    }
+}
+@media only screen and (max-width: 520px) {
+
+    .card-grid {
+        min-width: 240px;
+        grid-gap: 0px;
+    }
+    .card-grid .btn-primary {
+        padding: 5px 20px;
+        font-size: 18px;
+        margin-bottom:10px;
+    }
+    .card-info {
+        padding-top:0px;
+    }
+    .card-grid .title-secondary {
+        font-size:13px;
+    }
+    .card-grid .footer-card .info-detail {
+        font-size: 13px;
+    }
+    .card-grid .footer-card {
+        font-size:13px;
+    }
+    .info-liquidity .percent-chart {
+        width:100px;
+        height:100px;
+    }
+    .bg-st { 
+        width:80px;
+        height:80px;
+        font-size: 20px;
+    }
 }

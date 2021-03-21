@@ -16,7 +16,7 @@ export const Sidebar = () => {
 		setItemActive(className)
 	}
 	return (
-		<div className='sidebar'>
+		<div id='sidebar' className='sidebar'>
 			<ul className='list-item'>
 				{ListSidebarItem.map((item) => {
 					return (

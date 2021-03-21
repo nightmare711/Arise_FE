@@ -12,7 +12,6 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
 }
 .countdown .list-item li {
-    font-size: 60px;
     display: flex;
     flex-direction: column;
     font-weight: 900;
@@ -39,4 +38,39 @@
     margin:0;
     padding:0;
     margin-top:20px;
+}
+@media only screen and (max-width: 1000px) {
+
+    .countdown .list-item li .item {
+        font-size: 40px;
+    }
+    .countdown .list-item li:not(:last-child) {
+        margin-right: 20px;
+    }
+    .countdown .list-item li .label {
+        font-size:20px
+    }
+    .countdown .list-item {
+        padding:20px;
+    }
+}
+@media only screen and (max-width: 520px) {
+    .countdown .list-item li .item {
+        font-size: 30px;
+    }
+    .countdown .list-item li span{
+        line-height: 25px;
+    }
+    .countdown .list-item li:not(:last-child) {
+        margin-right: 10px;
+    }
+    .countdown .list-item li .label {
+        font-size:15px
+    }
+    .countdown .list-item {
+        padding:10px;
+    }
+    .countdown .list-item li .label {
+        margin-top:10px;
+    }
 }

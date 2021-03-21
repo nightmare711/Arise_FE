@@ -12,3 +12,21 @@
     font-size: 17px;
     font-weight: 400;
 }
+@media only screen and (max-width: 1200px) {
+    .card-secure-info{
+        padding: 20px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .card-secure-info .txt-frame .content {
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 520px) {
+    .card-secure-info .txt-frame .content {
+        font-size: 10px;
+    }
+    .card-secure-info .img-main {
+        width:60px;
+    }
+}
