@@ -56,6 +56,7 @@ export const Sidebar = () => {
 								<ul className='list-child'>
 									{item.child.map((item) => (
 										<li className='child-item' key={item.id}>
+											{item.icon ? <FontAwesomeIcon className='icon' icon={item.icon} /> : null}
 											{item.title}
 										</li>
 									))}
@@ -68,11 +69,11 @@ export const Sidebar = () => {
 			<div className='sidebar-bottom'>
 				<div className='bottom-front'>
 					<div className='coin-market'>
-						<span>CoinMarketCap</span>
-						<span className='content-coin'>$3.917</span>
+						<span>CoinGecko</span>
+						<span className='content-coin'>$0.000</span>
 					</div>
 					<div className='coin-gecko'>
-						<span>CoinGecko</span>
+						<span>Join us now</span>
 						<div className='coin-icon-container content-coin'>
 							<div className='icon'>
 								<FontAwesomeIcon className='coin-icon' icon={faTwitter} />

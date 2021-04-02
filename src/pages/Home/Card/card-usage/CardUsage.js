@@ -6,6 +6,13 @@ export const CardUsage = () => {
 	return (
 		<div className='card card-usage'>
 			<div className='pie-chart'>
+				<div className='overlay-percent'>
+					<span className='percent percent-1'>33%</span>
+					<span className='percent percent-2'>32%</span>
+					<span className='percent percent-3'>20%</span>
+					<span className='percent percent-4'>5%</span>
+					<span className='percent percent-5'>10%</span>
+				</div>
 				<div className='total'></div>
 			</div>
 			<div className='left-txt'>

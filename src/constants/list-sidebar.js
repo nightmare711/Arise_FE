@@ -6,11 +6,13 @@ import {
 	faSyncAlt,
 	faNewspaper,
 	faShieldAlt,
-	faCertificate,
 	faEllipsisH,
 	faHome,
 	faBug,
+	faQuestionCircle,
 } from '@fortawesome/free-solid-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faFile } from '@fortawesome/free-regular-svg-icons'
 export const ListSidebarItem = [
 	{
 		id: 0,
@@ -34,7 +36,7 @@ export const ListSidebarItem = [
 			},
 			{
 				id: '3',
-				title: 'DEFI yeild aggregator',
+				title: 'DEX Aggregator',
 			},
 		],
 		content: 'buy-ari',
@@ -46,27 +48,19 @@ export const ListSidebarItem = [
 		child: [
 			{
 				id: '1',
-				title: 'ARI Swap',
+				title: 'ARI DEX',
 			},
 			{
 				id: '2',
-				title: 'Yield Farming',
+				title: 'Farm Aggregator',
 			},
 			{
 				id: '3',
-				title: 'Cross-dex Swap',
-			},
-			{
-				id: '4',
 				title: 'Liquidity',
 			},
 			{
-				id: '5',
-				title: 'Vault',
-			},
-			{
-				id: '6',
-				title: 'Lottery',
+				id: '4',
+				title: 'Retirement Vault',
 			},
 		],
 		content: 'swap',
@@ -98,7 +92,15 @@ export const ListSidebarItem = [
 		child: [
 			{
 				id: '1',
+				title: 'Air drop',
+			},
+			{
+				id: '2',
 				title: 'Raffles',
+			},
+			{
+				id: '3',
+				title: 'Lottery',
 			},
 		],
 		content: 'game',
@@ -119,20 +121,6 @@ export const ListSidebarItem = [
 	},
 	{
 		id: 7,
-		title: 'Certik Audit',
-		icon: faCertificate,
-		child: [],
-		content: 'certik-audit',
-	},
-	{
-		id: 8,
-		title: 'Tech rate audit',
-		icon: faShieldAlt,
-		child: [],
-		content: 'tech-rate-audit',
-	},
-	{
-		id: 9,
 		title: 'Bug Bounty Programs',
 		icon: faBug,
 		child: [],
@@ -140,10 +128,33 @@ export const ListSidebarItem = [
 		extra: '(On Going)',
 	},
 	{
-		id: 10,
+		id: 8,
+		title: 'Audit Reports',
+		icon: faShieldAlt,
+		child: [],
+		content: 'audit-report',
+	},
+	{
+		id: 9,
 		title: 'More',
 		icon: faEllipsisH,
-		child: [],
+		child: [
+			{
+				id: '1',
+				title: 'Github',
+				icon: faGithub,
+			},
+			{
+				id: '2',
+				title: 'Docs',
+				icon: faFile,
+			},
+			{
+				id: '3',
+				title: 'FAQ',
+				icon: faQuestionCircle,
+			},
+		],
 		content: 'more',
 	},
 ]
@@ -156,43 +167,43 @@ export const listRoadmap = [
 			'For our first 2,000 valid participants. Details will be announced soon on our Twitter',
 	},
 	{
-		status: true,
+		status: false,
 		date: '7/4',
 		title: ' Estimated Arise Pre-sale',
 		content: 'Join our telegram group to see more information ',
 	},
 	{
-		status: true,
+		status: false,
 		date: '8/4',
 		title: 'Pancake Listing & Marketing Campaign ',
 		content: 'Partners with Influencers, Youtubers, AMAs, and more',
 	},
 	{
-		status: false,
+		status: 'not-yet',
 		date: '15/4',
 		title: 'Coingecko & Coinmarketcap Listing ',
 		content: '',
 	},
 	{
-		status: false,
+		status: 'not-yet',
 		date: '20/4',
 		title: 'Launch the first crypto game using ARI token & daily ARI airdrop event',
 		content: '',
 	},
 	{
-		status: false,
+		status: 'not-yet',
 		date: '30/4',
 		title: 'Launch Farm & Retirement Vault',
 		content: '',
 	},
 	{
-		status: false,
+		status: 'not-yet',
 		date: 'May',
 		title: 'Launch BSC Chart Tools & NFTs farming',
 		content: '',
 	},
 	{
-		status: false,
+		status: 'not-yet',
 		date: 'June',
 		title: 'Launch BSC DEX Tools & Defi Aggregation',
 		content: '',

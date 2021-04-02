@@ -1,7 +1,7 @@
 import React from 'react'
-import ChartImg from 'assets/chart.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faExchangeAlt } from '@fortawesome/free-solid-svg-icons'
+// import ChartImg from 'assets/chart.png'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faExchangeAlt } from '@fortawesome/free-solid-svg-icons'
 import './card-info.css'
 
 export const CardInfo = () => {
@@ -18,13 +18,14 @@ const InfoChart = () => {
 	return (
 		<div className='card-grid card-value info-chart'>
 			<span className='title-primary'>BBOO Price Chart</span>
-			<img className='illustrate' src={ChartImg} alt='Illustrate' />
+			<div className='coming-soon'>Coming soon</div>
+			{/* <img className='illustrate' src={ChartImg} alt='Illustrate' />
 			<div className='footer-card'>
 				<div className='btn-secondary'>
 					<a href={() => false}>Details</a>
 				</div>
 				<span>Holders: 1234</span>
-			</div>
+			</div> */}
 		</div>
 	)
 }
@@ -35,7 +36,8 @@ const InfoToken = () => {
 				<span className='title-primary'>ARI Token Information</span>
 				<span className='title-secondary'>Trade ARI Token Pancake Swap</span>
 			</div>
-			<span className='price'>$357.223</span>
+			<div className='coming-soon'>Coming soon</div>
+			{/* <span className='price'>$357.223</span>
 			<div className='footer-card'>
 				<div className='btn-secondary'>
 					<FontAwesomeIcon className='icon' icon={faExchangeAlt} />
@@ -51,7 +53,7 @@ const InfoToken = () => {
 						<span>990,000 ARI</span>
 					</div>
 				</div>
-			</div>
+			</div> */}
 		</div>
 	)
 }

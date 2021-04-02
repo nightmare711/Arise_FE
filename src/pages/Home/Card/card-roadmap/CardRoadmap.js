@@ -11,11 +11,11 @@ export const CardRoadmap = () => {
 					return (
 						<li className='item' key={index}>
 							<div className='left-txt'>
-								{item.status ? (
-									// <span className='status status-done'>Done</span>
+								{item.status === true ? (
+									<span className='status status-done'>Done</span>
+								) : item.status === 'not-yet' ? null : (
 									<span className='status status-false'>Ongoing</span>
-								) : // <span className='status status-false'>Ongoing</span>
-								null}
+								)}
 								<span className='date'>{item.date}</span>
 							</div>
 							<span className='title'>{item.title}</span>

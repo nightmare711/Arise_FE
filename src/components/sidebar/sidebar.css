@@ -75,6 +75,9 @@
     padding-left:60px;
     transition:all .2s;
 }
+.sidebar .list-item .item .list-child .child-item .icon {
+    margin-right: 10px;
+}
 .sidebar .list-item .item .list-child .child-item:hover {
     background-color: #9A5FB1;
 }

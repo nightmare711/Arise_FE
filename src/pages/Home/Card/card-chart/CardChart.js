@@ -7,8 +7,16 @@ export const CardChart = () => {
 		<div className='card card-chart'>
 			<div className='chart-container'>
 				<div className='pie-chart'>
+					<div className='overlay-percent'>
+						<span className='percent percent-1'>40%</span>
+						<span className='percent percent-2'>25%</span>
+						<span className='percent percent-3'>10%</span>
+						<span className='percent percent-4'>5%</span>
+						<span className='percent percent-5'>7.5%</span>
+						<span className='percent percent-6'>12.5%</span>
+					</div>
 					<div className='total'>
-						<b>Total supply:</b> <span>3,000,000</span>
+						<b>Total supply:</b> <span>10,000,000</span>
 					</div>
 				</div>
 				<div className='left-txt'>

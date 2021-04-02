@@ -10,7 +10,7 @@ export const Countdown = () => {
 			hour = minute * 60,
 			day = hour * 24
 
-		let birthday = new Date().getTime() + 100000000,
+		let birthday = 1618057929006,
 			countDown = new Date(birthday).getTime(),
 			x = setInterval(function () {
 				let now = new Date().getTime(),
@@ -23,7 +23,7 @@ export const Countdown = () => {
 
 				//do something later when date is reached
 				if (distance < 0) {
-					alert('Sorry we lied you!')
+					alert('We start sale now')
 
 					clearInterval(x)
 				}
