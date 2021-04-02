@@ -17,7 +17,7 @@ export const CardInfo = () => {
 const InfoChart = () => {
 	return (
 		<div className='card-grid card-value info-chart'>
-			<span className='title-primary'>BBOO Price Chart</span>
+			<span className='title-primary'>ARI Price Chart</span>
 			<div className='coming-soon'>Coming soon</div>
 			{/* <img className='illustrate' src={ChartImg} alt='Illustrate' />
 			<div className='footer-card'>
