@@ -5,6 +5,51 @@
     background-color: transparent;
     padding-left:20px;
 }
+.card-extend {
+    position:relative
+}
+.card-extend img {
+    position: absolute;
+}
+.bg-1 img {
+    top:0;
+    right:0px;
+}
+.bg-2 img {
+    bottom:0;
+    left:0;
+}
+.bg-3 img {
+    top: 30%;
+    transform: translateY(-50%);
+    right:0;
+}
+.bg-4 img {
+    top:0;
+    left:0;
+}
+.bg-5 img{
+    bottom:0;
+    right:0;
+}
+.bg-6 img {
+    bottom:0 ;
+    left:0;
+}
+.bg-7 img {
+    top:0;
+    left:50%;
+    transform: translateX(-50%)
+}
+.bg-8 img {
+    bottom: 0;
+    left:0;
+}
+.bg-9 img {
+    
+    top:0;
+    right:0;
+}
 .card-extend-info::-webkit-scrollbar {
     display: none;
 }

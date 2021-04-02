@@ -27,6 +27,8 @@
 .card-roadmap .list-roadmap .content {
     margin-top:10px;
     color:#848484;
+    max-width: 80%;
+    line-height: 25px;
 }
 .card-roadmap .list-roadmap .item .title {
     color: #E4752E;
