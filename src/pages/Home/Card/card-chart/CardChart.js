@@ -12,7 +12,7 @@ export const CardChart = () => {
 					</div>
 				</div>
 				<div className='left-txt'>
-					<span className='title-primary'>TOKEN ALLOCATION CHART</span>
+					<div className='title-primary'>TOKEN ALLOCATION CHART</div>
 					<ul className='list-detail'>
 						{listTokenDetail.map((item, index) => (
 							<li key={index} className='item'>

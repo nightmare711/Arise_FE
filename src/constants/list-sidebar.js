@@ -133,80 +133,103 @@ export const ListSidebarItem = [
 export const listRoadmap = [
 	{
 		status: true,
-		date: '18/3',
-		title: 'Arise Pre-sale',
-		content: 'Soft-cap 1500 BNB, Hard-cap 2500 BNB',
+		date: '1/4',
+		title: 'Airdrop for Contributors ',
+		content:
+			'For our first 2,000 valid participants. Details will be announced soon on our Twitter',
 	},
 	{
 		status: true,
-		date: '19/3',
-		title: ' Arise beta launch and Listing on PancakeSwap',
-		content: 'Raise funds for the liquidity',
+		date: '7/4',
+		title: ' Estimated Arise Pre-sale',
+		content: 'Join our telegram group to see more information ',
 	},
 	{
 		status: true,
-		date: 'Mar',
-		title: ' Launch the first advertising campaign - End of March',
-		content: 'Growth & scale community',
+		date: '8/4',
+		title: 'Pancake Listing & Marketing Campaign ',
+		content: 'Partners with Influencers, Youtubers, AMAs, and more',
 	},
 	{
 		status: false,
-		date: 'Mar',
-		title: 'Finish first audit with our Security Partners - End of March',
+		date: '15/4',
+		title: 'Coingecko & Coinmarketcap Listing ',
 		content: '',
 	},
 	{
 		status: false,
-		date: 'Mar',
-		title: 'Launch the first utilities of our eco system - End of March',
+		date: '20/4',
+		title: 'Launch the first crypto game using ARI token & daily ARI airdrop event',
 		content: '',
 	},
 	{
 		status: false,
-		date: 'Apr',
-		title: 'Listing on Coingecko and Coinmarketcap - April',
+		date: '30/4',
+		title: 'Launch Farm & Retirement Vault',
 		content: '',
 	},
 	{
 		status: false,
-		date: 'Apr',
-		title: 'Launch Airdrop program for holders April',
-		content: 'Reward for diamond holders to trial the very first beta functions',
+		date: 'May',
+		title: 'Launch BSC Chart Tools & NFTs farming',
+		content: '',
 	},
 	{
 		status: false,
-		date: 'Apr',
-		title: 'Launch BSC Token analysis tools (BETA version) April',
+		date: 'June',
+		title: 'Launch BSC DEX Tools & Defi Aggregation',
 		content: '',
 	},
 ]
 export const listTokenDetail = [
 	{
-		color: '#C1501F',
+		color: '#E05C53',
 		title: 'Presale',
 	},
 	{
-		color: '#D21C7D',
+		color: '#CB9801',
 		title: 'Liquidity/ Listing',
 	},
 	{
-		color: '#833A13',
-		title: 'Development',
+		color: '#513C84',
+		title: 'Marketing, Partnership & Development',
 	},
 	{
-		color: '#BB7BDA',
+		color: '#0070C0',
 		title: 'Team',
 	},
 	{
-		color: '#DAAA8F',
-		title: 'Airdrop',
+		color: '#00B050',
+		title: 'Lottery & Airdrop',
 	},
 	{
-		color: '#FEC113',
+		color: '#5BCBCC',
 		title: 'Vault & Liquidity fund',
 	},
 	{
 		color: '#842F74',
 		title: 'Marketing/Advisor/Partnership',
+	},
+]
+export const ListUsage = [
+	{
+		color: '#E05C53',
+		title: 'Provide liquidity to exchanges: 33%',
+	},
+	{
+		color: '#513C84',
+		title: 'Fund for farming, vault rewards: 32%',
+	},
+	{
+		color: '#CB9801',
+		title: 'Support Marketing/Partnerships and go-to market strategy: 20%',
+	},
+	{
+		color: '#0070C0',
+		title: 'Support development team: 5%',
+	},
+	{
+		color: '#00B050',
+		title: 'Fund for game, lottery & airdrop for holders: 10%',
 	},
 ]

@@ -8,6 +8,9 @@
     justify-content: space-around;
     align-items: center;
 }
+.card-chart .chart-container .left-txt {
+    margin-left:20px;
+}
 .card-chart .chart-container .pie-chart {
     width: 300px; 
     height: 300px; 
@@ -16,13 +19,12 @@
     align-items: center;
     justify-content: center;
     background-image: conic-gradient( 
-        #C1501F 110deg,  
-        #842F74 0 140deg, 
-        #D21C7D 0 230deg,
-        #BB7BDA 0 265deg,
-        #833A13 0 285deg,
-        #DAAA8F 0 320deg,
-        orange 0)
+        #E05C53 130deg,  
+        #513C84 0 230deg, 
+        #CB9801 0 260deg,
+        #0070C0 0 280deg,
+        #00B050 0 320deg,
+        #5BCBCC 0)
 }
 .card-chart .chart-container .pie-chart .total {
     width:150px;
@@ -35,6 +37,14 @@
     border-radius: 50%;
     font-size: 18px;
     color:#808080;
+}
+.card-chart .chart-container .left-txt .title-primary {
+    display: inline-block;
+    background: linear-gradient(180deg, #5BCBCC 0%, #0070C0 100%);
+    padding: 10px 30px;
+    color:white;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
 }
 .card-chart .chart-container .left-txt .list-detail {
     display: grid;

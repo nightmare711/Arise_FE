@@ -19,7 +19,7 @@ function App() {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [data.isOpenSidebar])
 	return (
-		<>
+		<div>
 			{data.isOpenOverlay ? <Overlay /> : null}
 			<Navbar />
 			<Sidebar />
@@ -52,7 +52,7 @@ function App() {
 					<button onClick={() => wallet.connect('portis')}>Portis</button>
 				</div>
 			)} */}
-		</>
+		</div>
 	)
 }
 

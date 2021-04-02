@@ -1,0 +1,130 @@
+.card-usage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding:30px 60px;
+    font-size: 18px;
+    color:#808080;
+}
+.card-usage .title-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(180deg, #E77332 0%, #632C8A 100%);
+    padding: 10px;
+    color:white;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+.card-usage .left-txt {
+    margin-left:40px;
+}
+.card-usage .title-primary .title-extra {
+    font-size: 13px;
+
+}
+.card-usage .pie-chart {
+    width: 300px; 
+    height: 300px; 
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: conic-gradient( 
+        #E05C53 130deg,  
+        #513C84 0 230deg, 
+        #CB9801 0 300deg,
+        #0070C0 0 320deg,
+        #00B050 0)
+}
+.card-usage .pie-chart .total {
+    width:150px;
+    height:150px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 18px;
+    color:#808080;
+}
+.card-usage .left-txt .list-detail{
+    display: flex;
+    flex-direction: column;
+    margin-top:40px;
+}
+.card-usage .left-txt .list-detail .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top:20px;
+}
+.card-usage .left-txt .list-detail .item .detail {
+    margin-left:20px;
+    width: 80%;
+}
+.card-usage .left-txt .list-detail .color {
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+}
+@media only screen and (max-width: 1000px) {
+    .card-usage {
+        padding: 30px 10px;
+        justify-content: space-around;
+    }
+    .card-usage .left-txt {
+        width:45%;
+        overflow: hidden;
+    }
+    .card-usage .pie-chart  {
+        width: 250px;
+        height:250px;
+    }
+    .card-usage .pie-chart .total {
+        width:120px;
+        height: 120px;
+    }
+    .card-usage .left-txt .list-detail .item {
+        margin-top:0px;
+    }
+}
+@media only screen and (max-width: 520px) {
+    .card-usage {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding:30px;
+    }
+    .card-usage .pie-chart {
+        align-self: center;
+    }
+    .card-usage .left-txt  {
+        margin-left:0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .card-chart .chart-container {
+        flex-direction: column;
+    }
+    .card-usage .list-detail {
+        margin-top:10px;
+        
+    }
+    .card-usage .left-txt .list-detail .item{
+        margin-top:10px;
+    }
+    .card-usage .left-txt .list-detail .item .detail {
+        font-size: 13px;
+    }
+    .card-usage .left-txt .list-detail .item .color {
+        width:15px;
+        height: 15px;
+    }
+}

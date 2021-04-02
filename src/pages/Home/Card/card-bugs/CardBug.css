@@ -1,0 +1,14 @@
+.card-bug {
+    align-items: center;;
+}
+.card-bug .btn-secondary {
+    padding:10px 20px;
+    font-size: 18px;
+}
+@media only screen and (max-width: 520px) {
+    .card-bug .btn-secondary {
+        padding: 5px 20px;
+        font-size: 13px;
+        margin-bottom:10px;
+    }
+}

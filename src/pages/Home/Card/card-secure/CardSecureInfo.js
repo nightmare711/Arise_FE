@@ -13,6 +13,9 @@ export const CardSecureInfo = () => {
 					request already submitted and coming soon in next weeks.
 				</span>
 			</div>
+			<div className='btn-secondary'>
+				<a href={() => false}>Join us</a>
+			</div>
 		</div>
 	)
 }

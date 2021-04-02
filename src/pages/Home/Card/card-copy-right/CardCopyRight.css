@@ -1,0 +1,26 @@
+.card-copy-right {
+    width: calc(100% + 30px);
+    height:150px;
+    background-color: #350747 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    color:white;
+    border-radius: 0px !important;
+    margin-top:40px;
+}
+@media only screen and (max-width: 1000px) {
+    .card-copy-right {
+        width: calc(100% + 60px);
+        transform: translateX(-30px);
+    }
+}
+@media only screen and (max-width: 520px) {
+    .card-copy-right {
+        width: calc(100% + 20px);
+        transform: translateX(-10px);
+    }
+    
+}

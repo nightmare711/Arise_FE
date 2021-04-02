@@ -20,7 +20,7 @@ const InfoChart = () => {
 			<span className='title-primary'>BBOO Price Chart</span>
 			<img className='illustrate' src={ChartImg} alt='Illustrate' />
 			<div className='footer-card'>
-				<div className='btn-primary'>
+				<div className='btn-secondary'>
 					<a href={() => false}>Details</a>
 				</div>
 				<span>Holders: 1234</span>
@@ -37,7 +37,7 @@ const InfoToken = () => {
 			</div>
 			<span className='price'>$357.223</span>
 			<div className='footer-card'>
-				<div className='btn-primary'>
+				<div className='btn-secondary'>
 					<FontAwesomeIcon className='icon' icon={faExchangeAlt} />
 					<a href={() => false}>Swap</a>
 				</div>
@@ -59,7 +59,8 @@ export const InfoLiquidity = () => {
 	return (
 		<div className='card-grid card-value info-liquidity info-token'>
 			<span className='title-primary'>Liquidity Locked</span>
-			<div className='percent-chart'>
+			<div className='coming-soon'>Coming soon</div>
+			{/* <div className='percent-chart'>
 				<div className='bg-st'>85%</div>
 			</div>
 			<div className='footer-card'>
@@ -73,7 +74,7 @@ export const InfoLiquidity = () => {
 						<span>990,000 ARI</span>
 					</div>
 				</div>
-			</div>
+			</div> */}
 		</div>
 	)
 }

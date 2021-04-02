@@ -7,6 +7,9 @@ import {
 	CardRoadmap,
 	CardExtendInfo,
 	CardChart,
+	CardBug,
+	CardCopyRight,
+	CardUsage,
 } from './Card'
 import './Homepage.css'
 
@@ -16,10 +19,13 @@ export const HomePage = () => {
 			<CardIntro />
 			<CardSale />
 			<CardInfo />
+			<CardBug />
 			<CardSecureInfo />
 			<CardRoadmap />
 			<CardExtendInfo />
 			<CardChart />
+			<CardUsage />
+			<CardCopyRight />
 		</div>
 	)
 }
