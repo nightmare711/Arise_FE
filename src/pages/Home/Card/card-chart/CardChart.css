@@ -114,6 +114,12 @@
     color: #808080;
     line-height: 30px;
 }
+@media only screen and (max-width: 1360px) {
+    .card-chart .chart-container .left-txt  {
+        width:50%;
+    }
+
+}
 @media only screen and (max-width: 1200px) {
     .card-chart .chart-container .left-txt .list-detail {
         grid-gap: 0px;

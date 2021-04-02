@@ -105,10 +105,17 @@
     height:20px;
     border-radius: 50%;
 }
+@media only screen and (max-width: 1360px) {
+    .card-usage {
+        justify-content: space-around;
+    }
+    .card-usage .left-txt {
+        width:50%;
+    }
+}
 @media only screen and (max-width: 1200px) {
     .card-usage .left-txt {
         width:35%;
-        overflow: hidden;
     }
 }
 @media only screen and (max-width: 1000px) {
