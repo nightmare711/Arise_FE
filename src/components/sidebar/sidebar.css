@@ -36,7 +36,11 @@
     cursor:pointer;
     
 }
-
+.sidebar .list-item .item .left-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 .sidebar .list-item .item .left-text span{
     margin-left:20px;
 }

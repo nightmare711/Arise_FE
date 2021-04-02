@@ -8,8 +8,17 @@ import {
 	faShieldAlt,
 	faCertificate,
 	faEllipsisH,
+	faHome,
+	faBug,
 } from '@fortawesome/free-solid-svg-icons'
 export const ListSidebarItem = [
+	{
+		id: 0,
+		title: 'Home',
+		icon: faHome,
+		content: 'home-item',
+		child: [],
+	},
 	{
 		id: 1,
 		title: 'Buy ARI',
@@ -124,6 +133,14 @@ export const ListSidebarItem = [
 	},
 	{
 		id: 9,
+		title: 'Bug Bounty Programs',
+		icon: faBug,
+		child: [],
+		content: 'bug',
+		extra: '(On Going)',
+	},
+	{
+		id: 10,
 		title: 'More',
 		icon: faEllipsisH,
 		child: [],

@@ -21,14 +21,26 @@ export const CardSale = () => {
 			<div className='content'>
 				<span className='title-primary'>PRE-SALE COMING IN</span>
 				<Countdown />
-				<div className='cap'>
-					<div className='cap-item soft-cap'>
-						<span className='head'>Soft Cap</span>
-						<span className='content'>1,500 BNB</span>
+				<div className='flex flex-row'>
+					<div className='cap'>
+						<div className='cap-item soft-cap'>
+							<span className='head'>Soft Cap</span>
+							<span className='content'>1,500 BNB</span>
+						</div>
+						<div className='cap-item hard-cap'>
+							<span className='head'>Hard Cap</span>
+							<span className='content'>2,500 BNB</span>
+						</div>
 					</div>
-					<div className='cap-item hard-cap'>
-						<span className='head'>Hard Cap</span>
-						<span className='content'>2,500 BNB</span>
+					<div className='cap'>
+						<div className='cap-item soft-cap'>
+							<span className='head'>PreSale price</span>
+							<span className='content'>1 BNB = 16,000 ARI</span>
+						</div>
+						<div className='cap-item hard-cap'>
+							<span className='head'>Listing price</span>
+							<span className='content'>1 BNB = 12,000 ARI</span>
+						</div>
 					</div>
 				</div>
 			</div>

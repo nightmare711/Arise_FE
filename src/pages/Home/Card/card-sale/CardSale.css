@@ -11,9 +11,9 @@
     left:35px;
 }
 .card-sale .watermark-bottom {
-    bottom:35px;
+    top:40%;
     right:35px;
-    transform: rotate(30deg)
+    transform: rotate(30deg) ;
 }
 .card-sale .watermark img {
     width: 80px;

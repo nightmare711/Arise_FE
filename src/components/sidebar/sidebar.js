@@ -7,7 +7,7 @@ import { ListSidebarItem } from 'constants/list-sidebar'
 import './sidebar.css'
 
 export const Sidebar = () => {
-	const [itemActive, setItemActive] = useState('')
+	const [itemActive, setItemActive] = useState('home-item')
 	const onHandleClickItem = (className) => {
 		if (itemActive !== '') {
 			document.querySelector(`.${itemActive}`)?.classList.remove('active')
@@ -15,6 +15,10 @@ export const Sidebar = () => {
 		document.querySelector(`.${className}`)?.classList.add('active')
 		setItemActive(className)
 	}
+	React.useEffect(() => {
+		document.querySelector(`.${itemActive}`)?.classList.add('active')
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [])
 	return (
 		<div id='sidebar' className='sidebar'>
 			<ul className='list-item'>
@@ -23,11 +27,23 @@ export const Sidebar = () => {
 						<li key={item.id} className='item'>
 							<div
 								onClick={() => onHandleClickItem(item.content)}
-								className={`${item.content} main-item`}
+								className={`${item.content}  main-item`}
 							>
 								<span className='left-text'>
 									<FontAwesomeIcon className={'icon'} icon={item.icon} />
-									<span>{item.title}</span>
+									<span>
+										{item.title}
+										<span
+											style={{
+												fontSize: '13px',
+												color: 'white',
+												textTransform: 'capitalize',
+												margin: '10px',
+											}}
+										>
+											{item.extra || ''}
+										</span>
+									</span>
 								</span>
 								{item.child.length !== 0 ? (
 									<FontAwesomeIcon
