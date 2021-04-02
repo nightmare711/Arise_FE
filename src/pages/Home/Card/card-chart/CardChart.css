@@ -173,7 +173,7 @@
         height: 120px;
     }
 }
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 550px) {
     .card-chart .chart-container .left-txt  {
         margin-left:0;
         display: flex;
