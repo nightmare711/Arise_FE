@@ -42,16 +42,12 @@
         margin-left:0px;
     }
     .card-secure-info .txt-frame .content {
-        font-size: 10px;
+        font-size: 13px;
     }
     .card-secure-info .img-main {
         display: none;
     }
-}
-@media only screen and (max-width: 520px) {
-    .card-secure-info .btn-secondary {
-        padding: 5px 20px;
-        font-size: 13px;
-        margin-bottom:10px;
+    .card-secure-info .txt-frame .title-primary {
+        font-size: 20px;
     }
 }

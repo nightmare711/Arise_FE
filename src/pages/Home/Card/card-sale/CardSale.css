@@ -106,4 +106,9 @@
     .card-sale .watermark .point {
         display: none;
     }
+    .card-sale .content .container-cap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

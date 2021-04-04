@@ -11,12 +11,13 @@
     text-align: center;
 }
 @media only screen and (max-width: 520px) {
-    .card-bug .btn-secondary {
-        padding: 5px 15px;
-        font-size: 10px;
-        margin-bottom:10px;
-    }
+    
     .card-bug {
         padding:10px;
+    }
+    .card-secure-info .btn-secondary {
+        padding: 10px 20px;
+        font-size: 15px;
+        margin-bottom:10px;
     }
 }

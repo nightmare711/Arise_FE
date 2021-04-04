@@ -21,7 +21,7 @@ export const CardSale = () => {
 			<div className='content'>
 				<span className='title-primary'>PRE-SALE COMING IN</span>
 				<Countdown />
-				<div className='flex flex-row'>
+				<div className='flex flex-row container-cap'>
 					<div className='cap'>
 						<div className='cap-item soft-cap'>
 							<span className='head'>Soft Cap</span>

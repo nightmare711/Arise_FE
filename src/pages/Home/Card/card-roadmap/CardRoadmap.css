@@ -89,12 +89,15 @@
     }
     .card-roadmap .list-roadmap .item {
         padding-bottom: 30px;
-        font-size: 10px;
+        font-size: 13px;
         padding-left: 15px;
         line-height: 12px;
     }
+    .card-roadmap .list-roadmap .item .title {
+        line-height: 20px;
+    }
     .card-roadmap .list-roadmap .content {
-        margin-top:4px;
+        margin-top:0px;
     }
     .card-roadmap .list-roadmap .item .left-txt {
         left: -80px;
