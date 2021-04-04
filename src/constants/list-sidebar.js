@@ -9,9 +9,8 @@ import {
 	faEllipsisH,
 	faHome,
 	faBug,
-	faQuestionCircle,
 } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faTelegramPlane, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faTelegramPlane, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faFile } from '@fortawesome/free-regular-svg-icons'
 export const ListSidebarItem = [
 	{
@@ -170,35 +169,38 @@ export const ListSidebarItem = [
 		title: 'More',
 		icon: faEllipsisH,
 		child: [
-			{
-				id: '1',
-				title: 'Github',
-				icon: faGithub,
-				href: '/github',
-			},
+			// {
+			// 	id: '1',
+			// 	title: 'Github',
+			// 	icon: faGithub,
+			// 	href: '/github',
+			// },
 			{
 				id: '2',
 				title: 'Docs',
 				icon: faFile,
-				href: '/docs',
+				href: 'https://arise-finance.medium.com/',
+				external: true,
 			},
-			{
-				id: '3',
-				title: 'FAQ',
-				icon: faQuestionCircle,
-				href: '/faq',
-			},
+			// {
+			// 	id: '3',
+			// 	title: 'FAQ',
+			// 	icon: faQuestionCircle,
+			// 	href: '/faq',
+			// },
 			{
 				id: '4',
 				title: 'Telegram',
 				icon: faTelegramPlane,
-				href: '/telegram',
+				href: 'https://t.me/AriseFinance',
+				external: true,
 			},
 			{
 				id: '5',
 				title: 'Twitter',
 				icon: faTwitter,
-				href: '/twitter',
+				href: 'https://twitter.com/arisefinance',
+				external: true,
 			},
 		],
 		content: 'more',

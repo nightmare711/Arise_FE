@@ -16,7 +16,7 @@ export const CardBug = () => {
 				</span>
 			</div>
 			<div className='btn-secondary'>
-				<a href={() => false}>Join us</a>
+				<a href={() => false}>Coming Soon</a>
 			</div>
 		</div>
 	)

@@ -25,6 +25,7 @@
     list-style: none;
     margin:0;
     padding:0;
+    margin-bottom: 20px;
 }
 .sidebar .list-item .item {
     width:250px;
@@ -83,9 +84,6 @@
     padding: 8px 0px;
     padding-left:60px;
     transition:all .2s;
-}
-.sidebar .list-item .item .list-child .child-item a {
-    
 }
 .sidebar .list-item .item .list-child .child-item .icon {
     margin-right: 10px;

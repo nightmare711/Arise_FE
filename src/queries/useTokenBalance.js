@@ -26,7 +26,6 @@ export const useTotalSupply = () => {
 	const [totalSupply, setTotalSupply] = React.useState(new BigNumber(0))
 	const { slowRefresh } = useRefresh()
 	React.useEffect(() => {
-		console.log('test refresh')
 		async function fetchTotalSupply() {
 			const cakeContract = getContract(cakeABI, getCakeAddress())
 			const supply = await cakeContract.methods.totalSupply().call()

@@ -1,7 +1,6 @@
 import React from 'react'
 import {
 	CardIntro,
-	CardSale,
 	CardInfo,
 	CardSecureInfo,
 	CardRoadmap,
@@ -10,6 +9,7 @@ import {
 	CardBug,
 	CardCopyRight,
 	CardUsage,
+	CardBanner,
 } from './Card'
 import './Homepage.css'
 
@@ -17,7 +17,8 @@ export const HomePage = () => {
 	return (
 		<div className='home-page'>
 			<CardIntro />
-			<CardSale />
+			{/* <CardSale /> */}
+			<CardBanner />
 			<CardInfo />
 			<CardBug />
 			<CardSecureInfo />

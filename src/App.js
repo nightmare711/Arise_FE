@@ -43,7 +43,6 @@ function App() {
 					<button
 						onClick={async () => {
 							let x = await wallet.connect()
-							console.log('connect', x)
 						}}
 					>
 						MetaMask

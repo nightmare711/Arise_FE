@@ -9,7 +9,7 @@ import './sidebar.css'
 export const Sidebar = () => {
 	const [itemActive, setItemActive] = useState('aaaa')
 	const route = useDetectRoute(itemActive, setItemActive)
-	console.log(route)
+	console.debug(route)
 	const onHandleClickItem = (className) => {
 		if (itemActive !== '') {
 			document.querySelector(`.${itemActive}`)?.classList.remove('active')
@@ -45,8 +45,12 @@ export const Sidebar = () => {
 								{item.child.length !== 0 && itemActive === item.content ? (
 									<ul className='list-child'>
 										{item.child.map((item, index) => (
-											<Link key={index} to={item.href || 0}>
-												<li className='child-item' key={item.id}>
+											<Link key={index} to={item.external ? 0 : item.href || 0}>
+												<li
+													onClick={() => (item.external ? window.open(item.href, '_blank') : null)}
+													className='child-item'
+													key={item.id}
+												>
 													{item.icon ? <FontAwesomeIcon className='icon' icon={item.icon} /> : null}
 													{item.title}
 												</li>

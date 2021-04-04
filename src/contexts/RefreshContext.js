@@ -13,7 +13,7 @@ const RefreshContextProvider = ({ children }) => {
 	useEffect(() => {
 		const interval = setInterval(async () => {
 			setFast((prev) => prev + 1)
-			console.log('prev', fast)
+			// console.log('prev', fast)
 		}, FAST_INTERVAL)
 		return () => clearInterval(interval)
 		// eslint-disable-next-line react-hooks/exhaustive-deps
