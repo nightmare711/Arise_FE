@@ -1,6 +1,6 @@
 import React from 'react'
 import { CardCopyRight } from 'pages/Home/Card'
-import Rocket from 'assets/rocket.png'
+import Rocket from 'assets/rocket.gif'
 import './404Page.css'
 
 export const ErrorPage = () => {
