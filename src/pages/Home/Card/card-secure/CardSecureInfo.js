@@ -7,14 +7,8 @@ export const CardSecureInfo = () => {
 		<div className='card card-secure-info'>
 			<img src={Shield} className='img-main' alt='Shield' />
 			<div className='txt-frame'>
-				<span className='title-primary'>SECURITY AUDIT PASSED</span>
-				<span className='content'>
-					We are still working with Certik and One big company to release more audit ASAP, audit
-					request already submitted and coming soon in next weeks.
-				</span>
-			</div>
-			<div className='btn-secondary'>
-				<a href={() => false}>Join us</a>
+				<span className='title-primary'>AUDIT ON ITS WAY.</span>
+				<span className='content'>Contract is audited by Quil now.</span>
 			</div>
 		</div>
 	)

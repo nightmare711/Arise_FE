@@ -1,7 +1,7 @@
 import React from 'react'
 import { DataContext } from 'contexts/DataContext'
 import { Navbar, Sidebar, PaddingContent, Overlay } from 'components'
-import { HomePage } from 'pages'
+import { HomePage, ErrorPage } from 'pages'
 import { Switch, Route } from 'react-router-dom'
 
 function App() {
@@ -25,9 +25,8 @@ function App() {
 			<Sidebar />
 			<PaddingContent>
 				<Switch>
-					<Route path='/'>
-						<HomePage />
-					</Route>
+					<Route exact path='/' component={HomePage} />
+					<Route component={ErrorPage} />
 				</Switch>
 			</PaddingContent>
 			{/* <h1>Wallet</h1>

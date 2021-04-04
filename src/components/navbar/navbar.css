@@ -6,13 +6,17 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 30px;
+    padding: 0px 10px;
+    padding-right:30px;
     width:100%;
     box-sizing: border-box;
     height:75px;
     top:0;
     left:0;
     z-index: 10;
+}
+.navbar img {
+    width:230px;
 }
 .navbar .menu-btn {
     display: none;

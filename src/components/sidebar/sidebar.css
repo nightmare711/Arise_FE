@@ -44,6 +44,12 @@
 .sidebar .list-item .item .left-text span{
     margin-left:20px;
 }
+.title-extra {
+    font-size: 13px;
+	color: white;
+	text-transform: capitalize;
+    transition: all .3s;
+}
 
 .sidebar .list-item .item .main-item {
     display: none;
@@ -57,6 +63,9 @@
 }
 .sidebar .list-item .item .main-item:hover {
     background-color: white;
+}
+.sidebar .list-item .item .main-item:hover .title-extra {
+    color:#E4752E;
 }
 .sidebar .list-item .item .list-child {
     overflow: hidden;
@@ -75,6 +84,9 @@
     padding-left:60px;
     transition:all .2s;
 }
+.sidebar .list-item .item .list-child .child-item a {
+    
+}
 .sidebar .list-item .item .list-child .child-item .icon {
     margin-right: 10px;
 }
@@ -83,6 +95,9 @@
 }
 .sidebar .list-item .active {
     background-color: white;
+}
+.sidebar .list-item .active .title-extra {
+    color: #E4752E !important;
 }
 .sidebar .sidebar-bottom {
     display:flex;

@@ -18,10 +18,11 @@ export const CardUsage = () => {
 			<div className='left-txt'>
 				<div className='title-primary'>
 					<span>TOKEN ALLOCATION CHART</span>
-					<span className='title-extra'>
-						Please find below the details about how presale fund will be used
-					</span>
 				</div>
+				<br />
+				<span className='title-extra'>
+					Please find below the details about how presale fund will be used
+				</span>
 				<ul className='list-detail'>
 					{ListUsage.map((item, index) => (
 						<li key={index} className='item'>

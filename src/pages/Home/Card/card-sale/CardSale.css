@@ -77,10 +77,10 @@
 }
 @media only screen and (max-width: 1000px) {
     .card-sale .content .cap .cap-item .head {
-        font-size: 18px;
+        font-size: 13px;
     }
     .card-sale .content .cap .cap-item .content {
-        font-size:20px;
+        font-size:15px;
     }
     .card-sale .watermark img {
         width:55px;
@@ -92,16 +92,16 @@
 }
 @media only screen and (max-width: 520px) {
     .card-sale .content .cap .cap-item .head {
-        font-size: 13px;
+        font-size: 9px;
     }
     .card-sale .content .cap .cap-item .content {
-        font-size:15px;
+        font-size:12px;
     }
     .card-sale .watermark img {
         display: none;
     }
     .card-sale {
-        padding:20px;
+        padding:10px;
     }
     .card-sale .watermark .point {
         display: none;

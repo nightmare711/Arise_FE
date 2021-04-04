@@ -7,10 +7,7 @@
     color:#808080;
 }
 .card-usage .title-primary {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    display: inline-block;
     background: linear-gradient(180deg, #E77332 0%, #632C8A 100%);
     padding: 10px;
     color:white;
@@ -20,9 +17,10 @@
 .card-usage .left-txt {
     margin-left:40px;
 }
-.card-usage .title-primary .title-extra {
+.card-usage  .title-extra {
     font-size: 13px;
-
+    font-weight: 600;
+    color: inherit;
 }
 .card-usage .pie-chart {
     position:relative;
@@ -88,13 +86,12 @@
 .card-usage .left-txt .list-detail{
     display: flex;
     flex-direction: column;
-    margin-top:40px;
 }
 .card-usage .left-txt .list-detail .item {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top:20px;
+    margin-top:30px;
 }
 .card-usage .left-txt .list-detail .item .detail {
     margin-left:20px;

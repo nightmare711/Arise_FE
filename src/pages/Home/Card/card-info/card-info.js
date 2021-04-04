@@ -34,7 +34,7 @@ const InfoToken = () => {
 		<div className='card-grid card-value info-token'>
 			<div className='card-heading'>
 				<span className='title-primary'>ARI Token Information</span>
-				<span className='title-secondary'>Trade ARI Token Pancake Swap</span>
+				<span className='title-secondary'>Trade ARI Token on Pancake Swap</span>
 			</div>
 			<div className='coming-soon'>Coming soon</div>
 			{/* <span className='price'>$357.223</span>

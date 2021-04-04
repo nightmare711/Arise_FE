@@ -1,14 +1,22 @@
 .card-bug {
-    align-items: center;;
+    display: flex;
+    align-items: center;
+    padding:20px 20px;
+    padding-left:70px;
 }
 .card-bug .btn-secondary {
     padding:10px 20px;
-    font-size: 18px;
+    font-size: 1.1rem;
+    margin-left: 40px;
+    text-align: center;
 }
 @media only screen and (max-width: 520px) {
     .card-bug .btn-secondary {
-        padding: 5px 20px;
-        font-size: 13px;
+        padding: 5px 15px;
+        font-size: 10px;
         margin-bottom:10px;
+    }
+    .card-bug {
+        padding:10px;
     }
 }

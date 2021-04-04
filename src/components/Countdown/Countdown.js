@@ -9,17 +9,18 @@ export const Countdown = () => {
 			minute = second * 60,
 			hour = minute * 60,
 			day = hour * 24
-
-		let birthday = 1618057929006,
-			countDown = new Date(birthday).getTime(),
+		let saleDay = 1618057929006,
+			countDown = new Date(saleDay).getTime(),
 			x = setInterval(function () {
-				let now = new Date().getTime(),
-					distance = countDown - now
-
-				;(document.getElementById('days').innerText = Math.floor(distance / day)),
-					(document.getElementById('hours').innerText = Math.floor((distance % day) / hour)),
-					(document.getElementById('minutes').innerText = Math.floor((distance % hour) / minute)),
-					(document.getElementById('seconds').innerText = Math.floor((distance % minute) / second))
+				let now = new Date().getTime()
+				let distance = countDown - now
+				const domDay = document.getElementById('days')
+				if (domDay) {
+					document.getElementById('days').innerText = Math.floor(distance / day)
+					document.getElementById('hours').innerText = Math.floor((distance % day) / hour)
+					document.getElementById('minutes').innerText = Math.floor((distance % hour) / minute)
+					document.getElementById('seconds').innerText = Math.floor((distance % minute) / second)
+				}
 
 				//do something later when date is reached
 				if (distance < 0) {

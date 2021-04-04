@@ -11,7 +11,7 @@ import {
 	faBug,
 	faQuestionCircle,
 } from '@fortawesome/free-solid-svg-icons'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faTelegramPlane, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faFile } from '@fortawesome/free-regular-svg-icons'
 export const ListSidebarItem = [
 	{
@@ -20,6 +20,7 @@ export const ListSidebarItem = [
 		icon: faHome,
 		content: 'home-item',
 		child: [],
+		href: '/',
 	},
 	{
 		id: 1,
@@ -29,14 +30,17 @@ export const ListSidebarItem = [
 			{
 				id: '1',
 				title: 'Buy on Pancake',
+				href: '/buy-on-pancake',
 			},
 			{
 				id: '2',
 				title: 'ARI Live chart',
+				href: '/ari-live-chart',
 			},
 			{
 				id: '3',
 				title: 'DEX Aggregator',
+				href: '/dex-aggregator',
 			},
 		],
 		content: 'buy-ari',
@@ -49,18 +53,22 @@ export const ListSidebarItem = [
 			{
 				id: '1',
 				title: 'ARI DEX',
+				href: '/ari-dex',
 			},
 			{
 				id: '2',
 				title: 'Farm Aggregator',
+				href: '/farm-aggregator',
 			},
 			{
 				id: '3',
 				title: 'Liquidity',
+				href: '/liquidity',
 			},
 			{
 				id: '4',
 				title: 'Retirement Vault',
+				href: '/retirement-vault',
 			},
 		],
 		content: 'swap',
@@ -73,14 +81,17 @@ export const ListSidebarItem = [
 			{
 				id: '1',
 				title: 'BSC Token analysis',
+				href: '/bsc-token-anylysis',
 			},
 			{
 				id: '2',
 				title: 'Whale Tracker',
+				href: '/whale-tracker',
 			},
 			{
 				id: '3',
 				title: 'Trading bots',
+				href: '/trading-bots',
 			},
 		],
 		content: 'tool',
@@ -93,14 +104,17 @@ export const ListSidebarItem = [
 			{
 				id: '1',
 				title: 'Air drop',
+				href: '/air-drop',
 			},
 			{
 				id: '2',
 				title: 'Raffles',
+				href: '/raffles',
 			},
 			{
 				id: '3',
 				title: 'Lottery',
+				href: '/lottery',
 			},
 		],
 		content: 'game',
@@ -111,6 +125,7 @@ export const ListSidebarItem = [
 		icon: faSyncAlt,
 		child: [],
 		content: 'referral',
+		href: '/referral',
 	},
 	{
 		id: 6,
@@ -118,6 +133,7 @@ export const ListSidebarItem = [
 		icon: faNewspaper,
 		child: [],
 		content: 'news',
+		href: '/news',
 	},
 	{
 		id: 7,
@@ -126,6 +142,7 @@ export const ListSidebarItem = [
 		child: [],
 		content: 'bug',
 		extra: '(On Going)',
+		href: '/bug-bounty',
 	},
 	{
 		id: 8,
@@ -133,6 +150,7 @@ export const ListSidebarItem = [
 		icon: faShieldAlt,
 		child: [],
 		content: 'audit-report',
+		href: '/audit-reports',
 	},
 	{
 		id: 9,
@@ -143,16 +161,31 @@ export const ListSidebarItem = [
 				id: '1',
 				title: 'Github',
 				icon: faGithub,
+				href: '/github',
 			},
 			{
 				id: '2',
 				title: 'Docs',
 				icon: faFile,
+				href: '/docs',
 			},
 			{
 				id: '3',
 				title: 'FAQ',
 				icon: faQuestionCircle,
+				href: '/faq',
+			},
+			{
+				id: '4',
+				title: 'Telegram',
+				icon: faTelegramPlane,
+				href: '/telegram',
+			},
+			{
+				id: '5',
+				title: 'Twitter',
+				icon: faTwitter,
+				href: '/twitter',
 			},
 		],
 		content: 'more',
