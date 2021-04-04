@@ -26,6 +26,7 @@ function App() {
 			<PaddingContent>
 				<Switch>
 					<Route exact path='/' component={HomePage} />
+					<Route exact path='/home' component={HomePage} />
 					<Route component={ErrorPage} />
 				</Switch>
 			</PaddingContent>
