@@ -13,7 +13,9 @@ export const CardUsage = () => {
 					<span className='percent percent-4'>5%</span>
 					<span className='percent percent-5'>10%</span>
 				</div>
-				<div className='total'></div>
+				<div className='total'>
+					<b>Total supply:</b> <span>100,000,000</span>
+				</div>
 			</div>
 			<div className='left-txt'>
 				<div className='title-primary'>

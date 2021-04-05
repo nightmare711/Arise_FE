@@ -16,7 +16,7 @@ export const CardChart = () => {
 						<span className='percent percent-6'>12.5%</span>
 					</div>
 					<div className='total'>
-						<b>Total supply:</b> <span>10,000,000</span>
+						<b>Total supply:</b> <span>100,000,000</span>
 					</div>
 				</div>
 				<div className='left-txt'>

@@ -23,9 +23,9 @@ export const Navbar = () => {
 				<FontAwesomeIcon icon={faBars} className='menu-icon-bar' />
 			</div>
 			<img className='navbar-logo' src={Logo} alt='logo' />
-			<div className='btn-primary'>
+			{/* <div className='btn-primary'>
 				<a href={() => false}>Connect</a>
-			</div>
+			</div> */}
 		</div>
 	)
 }
