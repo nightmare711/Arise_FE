@@ -25,10 +25,10 @@ export const Navbar = () => {
 			</div>
 			<img className='navbar-logo' src={Logo} alt='logo' />
 			{wallet.status === 'connected' ? (
-				<div>
-					<div>Account: {wallet.account}</div>
-					<div>Balance: {wallet.balance}</div>
-					<button onClick={() => wallet.reset()}>disconnect</button>
+				<div className='account' onClick={() => wallet.reset()}>
+					{wallet.account || 'default'}
+					{/* <div>Balance: {wallet.balance}</div>
+					<button onClick={() => wallet.reset()}>disconnect</button> */}
 				</div>
 			) : (
 				<div
