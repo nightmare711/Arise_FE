@@ -24,6 +24,22 @@
     color:#E4752E;
     cursor: pointer;
 }
+.navbar .account {
+    padding:10px 30px;
+    border-radius: 20px;
+    background-color: #E4752E;
+    font-weight: 600;
+    color:white;
+    transition:all .3s;
+    cursor:pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 17px 0 rgba(0, 0, 0, 0.19);
+}
+.navbar .account:hover {
+    background-color: #d66925;
+}
+.navbar .account:active {
+    background-color:#E4752E;
+}
 .navbar .btn-primary {
     background-color:  #E4752E;
     padding:8px 35px;
@@ -53,4 +69,7 @@
      .navbar .menu-btn {
          font-size:20px;
      }
+    .navbar .btn-mobile {
+        display: none;
+    }
 }
