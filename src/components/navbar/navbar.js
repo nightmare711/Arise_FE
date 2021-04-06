@@ -4,6 +4,7 @@ import './navbar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { DataContext } from 'contexts/DataContext'
+import { useWallet } from '@binance-chain/bsc-use-wallet'
 
 export const Navbar = () => {
 	const data = React.useContext(DataContext)
@@ -16,16 +17,29 @@ export const Navbar = () => {
 			data.setIsOpenSidebar(true)
 		}
 	}
-
+	const wallet = useWallet()
 	return (
 		<div className='navbar'>
 			<div onClick={onHandleClickMenu} className='menu-btn'>
 				<FontAwesomeIcon icon={faBars} className='menu-icon-bar' />
 			</div>
 			<img className='navbar-logo' src={Logo} alt='logo' />
-			{/* <div className='btn-primary'>
-				<a href={() => false}>Connect</a>
-			</div> */}
+			{wallet.status === 'connected' ? (
+				<div>
+					<div>Account: {wallet.account}</div>
+					<div>Balance: {wallet.balance}</div>
+					<button onClick={() => wallet.reset()}>disconnect</button>
+				</div>
+			) : (
+				<div
+					onClick={async () => {
+						await wallet.connect()
+					}}
+					className='btn-primary'
+				>
+					<a href={() => false}>Connect</a>
+				</div>
+			)}
 		</div>
 	)
 }
