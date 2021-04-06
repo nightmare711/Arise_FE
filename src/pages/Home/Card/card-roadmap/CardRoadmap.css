@@ -61,6 +61,8 @@
 .card-roadmap .list-roadmap .item .left-txt .date {
     color: #E4752E;
     font-weight: 600;
+    width:80px;
+    text-align: end;
 }
 .card-roadmap .list-roadmap .item .left-txt .status {
     line-height: 25px;

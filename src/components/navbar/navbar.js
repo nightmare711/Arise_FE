@@ -25,7 +25,7 @@ export const Navbar = () => {
 			</div>
 			<img className='navbar-logo' src={Logo} alt='logo' />
 			{wallet.status === 'connected' ? (
-				<div className='account' onClick={() => wallet.reset()}>
+				<div className='account btn-mobile' onClick={() => wallet.reset()}>
 					{wallet.account || 'default'}
 					{/* <div>Balance: {wallet.balance}</div>
 					<button onClick={() => wallet.reset()}>disconnect</button> */}
@@ -35,7 +35,7 @@ export const Navbar = () => {
 					onClick={async () => {
 						await wallet.connect()
 					}}
-					className='btn-primary'
+					className='btn-primary btn-mobile'
 				>
 					<a href={() => false}>Connect</a>
 				</div>

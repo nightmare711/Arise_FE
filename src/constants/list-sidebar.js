@@ -216,14 +216,14 @@ export const listRoadmap = [
 	},
 	{
 		status: false,
-		date: '7/4-10/4',
-		title: ' Estimated Arise Pre-sale',
+		date: '7/4 - 10/4',
+		title: 'Estimated Arise Private sale',
 		content: 'Join our telegram group to see more information ',
 	},
 	{
 		status: false,
-		date: '10/4',
-		title: 'Pancake Listing & Marketing Campaign ',
+		date: '11/4 - 14/4',
+		title: 'Public sale, Pancake Listing & Marketing Campaign',
 		content: 'Partners with Influencers, Youtubers, AMAs, and more',
 	},
 	{
