@@ -88,6 +88,7 @@
     }
     .card-roadmap .list-roadmap {
         transform: translateX(30px);
+        width:250px;
     }
     .card-roadmap .list-roadmap .item {
         padding-bottom: 30px;
@@ -112,5 +113,10 @@
     }
     .card-roadmap .list-roadmap .item .left-txt .status {
         line-height: 15px;
+    }
+}
+@media only screen and (max-width: 325px) {
+    .card-roadmap .list-roadmap {
+        max-width: 200px;
     }
 }
