@@ -37,8 +37,8 @@ export const CardChart = () => {
 					Public sale price: 1 BNB = 14.000 ARI <br />
 					Listing price: 1 BNB = 12.000 ARI <br />
 					Deflationary with buyback & burn, <br />
-					Liquidity auto-lock forever mechanisim, automatic yield farming <br /> Tx fee: 4% (2%
-					auto-lock forever to liquidity, 2% distributed for holders)
+					Token Burn forever mechanisim, automatic yield farming <br /> Tx fee: 4% (2% will be burnt
+					forever, 2% distributed for holders)
 				</span>
 			</div>
 		</div>

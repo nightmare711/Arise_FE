@@ -256,6 +256,25 @@ export const listRoadmap = [
 		title: 'Launch BSC DEX Tools & Defi Aggregation',
 		content: '',
 	},
+	{
+		status: 'not-yet',
+		date: 'Q3',
+		title: 'Build Whale tracking bots & ARI DEX',
+		content: '',
+	},
+	{
+		status: 'not-yet',
+		date: 'Q4',
+		title: 'More DEX listing, Build Multiswap functions & IDO Launchpad',
+		content: '',
+	},
+	{
+		status: 'not-yet',
+		date: '2022',
+		title:
+			'Multichain support: ERC20, Matic, Polkadot, Availanche, Solana ... Enhance Expert trading tools & launch new farming model',
+		content: '',
+	},
 ]
 export const listTokenDetail = [
 	{
