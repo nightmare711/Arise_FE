@@ -12,6 +12,7 @@
     transform:translateX(70px);
     padding:0;
     list-style: none;
+    max-width: 600px;
 }
 
 .card-roadmap .list-roadmap .item {
@@ -22,7 +23,7 @@
     display: flex;
     flex-direction: column;
     font-size:17px;
-    line-height: 15px;
+    /* line-height: 15px; */
 }
 .card-roadmap .list-roadmap .content {
     margin-top:10px;
@@ -80,6 +81,7 @@
     }
     .card-roadmap .list-roadmap {
         margin-top:20px;
+        max-width: 400px;
     }
 }
 @media only screen and (max-width: 520px) {
@@ -88,6 +90,7 @@
     }
     .card-roadmap .list-roadmap {
         transform: translateX(30px);
+        max-width:250px;
     }
     .card-roadmap .list-roadmap .item {
         padding-bottom: 30px;
@@ -112,5 +115,10 @@
     }
     .card-roadmap .list-roadmap .item .left-txt .status {
         line-height: 15px;
+    }
+}
+@media only screen and (max-width: 325px) {
+    .card-roadmap .list-roadmap {
+        max-width: 200px;
     }
 }

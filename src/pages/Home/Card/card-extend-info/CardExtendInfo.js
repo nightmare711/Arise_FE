@@ -27,8 +27,8 @@ export const CardExtendInfo = () => {
 			<CardContent
 				image={BG_3}
 				background='bg-3'
-				title='LIQUIDITY AUTO-LOCK FOREVER, DEFLATIONARY THROUGH BUY BACK & BURN'
-				content='2% fee of every ARI transaction will be added to liquidity and locked there forever. Once ARI DEX is launched, core team will buy back & burn ARI token using the trading fee.'
+				title='2% ARI VOLUME OF EVERY TRANSACTION WILL BE BURNT FOREVER. $ARI TOKEN IS DEFLATIONARY THROUGH BUY BACK & BURN.'
+				content='2% ARI volume of every transaction will be burn forever. Once ARI DEX is launched, Arise Finance core team will buy back & burn more ARI token using the trading fee.'
 			/>
 			<CardContent
 				image={BG_4}
