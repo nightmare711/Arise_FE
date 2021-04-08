@@ -1,6 +1,6 @@
 import React from 'react'
-import Banner from 'assets/banner.png'
-import BannerMobile from 'assets/banner-mobile.jpeg'
+import Banner from 'assets/banner.jpg'
+import BannerMobile from 'assets/banner-mobile.jpg'
 
 export const CardBanner = () => {
 	return (
