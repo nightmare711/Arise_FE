@@ -20,6 +20,7 @@ export const ListSidebarItem = [
 		content: 'home',
 		child: [],
 		href: '/home',
+		onClick: () => {},
 	},
 	{
 		id: 1,
@@ -46,6 +47,7 @@ export const ListSidebarItem = [
 			},
 		],
 		content: 'buy-ari',
+		onClick: () => {},
 	},
 	{
 		id: 2,
@@ -78,11 +80,13 @@ export const ListSidebarItem = [
 			},
 		],
 		content: 'swap',
+		onClick: () => {},
 	},
 	{
 		id: 3,
 		title: 'Tool',
 		icon: faTools,
+		onClick: () => {},
 		child: [
 			{
 				id: '1',
@@ -109,6 +113,7 @@ export const ListSidebarItem = [
 		id: 4,
 		title: 'Game',
 		icon: faGamepad,
+		onClick: () => {},
 		child: [
 			{
 				id: '1',
@@ -138,6 +143,7 @@ export const ListSidebarItem = [
 		child: [],
 		content: 'referral',
 		href: '/referral',
+		onClick: () => {},
 	},
 	{
 		id: 6,
@@ -146,6 +152,7 @@ export const ListSidebarItem = [
 		child: [],
 		content: 'news',
 		href: '/news',
+		onClick: () => {},
 	},
 	{
 		id: 7,
@@ -153,8 +160,14 @@ export const ListSidebarItem = [
 		icon: faBug,
 		child: [],
 		content: 'bug-bounty',
-		extra: '(On Going)',
-		href: '/bug-bounty',
+		extra: '',
+		href: '',
+		onClick: () => {
+			window.open(
+				'https://arise-finance.medium.com/smart-contract-bug-bounty-program-b8150fa12af',
+				'_blank'
+			)
+		},
 	},
 	{
 		id: 8,
@@ -163,6 +176,7 @@ export const ListSidebarItem = [
 		child: [],
 		content: 'audit-reports',
 		href: '/audit-reports',
+		onClick: () => {},
 	},
 	{
 		id: 9,
@@ -204,6 +218,7 @@ export const ListSidebarItem = [
 			},
 		],
 		content: 'more',
+		onClick: () => {},
 	},
 ]
 export const listRoadmap = [

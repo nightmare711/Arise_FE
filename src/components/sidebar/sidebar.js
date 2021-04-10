@@ -23,9 +23,12 @@ export const Sidebar = () => {
 				{ListSidebarItem.map((item) => {
 					return (
 						<li key={item.id} className='item'>
-							<Link to={item.href || 0}>
+							<Link>
 								<div
-									onClick={() => onHandleClickItem(item.content)}
+									onClick={() => {
+										onHandleClickItem(item.content)
+										item.onClick()
+									}}
 									className={`${item.content}  main-item`}
 								>
 									<span className='left-text'>
