@@ -34,8 +34,8 @@ export const CardChart = () => {
 			<div className='txt-info'>
 				<span>
 					Presale Price: 1 BNB = 16000 ARI <br /> Public sale Price: 1 BNB = 14000 ARI <br />{' '}
-					Listing Price: 1 BNB = 12000 ARI <br /> ARI Deflationary with buyback & burn Token burnt
-					forever mechanism, automatic yield farming <br /> Tx fee: 4%(2% burnt forever, 2%
+					Listing Price: 1 BNB = 12000 ARI <br /> ARI Deflationary with buyback & burn <br /> Token
+					burnt forever mechanism, automatic yield farming <br /> Tx fee: 4%(2% burnt forever, 2%
 					distributed for holders)
 					<br />
 					<a
