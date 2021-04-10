@@ -5,11 +5,12 @@
     padding:30px 60px;
     font-size: 18px;
     color:#808080;
+    justify-content: space-around;
 }
 .card-usage .title-primary {
     display: inline-block;
     background: linear-gradient(180deg, #E77332 0%, #632C8A 100%);
-    padding: 10px;
+    padding: 5px 10px;
     color:white;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
@@ -92,6 +93,7 @@
     flex-direction: row;
     align-items: center;
     margin-top:30px;
+    max-width: 450px;
 }
 .card-usage .left-txt .list-detail .item .detail {
     margin-left:20px;

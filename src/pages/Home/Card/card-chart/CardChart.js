@@ -33,12 +33,19 @@ export const CardChart = () => {
 			</div>
 			<div className='txt-info'>
 				<span>
-					Private sale price: 1 BNB = 16.000 ARI <br />
-					Public sale price: 1 BNB = 14.000 ARI <br />
-					Listing price: 1 BNB = 12.000 ARI <br />
-					Deflationary with buyback & burn, <br />
-					Token Burn forever mechanisim, automatic yield farming <br /> Tx fee: 4% (2% will be burnt
-					forever, 2% distributed for holders)
+					Presale price: 1 BNB - 16,000 ARI <br /> Listing price: 1 BNB - 12,000 <br /> ARI
+					Deflationary with buyback & burn, <br /> Liquidity auto-lock forever mechanisim, automatic
+					yield farming <br /> Tx fee: 4% (2% auto-lock forever to liquidity, 2% distributed for
+					holders)
+					<br />
+					<a
+						style={{ color: '#1DCF00', textDecoration: 'underline' }}
+						href='https://bscscan.com/token/0xa861f33d8ac80b64c1b8c7b4c99599474b79888a?fbclid=IwAR0JacCtU7et-qffjoPgPEgvjq6WAJjUwWSKXLH53ShD480RJEdGtoDwAEw#balances'
+						target='_blank'
+						rel='noreferrer'
+					>
+						View token contract on BSCSCAN
+					</a>
 				</span>
 			</div>
 		</div>

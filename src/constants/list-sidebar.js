@@ -282,28 +282,26 @@ export const listTokenDetail = [
 		title: 'Presale',
 	},
 	{
-		color: '#CB9801',
-		title: 'Liquidity/ Listing',
+		color: '#0070C0',
+		title: 'Team',
 	},
 	{
 		color: '#513C84',
 		title: 'Marketing, Partnership & Development',
 	},
-	{
-		color: '#0070C0',
-		title: 'Team',
-	},
+
 	{
 		color: '#00B050',
 		title: 'Lottery & Airdrop',
 	},
 	{
+		color: '#CB9801',
+		title: 'Liquidity/ Listing',
+	},
+
+	{
 		color: '#5BCBCC',
 		title: 'Vault & Liquidity fund',
-	},
-	{
-		color: '#842F74',
-		title: 'Marketing/Advisor/Partnership',
 	},
 ]
 export const ListUsage = [

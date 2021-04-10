@@ -3,7 +3,7 @@ import Web3 from 'web3'
 
 const RPC_URL = getRpcUrl()
 const httpProvider = new Web3.providers.HttpProvider(RPC_URL, { timeout: 10000 })
-const getWeb3 = () => {
+export const getWeb3 = () => {
 	const web3 = new Web3(httpProvider)
 	return web3
 }

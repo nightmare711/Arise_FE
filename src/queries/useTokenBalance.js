@@ -1,7 +1,7 @@
 import React from 'react'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import BigNumber from 'bignumber.js'
-import cakeABI from 'constants/abi/cake.json'
+import ariABI from 'constants/abi/ari.json'
 import { getCakeAddress } from 'services/utils/addressHelpers'
 import { getTokenBalance } from 'services/utils/erc20'
 import { getContract } from './ultils/web3'
@@ -27,7 +27,7 @@ export const useTotalSupply = () => {
 	const { slowRefresh } = useRefresh()
 	React.useEffect(() => {
 		async function fetchTotalSupply() {
-			const cakeContract = getContract(cakeABI, getCakeAddress())
+			const cakeContract = getContract(ariABI, getCakeAddress())
 			const supply = await cakeContract.methods.totalSupply().call()
 			setTotalSupply(new BigNumber(supply))
 		}
