@@ -32,7 +32,7 @@
     align-items: center;
     justify-content: center;
     background-image: conic-gradient( 
-        #E05C53 130deg,  
+        #E05C53 117deg,  
         #513C84 0 230deg, 
         #CB9801 0 300deg,
         #0070C0 0 320deg,
@@ -56,7 +56,6 @@
 }
 .card-usage .pie-chart .overlay-percent .percent-2{
     left:50%;
-    transform:translateX(-50%);
     bottom:25px;
 }
 .card-usage .pie-chart .overlay-percent .percent-3{
@@ -98,6 +97,7 @@
 .card-usage .left-txt .list-detail .item .detail {
     margin-left:20px;
     width: 80%;
+    font-size: 20px;
 }
 .card-usage .left-txt .list-detail .color {
     width:20px;
@@ -124,7 +124,6 @@
     }
     .card-usage .pie-chart .overlay-percent .percent-2{
         left:50%;
-        transform:translateX(-50%);
         bottom:20px;
     }
     .card-usage .pie-chart .overlay-percent .percent-3{
