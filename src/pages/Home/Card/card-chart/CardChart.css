@@ -88,8 +88,8 @@
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    margin-top:20px;
+    grid-template-rows: auto;
+    margin-top:40px;
 }
 .card-chart .chart-container .left-txt .list-detail .item {
     display: flex;
@@ -126,7 +126,8 @@
 @media only screen and (max-width: 1200px) {
     .card-chart .chart-container .left-txt .list-detail {
         grid-gap: 0px;
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
         
     }
     .card-chart .chart-container {
@@ -188,6 +189,13 @@
     }
     .card-chart .chart-container {
         flex-direction: column;
+        
+    }
+    .card-chart .chart-container .left-txt {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .card-chart .chart-container .left-txt .list-detail {
         margin-top:10px;

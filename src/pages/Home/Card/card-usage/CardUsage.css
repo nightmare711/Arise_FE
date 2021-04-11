@@ -17,11 +17,13 @@
 }
 .card-usage .left-txt {
     margin-left:40px;
+    
 }
 .card-usage  .title-extra {
     font-size: 13px;
     font-weight: 600;
     color: inherit;
+    text-align: center;
 }
 .card-usage .pie-chart {
     position:relative;
@@ -172,8 +174,8 @@
         margin-left:0;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         margin-top: 20px;
     }
@@ -186,9 +188,13 @@
     }
     .card-usage .left-txt .list-detail .item{
         margin-top:10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
     .card-usage .left-txt .list-detail .item .detail {
         font-size: 13px;
+        max-width: 200px;
     }
     .card-usage .left-txt .list-detail .item .color {
         width:15px;
