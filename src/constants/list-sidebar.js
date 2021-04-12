@@ -193,7 +193,7 @@ export const ListSidebarItem = [
 				id: '2',
 				title: 'Docs',
 				icon: faFile,
-				href: 'https://arise-finance.medium.com/',
+				href: 'https://arisefinance.gitbook.io/arise-finance/',
 				external: true,
 			},
 			// {
