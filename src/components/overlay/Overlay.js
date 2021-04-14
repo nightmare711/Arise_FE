@@ -2,7 +2,7 @@ import React from 'react'
 import { DataContext } from 'contexts/DataContext'
 import './Overlay.css'
 
-export const Overlay = () => {
+export const Overlay = ({ children }) => {
 	const data = React.useContext(DataContext)
 	const onHandleClickOverlay = () => {
 		if (data.isOpenSidebar) {
@@ -10,5 +10,9 @@ export const Overlay = () => {
 			data.setIsOpenSidebar(false)
 		}
 	}
-	return <div onClick={onHandleClickOverlay} className='overlay'></div>
+	return (
+		<div onClick={onHandleClickOverlay} className='overlay'>
+			{children}
+		</div>
+	)
 }

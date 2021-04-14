@@ -1,6 +1,7 @@
 import React from 'react'
 import { ListSidebarItem } from 'constants/list-sidebar'
 import { useLocation } from 'react-router-dom'
+import { DataContext } from 'contexts/DataContext'
 
 export const useDetectRoute = (itemActive, setItemActive) => {
 	const location = useLocation()
@@ -47,5 +48,26 @@ const onHandleActiveItemSidebar = (itemActive, preItemActive, setItemActive) => 
 		}
 	} catch (err) {
 		console.log(err)
+	}
+}
+export const useListToken = () => {
+	const data = React.useContext(DataContext)
+	return (className) => {
+		if (className === 'input-from') {
+			console.log(data.isOpenSelectTokenFrom)
+			if (data.isOpenSelectTokenFrom) {
+				data.setIsOpenSelectTokenFrom(false)
+			} else {
+				data.setIsOpenSelectTokenTo(false)
+				data.setIsOpenSelectTokenFrom(true)
+			}
+		} else if (className === 'input-to') {
+			if (data.isOpenSelectTokenTo) {
+				data.setIsOpenSelectTokenTo(false)
+			} else {
+				data.setIsOpenSelectTokenFrom(false)
+				data.setIsOpenSelectTokenTo(true)
+			}
+		}
 	}
 }

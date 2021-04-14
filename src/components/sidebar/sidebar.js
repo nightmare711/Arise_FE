@@ -23,7 +23,7 @@ export const Sidebar = () => {
 				{ListSidebarItem.map((item) => {
 					return (
 						<li key={item.id} className='item'>
-							<Link>
+							<Link to={item.href || 0}>
 								<div
 									onClick={() => {
 										onHandleClickItem(item.content)
