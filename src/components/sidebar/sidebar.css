@@ -154,9 +154,11 @@
 @keyframes moveInHeight {
     from {
         max-height: 0px;
+        opacity: 0;
     }
     to {
         max-height:500px;
+        opacity: 1;
     }
 }
 @media only screen and (max-width: 865px) {
@@ -166,7 +168,7 @@
 }
 @media only screen and (max-width: 520px) {
     .sidebar {
-        width:50%
+        width:50%;
     }
     .sidebar .list-item .item {
         font-size: 13px;
