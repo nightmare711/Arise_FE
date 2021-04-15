@@ -12,17 +12,18 @@ export const InputGroup = ({ setIsLoading }) => {
 	const [info, setInfo] = React.useState({
 		from: 'BNB',
 		to: 'BUSD',
-		amount: 0,
+		amount: 1,
 	})
 	const { mutate: postAggregator } = useGetAggregator(setIsLoading)
 	return (
 		<div className='card card-aggregator'>
 			<div className='card-input'>
-				<span className='title-primary'>Find the best prices across BSC DEX platforms</span>
+				<span className='title-primary'>
+					Swap at the best rate across Binance Smart Chain Top DEXes.
+				</span>
 				<div className='alert-content'>
-					This is an alpha version, search algorithms (and paths) will be improved. More tokens and
-					exchanges would be also added soon. Features like one-click swap, arbitrage opportunities
-					and others are coming too
+					This is a beta version, more improvements are coming soon, including more tokens, DEXes,
+					arbitrage, one-click swap, etc.
 				</div>
 				<div className='input-container'>
 					<div className='input-token input-from'>
@@ -58,6 +59,7 @@ export const InputGroup = ({ setIsLoading }) => {
 							) : null}
 						</div>
 						<input
+							value={info.amount}
 							id='amount'
 							className='amount'
 							type='number'
