@@ -15,7 +15,15 @@ export const CardBug = () => {
 					rewarded up to 10,000$.
 				</span>
 			</div>
-			<div className='btn-secondary'>
+			<div
+				onClick={() =>
+					window.open(
+						'https://arise-finance.medium.com/smart-contract-bug-bounty-program-b8150fa12af?fbclid=IwAR3fvHPg8p-rADBESRRX0W6Ln2DrxyXbP7is3XIb83SkYSPg5Ue6lPhbjyw',
+						'_blank'
+					)
+				}
+				className='btn-secondary'
+			>
 				<a
 					href='https://arise-finance.medium.com/smart-contract-bug-bounty-program-b8150fa12af?fbclid=IwAR3fvHPg8p-rADBESRRX0W6Ln2DrxyXbP7is3XIb83SkYSPg5Ue6lPhbjyw'
 					target='_blank'

@@ -35,7 +35,7 @@ export const Navbar = () => {
 					onClick={async () => {
 						await wallet.connect()
 					}}
-					className='btn-primary btn-mobile'
+					className='btn-primary'
 				>
 					<a href={() => false}>Connect</a>
 				</div>
