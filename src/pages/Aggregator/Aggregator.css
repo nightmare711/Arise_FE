@@ -1,0 +1,117 @@
+.aggregator {
+    min-height: calc(100% - 80px);
+}
+
+.card-aggregator {
+    padding:30px;
+}
+.card-aggregator .alert-content {
+    background-color: rgba(6, 208, 231,0.2);
+    color:#06CFE7;
+    padding:10px;
+    border-radius: 10px;
+    margin-top:20px;
+}
+.card-aggregator .input-container {
+    display: flex;
+    flex-direction: row;
+    margin-top:30px;
+    justify-content: space-around;
+
+}
+.card-aggregator .input-container .input-token {
+    margin-right:30px;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+.card-aggregator .input-container .input-token .select-token {
+    width:100px;
+    padding: 7px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: #E4752E;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color:white;
+    position:relative;
+    cursor: pointer;
+}
+.card-aggregator .input-container .input-token .select-token .icon {
+    margin-left: 5px;
+}
+.card-aggregator .input-container .input-token .select-token .list-token {
+    position:absolute;
+    z-index: 100;
+    top:100%;
+    left:0;
+    background-color: #E4752E;
+    color:white;
+    width: 100%;
+    transition:all .3s;
+    animation: moveInOpacity .5s;
+    animation-fill-mode: forwards;
+    height:380px;
+    overflow: hidden;
+}
+.card-aggregator .input-container .input-token .select-token .list-token li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:5px 0px;
+    cursor: pointer;
+}
+.card-aggregator .input-container .input-token .select-token .list-token li:hover {
+    background-color: #f2f2f0;
+}
+.card-aggregator .input-container input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+.card-aggregator .input-container input {
+    
+    background-color: transparent;
+    border:1px solid #acb4b5;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    padding: 0px 20px;
+    width:75%;
+    border-left:none;
+    transition:all .3s;
+}
+.card-aggregator .input-container input:focus {
+    border:1px solid #E4752E !important;
+    border-left:none !important;
+}
+.card-aggregator .btn-primary {
+    background-color:  #E4752E;
+    padding:6px 35px;
+    font-weight: 700;
+    font-size: 18px;
+    color:white;
+    border-radius: 10px;
+    border: 2px solid #E4752E;
+    transition: all .1s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 17px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+.card-aggregator .btn-primary:active {
+    color: #E4752E;
+    background-color: transparent;
+}
+@keyframes moveInOpacity {
+    from {
+        height:0px;
+        opacity: 0;
+    }
+    to {
+        height:380px;
+        opacity: 1;
+    }
+}

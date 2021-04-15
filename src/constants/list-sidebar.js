@@ -9,6 +9,7 @@ import {
 	faEllipsisH,
 	faHome,
 	faBug,
+	faBinoculars,
 } from '@fortawesome/free-solid-svg-icons'
 import { faTelegramPlane, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faFile } from '@fortawesome/free-regular-svg-icons'
@@ -138,6 +139,15 @@ export const ListSidebarItem = [
 	},
 	{
 		id: 5,
+		title: 'Swap Aggregator',
+		icon: faBinoculars,
+		child: [],
+		content: 'swap-aggregator',
+		href: '/swap-aggregator',
+		onClick: () => {},
+	},
+	{
+		id: 6,
 		title: 'Referral',
 		icon: faSyncAlt,
 		child: [],
@@ -146,7 +156,7 @@ export const ListSidebarItem = [
 		onClick: () => {},
 	},
 	{
-		id: 6,
+		id: 7,
 		title: 'News',
 		icon: faNewspaper,
 		child: [],
@@ -155,7 +165,7 @@ export const ListSidebarItem = [
 		onClick: () => {},
 	},
 	{
-		id: 7,
+		id: 8,
 		title: 'Bug Bounty Programs',
 		icon: faBug,
 		child: [],
@@ -170,7 +180,7 @@ export const ListSidebarItem = [
 		},
 	},
 	{
-		id: 8,
+		id: 9,
 		title: 'Audit Reports',
 		icon: faShieldAlt,
 		child: [],
@@ -179,7 +189,7 @@ export const ListSidebarItem = [
 		onClick: () => {},
 	},
 	{
-		id: 9,
+		id: 10,
 		title: 'More',
 		icon: faEllipsisH,
 		child: [
@@ -231,13 +241,13 @@ export const listRoadmap = [
 	},
 	{
 		status: false,
-		date: '7/4 - 10/4',
+		date: '7 - 10/4',
 		title: 'Estimated Arise Private sale',
 		content: 'Join our telegram group to see more information ',
 	},
 	{
 		status: false,
-		date: '11/4 - 14/4',
+		date: '11 - 14/4',
 		title: 'Public sale, Pancake Listing & Marketing Campaign',
 		content: 'Partners with Influencers, Youtubers, AMAs, and more',
 	},

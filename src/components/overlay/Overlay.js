@@ -1,14 +1,22 @@
 import React from 'react'
-import { DataContext } from 'contexts/DataContext'
+import { useClickOverlay } from 'services/UI/useDevelopUI'
 import './Overlay.css'
 
-export const Overlay = () => {
-	const data = React.useContext(DataContext)
-	const onHandleClickOverlay = () => {
-		if (data.isOpenSidebar) {
-			document.querySelector('.sidebar').style.transform = 'translateX(-300px)'
-			data.setIsOpenSidebar(false)
-		}
-	}
-	return <div onClick={onHandleClickOverlay} className='overlay'></div>
+export const Overlay = ({ children, transparent }) => {
+	const onHandleClickOverlay = useClickOverlay()
+	return (
+		<div
+			style={
+				transparent
+					? {
+							backgroundColor: 'transparent',
+					  }
+					: {}
+			}
+			onClick={onHandleClickOverlay}
+			className='overlay'
+		>
+			{children}
+		</div>
+	)
 }
