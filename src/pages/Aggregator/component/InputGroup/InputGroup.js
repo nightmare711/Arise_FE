@@ -37,8 +37,8 @@ export const InputGroup = ({ setIsLoading }) => {
 											style={
 												token.name === info.to || token.name === info.from
 													? {
-															backgroundColor: '#dbdbdb',
 															cursor: 'not-allowed',
+															opacity: 0.4,
 													  }
 													: {}
 											}
@@ -81,8 +81,8 @@ export const InputGroup = ({ setIsLoading }) => {
 											style={
 												token.name === info.to || token.name === info.from
 													? {
-															backgroundColor: '#dbdbdb',
 															cursor: 'not-allowed',
+															opacity: 0.4,
 													  }
 													: {}
 											}

@@ -9,10 +9,6 @@ export const Tokens = [
 	},
 	{
 		status: true,
-		name: 'OCT',
-	},
-	{
-		status: true,
 		name: 'DOT',
 	},
 	{

@@ -1,23 +1,19 @@
 import React from 'react'
 import { DataContext } from 'contexts/DataContext'
 import { Navbar, Sidebar, PaddingContent, Overlay } from 'components'
+import { useUpdateOverlayTrans, useUpdateOverlayColor } from 'services/UI/useDevelopUI'
 import { Aggregator } from 'pages'
 import { HomePage, ErrorPage } from 'pages'
 import { Switch, Route } from 'react-router-dom'
 
 function App() {
 	const data = React.useContext(DataContext)
-	React.useEffect(() => {
-		if (data.isOpenSidebar) {
-			data.setIsOpenOverlay(true)
-		} else {
-			data.setIsOpenOverlay(false)
-		}
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [data.isOpenSidebar])
+	useUpdateOverlayColor()
+	useUpdateOverlayTrans()
 	return (
 		<div>
 			{data.isOpenOverlay ? <Overlay /> : null}
+			{data.isOpenOverlayTrans ? <Overlay transparent /> : null}
 			<Navbar />
 			<Sidebar />
 			<PaddingContent>

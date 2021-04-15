@@ -13,6 +13,7 @@ const Providers = ({ children }) => {
 	const [isOpenOverlay, setIsOpenOverlay] = React.useState(false)
 	const [isOpenSelectTokenFrom, setIsOpenSelectTokenFrom] = React.useState(false)
 	const [isOpenSelectTokenTo, setIsOpenSelectTokenTo] = React.useState(false)
+	const [isOpenOverlayTrans, setIsOpenOverlayTrans] = React.useState(false)
 	const [aggregator, setAggregator] = React.useState([])
 	return (
 		<UseWalletProvider
@@ -26,6 +27,8 @@ const Providers = ({ children }) => {
 				<RefreshContextProvider>
 					<DataContext.Provider
 						value={{
+							isOpenOverlayTrans,
+							setIsOpenOverlayTrans,
 							isOpenSidebar,
 							setIsOpenSidebar,
 							isOpenOverlay,

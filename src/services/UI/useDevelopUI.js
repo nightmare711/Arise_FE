@@ -71,3 +71,40 @@ export const useListToken = () => {
 		}
 	}
 }
+export const useUpdateOverlayTrans = () => {
+	const data = React.useContext(DataContext)
+	React.useEffect(() => {
+		if (data.isOpenSelectTokenFrom || data.isOpenSelectTokenTo) {
+			data.setIsOpenOverlayTrans(true)
+		} else {
+			data.setIsOpenOverlayTrans(false)
+		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [data.isOpenSelectTokenFrom, data.isOpenSelectTokenTo])
+}
+export const useUpdateOverlayColor = () => {
+	const data = React.useContext(DataContext)
+	React.useEffect(() => {
+		if (data.isOpenSidebar) {
+			data.setIsOpenOverlay(true)
+		} else {
+			data.setIsOpenOverlay(false)
+		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [data.isOpenSidebar])
+}
+export const useClickOverlay = () => {
+	const data = React.useContext(DataContext)
+	return () => {
+		if (data.isOpenSidebar) {
+			document.querySelector('.sidebar').style.transform = 'translateX(-300px)'
+			data.setIsOpenSidebar(false)
+		}
+		if (data.isOpenSelectTokenTo) {
+			data.setIsOpenSelectTokenTo(false)
+		}
+		if (data.isOpenSelectTokenFrom) {
+			data.setIsOpenSelectTokenFrom(false)
+		}
+	}
+}
