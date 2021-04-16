@@ -139,7 +139,7 @@ export const ListSidebarItem = [
 	},
 	{
 		id: 5,
-		title: 'Swap Aggregator',
+		title: 'Dex Aggregator',
 		icon: faBinoculars,
 		child: [],
 		content: 'swap-aggregator',
@@ -234,38 +234,25 @@ export const ListSidebarItem = [
 export const listRoadmap = [
 	{
 		status: true,
-		date: '1/4',
-		title: 'Airdrop for Contributors ',
-		content:
-			'For our first 2,000 valid participants. Details will be announced soon on our Twitter',
-	},
-	{
-		status: false,
-		date: '7 - 10/4',
-		title: 'Estimated Arise Private sale',
-		content: 'Join our telegram group to see more information ',
-	},
-	{
-		status: false,
-		date: '11 - 14/4',
-		title: 'Public sale, Pancake Listing & Marketing Campaign',
-		content: 'Partners with Influencers, Youtubers, AMAs, and more',
-	},
-	{
-		status: 'not-yet',
 		date: '15/4',
-		title: 'Coingecko & Coinmarketcap Listing ',
+		title: 'Dex Aggregator',
 		content: '',
 	},
 	{
 		status: 'not-yet',
-		date: '20/4',
+		date: 'April',
+		title: 'Listing on PancakeSwap & JulSwap',
+		content: '',
+	},
+	{
+		status: 'not-yet',
+		date: 'April',
 		title: 'Launch the first crypto game using ARI token & daily ARI airdrop event',
 		content: '',
 	},
 	{
 		status: 'not-yet',
-		date: '30/4',
+		date: 'April',
 		title: 'Launch Farm & Retirement Vault',
 		content: '',
 	},

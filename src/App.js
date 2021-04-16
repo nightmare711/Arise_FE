@@ -18,7 +18,7 @@ function App() {
 			<Sidebar />
 			<PaddingContent>
 				<Switch>
-					<Route exact path='/farm-aggregator' component={Aggregator} />
+					<Route exact path='/swap-aggregator' component={Aggregator} />
 					<Route exact path='/' component={HomePage} />
 					<Route exact path='/home' component={HomePage} />
 					<Route component={ErrorPage} />

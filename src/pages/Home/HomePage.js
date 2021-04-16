@@ -5,12 +5,13 @@ import {
 	CardSecureInfo,
 	CardRoadmap,
 	CardExtendInfo,
-	CardChart,
 	CardBug,
 	CardCopyRight,
-	CardUsage,
 	CardBanner,
 } from './Card'
+import Percent from 'assets/percent.jpg'
+import BannerMobile from 'assets/banner.png'
+import Banner from 'assets/banner-mobile.jpg'
 import './Homepage.css'
 
 export const HomePage = () => {
@@ -18,14 +19,15 @@ export const HomePage = () => {
 		<div className='home-page'>
 			<CardIntro />
 			{/* <CardSale /> */}
-			<CardBanner />
+			<CardBanner desktopView={Banner} mobileView={BannerMobile} />
 			<CardInfo />
 			<CardBug />
 			<CardSecureInfo />
 			<CardRoadmap />
 			<CardExtendInfo />
-			<CardChart />
-			<CardUsage />
+			{/* <CardChart />
+			<CardUsage /> */}
+			<CardBanner desktopView={Percent} mobileView={Percent} />
 			<CardCopyRight />
 		</div>
 	)

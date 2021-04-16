@@ -1,19 +1,12 @@
 import React from 'react'
-import BannerMobile from 'assets/banner.jpg'
-import Banner from 'assets/banner-mobile.jpg'
 
-export const CardBanner = () => {
+export const CardBanner = ({ desktopView, mobileView }) => {
 	return (
 		<div className='card card-intro'>
 			<img
-				onClick={() =>
-					window.open(
-						'https://arise-finance.medium.com/private-sale-for-arise-enthusiasts-3e0d68415a38',
-						'_blank'
-					)
-				}
+				onClick={() => window.open('https://bscstarter.finance/#/pool/46', '_blank')}
 				style={{ borderRadius: '20px', cursor: 'pointer' }}
-				src={window.screen.width > 520 ? Banner : BannerMobile}
+				src={window.screen.width > 520 ? desktopView : mobileView}
 				className='img-intro'
 				alt='banner'
 			/>
