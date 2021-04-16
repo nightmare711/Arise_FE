@@ -21,6 +21,7 @@ function App() {
 					<Route exact path='/swap-aggregator' component={Aggregator} />
 					<Route exact path='/' component={HomePage} />
 					<Route exact path='/home' component={HomePage} />
+					{/* <Route exact path='/news' component={NewsPage} /> */}
 					<Route component={ErrorPage} />
 				</Switch>
 			</PaddingContent>

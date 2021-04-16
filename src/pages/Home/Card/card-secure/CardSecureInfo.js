@@ -8,7 +8,7 @@ export const CardSecureInfo = () => {
 			<img src={Shield} className='img-main' alt='Shield' />
 			<div className='txt-frame'>
 				<span className='title-primary'>AUDIT ON ITS WAY.</span>
-				<span className='content'>Contract is audited by Quil now.</span>
+				<span className='content'>Contract is audited by Solidity now.</span>
 			</div>
 		</div>
 	)

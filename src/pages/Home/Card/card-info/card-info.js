@@ -18,7 +18,7 @@ const InfoChart = () => {
 	return (
 		<div className='card-grid card-value info-chart'>
 			<span className='title-primary'>ARI Price Chart</span>
-			<div className='coming-soon'>Coming soon</div>
+			<div className='coming-soon'>Available after Pancake listing</div>
 			{/* <img className='illustrate' src={ChartImg} alt='Illustrate' />
 			<div className='footer-card'>
 				<div className='btn-secondary'>
@@ -61,7 +61,17 @@ export const InfoLiquidity = () => {
 	return (
 		<div className='card-grid card-value info-liquidity info-token'>
 			<span className='title-primary'>Liquidity Locked</span>
-			<div className='coming-soon'>Coming soon</div>
+			<div
+				className='coming-soon'
+				onClick={() =>
+					window.open(
+						'https://team.finance/view-coin/0xa861F33D8AC80b64C1B8C7b4C99599474b79888a?name=ARISE&symbol=ARI',
+						'_blank'
+					)
+				}
+			>
+				View $ARI token lock on team.finance
+			</div>
 			{/* <div className='percent-chart'>
 				<div className='bg-st'>85%</div>
 			</div>
