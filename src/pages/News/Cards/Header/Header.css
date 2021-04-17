@@ -1,6 +1,10 @@
 .card-header-new {
     
 }
+.card-header-new .active {
+    opacity: 0.5;
+    cursor: not-allowed !important;
+}
 .card-header-new.card {
     background-color: transparent !important;
     border: none;
@@ -9,7 +13,7 @@
 }
 .card-header-new .heading-primary {
     font-weight: 900;
-    font-size: 43px;
+    font-size: 3rem;
     font-family: 'Roboto';
     color: #350747;
 }
@@ -36,4 +40,43 @@
 .card-header-new .selector-container .selector-tabs li {
     margin-right: 30px;
     cursor: pointer;
+    text-align: center;
+}
+@media only screen and (max-width: 1050px) { 
+    .card-header-new .heading-primary {
+        font-size: 2.4rem;
+    }
+    .card-header-new .heading-tertiary {
+        font-size:20px;
+    }
+    .card-header-new .selector-container .selector-tabs{
+        font-size: 18px;
+    }
+    .card-header-new .selector-container .selector-tabs li  {
+        margin-right:20px;
+    }
+}
+@media only screen and (max-width: 865px) { 
+}
+@media only screen and (max-width: 520px) {
+    .card-header-new .heading-primary {
+        font-size: 2rem;
+    }
+    .card-header-new .heading-tertiary {
+        font-size:17px;
+    }
+    .card-header-new .selector-container .selector-tabs {
+        font-size: 15px;
+    }
+    .card-header-new .selector-container .selector-tabs li {
+        margin-right: 10px;
+    }
+}
+@media only screen and (max-width: 325px) {
+    .card-header-new .selector-container .selector-tabs {
+        font-size: 13px;
+    }
+    .card-header-new .selector-container{
+        border-bottom:1px solid black
+    }
 }

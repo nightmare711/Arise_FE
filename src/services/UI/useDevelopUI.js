@@ -108,3 +108,23 @@ export const useClickOverlay = () => {
 		}
 	}
 }
+
+export const useUpdateActiveFilter = (filter) => {
+	console.log(filter)
+	const { active, preActive } = filter
+	React.useEffect(() => {
+		try {
+			if (!active) {
+				document.querySelector('.card-header-new .all').classList.add('active')
+			}
+			if (preActive) {
+				document.querySelector(`.card-header-new .${preActive}`).classList.remove('active')
+			}
+			if (active !== preActive) {
+				document.querySelector(`.card-header-new .${active}`).classList.add('active')
+			}
+		} catch {
+			console.log('Some thing went wrong')
+		}
+	}, [active, preActive])
+}
