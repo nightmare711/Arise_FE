@@ -5,6 +5,13 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 import Provider from './Providers'
 import { BrowserRouter as Router } from 'react-router-dom'
+import TimeAgo from 'javascript-time-ago'
+
+import en from 'javascript-time-ago/locale/en'
+import ru from 'javascript-time-ago/locale/ru'
+
+TimeAgo.addDefaultLocale(en)
+TimeAgo.addLocale(ru)
 
 ReactDOM.render(
 	<React.StrictMode>

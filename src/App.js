@@ -3,7 +3,7 @@ import { DataContext } from 'contexts/DataContext'
 import { Navbar, Sidebar, PaddingContent, Overlay } from 'components'
 import { useUpdateOverlayTrans, useUpdateOverlayColor } from 'services/UI/useDevelopUI'
 import { Aggregator } from 'pages'
-import { HomePage, ErrorPage } from 'pages'
+import { HomePage, ErrorPage, NewsPage } from 'pages'
 import { Switch, Route } from 'react-router-dom'
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
 					<Route exact path='/swap-aggregator' component={Aggregator} />
 					<Route exact path='/' component={HomePage} />
 					<Route exact path='/home' component={HomePage} />
-					{/* <Route exact path='/news' component={NewsPage} /> */}
+					<Route exact path='/news' component={NewsPage} />
 					<Route component={ErrorPage} />
 				</Switch>
 			</PaddingContent>
