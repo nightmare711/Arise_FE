@@ -10,8 +10,8 @@ import {
 	CardBanner,
 } from './Card'
 import Percent from 'assets/percent.jpg'
-import BannerMobile from 'assets/banner.png'
-import Banner from 'assets/banner-mobile.png'
+import BannerMobile from 'assets/banner-mobile.png'
+import Banner from 'assets/banner.png'
 import './Homepage.css'
 
 export const HomePage = () => {
