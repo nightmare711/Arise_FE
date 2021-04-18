@@ -11,7 +11,7 @@ import {
 } from './Card'
 import Percent from 'assets/percent.jpg'
 import BannerMobile from 'assets/banner.png'
-import Banner from 'assets/banner-mobile.jpg'
+import Banner from 'assets/banner-mobile.png'
 import './Homepage.css'
 
 export const HomePage = () => {
