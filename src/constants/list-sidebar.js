@@ -10,6 +10,7 @@ import {
 	faHome,
 	faBug,
 	faBinoculars,
+	faRocket,
 } from '@fortawesome/free-solid-svg-icons'
 import { faTelegramPlane, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faFile } from '@fortawesome/free-regular-svg-icons'
@@ -139,6 +140,15 @@ export const ListSidebarItem = [
 	},
 	{
 		id: 5,
+		title: 'IFO',
+		icon: faRocket,
+		child: [],
+		content: 'ifo',
+		href: '/ifo',
+		onClick: () => {},
+	},
+	{
+		id: 6,
 		title: 'Dex Aggregator',
 		icon: faBinoculars,
 		child: [],
@@ -147,7 +157,7 @@ export const ListSidebarItem = [
 		onClick: () => {},
 	},
 	{
-		id: 6,
+		id: 7,
 		title: 'Referral',
 		icon: faSyncAlt,
 		child: [],
@@ -156,7 +166,7 @@ export const ListSidebarItem = [
 		onClick: () => {},
 	},
 	{
-		id: 7,
+		id: 8,
 		title: 'News',
 		icon: faNewspaper,
 		child: [],
@@ -165,7 +175,7 @@ export const ListSidebarItem = [
 		onClick: () => {},
 	},
 	{
-		id: 8,
+		id: 9,
 		title: 'Bug Bounty Programs',
 		icon: faBug,
 		child: [],
@@ -180,7 +190,7 @@ export const ListSidebarItem = [
 		},
 	},
 	{
-		id: 9,
+		id: 10,
 		title: 'Audit Reports',
 		icon: faShieldAlt,
 		child: [],
@@ -189,7 +199,7 @@ export const ListSidebarItem = [
 		onClick: () => {},
 	},
 	{
-		id: 10,
+		id: 11,
 		title: 'More',
 		icon: faEllipsisH,
 		child: [
