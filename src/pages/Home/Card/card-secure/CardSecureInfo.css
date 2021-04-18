@@ -10,6 +10,7 @@
 .card-secure-info .txt-frame {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     margin-left:40px;
     width:60%;
 }

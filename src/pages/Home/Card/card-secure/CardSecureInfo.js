@@ -7,8 +7,15 @@ export const CardSecureInfo = () => {
 		<div className='card card-secure-info'>
 			<img src={Shield} className='img-main' alt='Shield' />
 			<div className='txt-frame'>
-				<span className='title-primary'>AUDIT ON ITS WAY.</span>
-				<span className='content'>Contract is audited by Solidity now.</span>
+				<span className='title-primary'>Contract is audited by Solidity now.</span>
+				<div
+					onClick={() =>
+						window.open('https://arisefinance.gitbook.io/arise-finance/audit-result', '_blank')
+					}
+					className='btn-secondary'
+				>
+					Read more
+				</div>
 			</div>
 		</div>
 	)
