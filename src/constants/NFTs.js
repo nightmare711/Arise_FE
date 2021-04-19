@@ -1,4 +1,9 @@
-import AriseBeat from 'assets/NFTs/Arise-Beat.png'
+import UnicornRarePoster from 'assets/NFTs/AriseUnicorn/RarePoster.jpg'
+import UnicornEpicPoster from 'assets/NFTs/AriseUnicorn/EpicPoster.jpg'
+import UnicornLegendPoster from 'assets/NFTs/AriseUnicorn/LegendPoster.jpg'
+import BeatRarePoster from 'assets/NFTs/AriseBeat/RarePoster.jpg'
+import BeatEpicPoster from 'assets/NFTs/AriseBeat/EpicPoster.jpg'
+import BeatLegendPoster from 'assets/NFTs/AriseBeat/LegendPoster.jpg'
 import BeatLegend from 'assets/NFTs/AriseBeat/Legend.mp4'
 import BeatEpic from 'assets/NFTs/AriseBeat/Epic.mp4'
 import BeatRare from 'assets/NFTs/AriseBeat/Rare.mp4'
@@ -9,7 +14,7 @@ import UnicornRare from 'assets/NFTs/AriseUnicorn/Rare.mp4'
 export const listUnicorn = [
 	{
 		title: 'Arise Unicorn',
-		image: AriseBeat,
+		image: UnicornRarePoster,
 		scarcity: {
 			level: 'rare',
 			color: '#5725E5',
@@ -18,27 +23,27 @@ export const listUnicorn = [
 	},
 	{
 		title: 'Arise Unicorn',
-		image: AriseBeat,
-		scarcity: {
-			level: 'legend',
-			color: '#E2AD1F',
-		},
-		video: UnicornLegend,
-	},
-	{
-		title: 'Arise Unicorn',
-		image: AriseBeat,
+		image: UnicornEpicPoster,
 		scarcity: {
 			level: 'epic',
 			color: '#9900D6',
 		},
 		video: UnicornEpic,
 	},
+	{
+		title: 'Arise Unicorn',
+		image: UnicornLegendPoster,
+		scarcity: {
+			level: 'legend',
+			color: '#E2AD1F',
+		},
+		video: UnicornLegend,
+	},
 ]
 export const listBeat = [
 	{
 		title: 'Arise Beat',
-		image: AriseBeat,
+		image: BeatRarePoster,
 		scarcity: {
 			level: 'rare',
 			color: '#5725E5',
@@ -47,7 +52,7 @@ export const listBeat = [
 	},
 	{
 		title: 'Arise Beat',
-		image: AriseBeat,
+		image: BeatEpicPoster,
 		scarcity: {
 			level: 'epic',
 			color: '#9900D6',
@@ -56,7 +61,7 @@ export const listBeat = [
 	},
 	{
 		title: 'Arise Beat',
-		image: AriseBeat,
+		image: BeatLegendPoster,
 		scarcity: {
 			level: 'legend',
 			color: '#E2AD1F',
