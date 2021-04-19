@@ -1,6 +1,6 @@
 import React from 'react'
 import { CardValue } from './Card/CardValue/CardValue'
-import { listCollection } from 'constants/NFTs'
+import { listBeat, listUnicorn } from 'constants/NFTs'
 import { CardCopyRight } from 'pages/Home/Card'
 import './Collection.css'
 
@@ -14,11 +14,22 @@ export const Collection = () => {
 						At every milestone, we release a new NFTs collection to benchmark the growth of ARISE
 						FINANCE
 					</span>
-					<span className='txt-public-sale'>Arise Beat - Public Sale Launched</span>
-					<span className='txt-public-sale'>Arise Unicorn - Private Sale Launched</span>
 				</div>
+				<div className='txt-public-sale'>Arise Unicorn - Private Sale Launched</div>
 				<div className='container-news container-collection'>
-					{listCollection.map((item, index) => (
+					{listUnicorn.map((item, index) => (
+						<CardValue
+							key={index}
+							title={item.title}
+							image={item.image}
+							scarcity={item.scarcity}
+							video={item.video}
+						/>
+					))}
+				</div>
+				<div className='txt-public-sale'>Arise Beat - Public Sale Launched</div>
+				<div className='container-news container-collection'>
+					{listBeat.map((item, index) => (
 						<CardValue
 							key={index}
 							title={item.title}

@@ -6,7 +6,7 @@ import UnicornLegend from 'assets/NFTs/AriseUnicorn/Legend.mp4'
 import UnicornEpic from 'assets/NFTs/AriseUnicorn/Epic.mp4'
 import UnicornRare from 'assets/NFTs/AriseUnicorn/Rare.mp4'
 
-export const listCollection = [
+export const listUnicorn = [
 	{
 		title: 'Arise Unicorn',
 		image: AriseBeat,
@@ -34,6 +34,8 @@ export const listCollection = [
 		},
 		video: UnicornEpic,
 	},
+]
+export const listBeat = [
 	{
 		title: 'Arise Beat',
 		image: AriseBeat,
