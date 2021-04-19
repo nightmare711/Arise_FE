@@ -4,7 +4,7 @@ import BeatEpic from 'assets/NFTs/AriseBeat/Epic.mp4'
 import BeatRare from 'assets/NFTs/AriseBeat/Rare.mp4'
 import UnicornLegend from 'assets/NFTs/AriseUnicorn/Legend.mp4'
 import UnicornEpic from 'assets/NFTs/AriseUnicorn/Epic.mp4'
-import UnicornRare from 'assets/NFTs/AriseBeat/Rare.mp4'
+import UnicornRare from 'assets/NFTs/AriseUnicorn/Rare.mp4'
 
 export const listCollection = [
 	{

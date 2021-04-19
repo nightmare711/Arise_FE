@@ -14,6 +14,7 @@ export const Collection = () => {
 						At every milestone, we release a new NFTs collection to benchmark the growth of ARISE
 						FINANCE
 					</span>
+					<span className='txt-public-sale'>Arise Beat - Public Sale Launched</span>
 					<span className='txt-public-sale'>Arise Unicorn - Private Sale Launched</span>
 				</div>
 				<div className='container-news container-collection'>
