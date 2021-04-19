@@ -2,6 +2,7 @@ import React from 'react'
 import { CardValue } from './Card/CardValue/CardValue'
 import { listBeat, listUnicorn } from 'constants/NFTs'
 import { CardCopyRight } from 'pages/Home/Card'
+import { CardText } from './Card/CardText/CardText'
 import './Collection.css'
 
 export const Collection = () => {
@@ -39,6 +40,7 @@ export const Collection = () => {
 						/>
 					))}
 				</div>
+				<CardText />
 			</div>
 			<CardCopyRight />
 		</div>
