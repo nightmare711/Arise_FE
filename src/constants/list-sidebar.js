@@ -11,7 +11,9 @@ import {
 	faBug,
 	faBinoculars,
 	faRocket,
+	faThLarge,
 } from '@fortawesome/free-solid-svg-icons'
+// import { faImages } from '@fortawesome/free-regular-svg-icons'
 import { faTelegramPlane, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faFile } from '@fortawesome/free-regular-svg-icons'
 export const ListSidebarItem = [
@@ -200,6 +202,15 @@ export const ListSidebarItem = [
 	},
 	{
 		id: 11,
+		title: 'NFT Marketplace',
+		icon: faThLarge,
+		child: [],
+		content: 'my-collection',
+		href: '/my-collection',
+		onClick: () => {},
+	},
+	{
+		id: 12,
 		title: 'More',
 		icon: faEllipsisH,
 		child: [

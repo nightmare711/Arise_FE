@@ -26,6 +26,7 @@
     "react-scripts": "4.0.3",
     "react-time-ago": "^6.2.2",
     "use-wallet": "^0.8.1",
+    "video-react": "^0.14.1",
     "web-vitals": "^1.0.1",
     "web3": "^1.3.5",
     "web3-core-helpers": "^1.3.4",

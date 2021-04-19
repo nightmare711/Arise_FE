@@ -1,0 +1,43 @@
+.collection {
+    
+}
+.collection .container-w-min-w{
+    min-height: calc(100vh - 80px);
+}
+.collection .card-header-col {
+    border-bottom:2px solid black;
+    padding-bottom:15px;
+}
+
+.collection .txt-public-sale {
+    margin-top: 20px;
+    display: block;
+    font-size: 30px;
+    font-weight: 400;
+}
+.collection .container-collection {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+    
+}
+@media only screen and (max-width: 1050px) { 
+    .collection .container-collection {
+        grid-template-columns: 1fr 1fr;
+    }
+    .collection .txt-public-sale {
+        font-size: 24px;
+    }
+}
+@media only screen and (max-width: 700px) { 
+    .collection .container-collection {
+        grid-gap:20px;
+    }
+}
+@media only screen and (max-width: 520px) {
+    .collection .container-collection {
+        grid-template-columns: 1fr;
+    }
+    .collection .txt-public-sale {
+        font-size: 18px;
+    }
+}
