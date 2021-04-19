@@ -8,33 +8,6 @@ import UnicornRare from 'assets/NFTs/AriseUnicorn/Rare.mp4'
 
 export const listCollection = [
 	{
-		title: 'Arise Beat',
-		image: AriseBeat,
-		scarcity: {
-			level: 'rare',
-			color: '#5725E5',
-		},
-		video: BeatRare,
-	},
-	{
-		title: 'Arise Beat',
-		image: AriseBeat,
-		scarcity: {
-			level: 'epic',
-			color: '#9900D6',
-		},
-		video: BeatEpic,
-	},
-	{
-		title: 'Arise Beat',
-		image: AriseBeat,
-		scarcity: {
-			level: 'legend',
-			color: '#E2AD1F',
-		},
-		video: BeatLegend,
-	},
-	{
 		title: 'Arise Unicorn',
 		image: AriseBeat,
 		scarcity: {
@@ -60,5 +33,32 @@ export const listCollection = [
 			color: '#9900D6',
 		},
 		video: UnicornEpic,
+	},
+	{
+		title: 'Arise Beat',
+		image: AriseBeat,
+		scarcity: {
+			level: 'rare',
+			color: '#5725E5',
+		},
+		video: BeatRare,
+	},
+	{
+		title: 'Arise Beat',
+		image: AriseBeat,
+		scarcity: {
+			level: 'epic',
+			color: '#9900D6',
+		},
+		video: BeatEpic,
+	},
+	{
+		title: 'Arise Beat',
+		image: AriseBeat,
+		scarcity: {
+			level: 'legend',
+			color: '#E2AD1F',
+		},
+		video: BeatLegend,
 	},
 ]
