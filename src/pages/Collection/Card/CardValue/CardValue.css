@@ -11,7 +11,7 @@
 }
 .collection video {
     width: 100%;
-    min-height: 400px;
+    height: 400px;
     object-fit: cover;
     pointer-events: none;
     outline: none;
@@ -72,23 +72,13 @@
   }
    */
 @media only screen and (max-width: 1050px) { 
-    .collection .container-collection {
-        grid-template-columns: 1fr 1fr;
-    }
-    .collection .txt-public-sale {
-        font-size: 24px;
+    .collection video { 
+        height:500px;
     }
 }
 @media only screen and (max-width: 700px) { 
-    .collection .container-collection {
-        grid-gap:20px;
-    }
+    
 }
 @media only screen and (max-width: 520px) {
-    .collection .container-collection {
-        grid-template-columns: 1fr;
-    }
-    .collection .txt-public-sale {
-        font-size: 18px;
-    }
+    
 }
