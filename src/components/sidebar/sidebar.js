@@ -32,6 +32,7 @@ export const Sidebar = () => {
 									className={`${item.content}  main-item`}
 								>
 									<span className='left-text'>
+										{item.bestSale ? <span class={`tooltiptext ${item.content}`}>HOT</span> : null}
 										<FontAwesomeIcon className={'icon'} icon={item.icon} />
 										<span>
 											{item.title}

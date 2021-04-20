@@ -37,10 +37,37 @@
     cursor:pointer;
     
 }
+.sidebar .tooltiptext {
+    font-size: 10px;
+    font-weight: 600;
+    width: 30px;
+    background-color: #EB5756;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 0px 0;
+    position: absolute;
+    z-index: 1;
+    bottom:110%;
+    right:2%;
+    margin-left: -60px;
+}
+  
+.sidebar .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left:40%;
+    margin-left: -5px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #EB5756 transparent transparent transparent;
+}
 .sidebar .list-item .item .left-text {
     display: flex;
     flex-direction: row;
     align-items: center;
+    position: relative
 }
 .sidebar .list-item .item .left-text span{
     margin-left:20px;
@@ -196,5 +223,23 @@
     .sidebar .sidebar-bottom .bottom-bot {
         margin-top: 5px;
     }
+    .sidebar .tooltiptext {
+        bottom:100%;
+    }
 }
+
+@media only screen and (max-width: 365px) { 
+    .sidebar .tooltiptext.my-collection {
+        bottom:50%;
+        right:10px;
+    }
+}
+@media only screen and (max-width: 345px) {
+    .sidebar .tooltiptext.swap-aggregator {
+        bottom:50%;
+        right:10px;
+    }
+ }
+
+
 

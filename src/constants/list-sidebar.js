@@ -43,13 +43,14 @@ export const ListSidebarItem = [
 				href: '/ari-live-chart',
 				content: 'buy-ari',
 			},
-			{
-				id: '3',
-				title: 'DEX Aggregator',
-				href: '/dex-aggregator',
-				content: 'buy-ari',
-			},
+			// {
+			// 	id: '3',
+			// 	title: 'DEX Aggregator',
+			// 	href: '/dex-aggregator',
+			// 	content: 'buy-ari',
+			// },
 		],
+		bestSale: false,
 		content: 'buy-ari',
 		onClick: () => {},
 	},
@@ -83,6 +84,7 @@ export const ListSidebarItem = [
 				content: 'swap',
 			},
 		],
+		bestSale: false,
 		content: 'swap',
 		onClick: () => {},
 	},
@@ -111,6 +113,7 @@ export const ListSidebarItem = [
 				content: 'tools',
 			},
 		],
+		bestSale: false,
 		content: 'tools',
 	},
 	{
@@ -118,6 +121,7 @@ export const ListSidebarItem = [
 		title: 'Game',
 		icon: faGamepad,
 		onClick: () => {},
+		bestSale: false,
 		child: [
 			{
 				id: '1',
@@ -148,6 +152,7 @@ export const ListSidebarItem = [
 		content: 'ifo',
 		href: '/ifo',
 		onClick: () => {},
+		bestSale: false,
 	},
 	{
 		id: 6,
@@ -157,6 +162,7 @@ export const ListSidebarItem = [
 		content: 'swap-aggregator',
 		href: '/swap-aggregator',
 		onClick: () => {},
+		bestSale: true,
 	},
 	{
 		id: 7,
@@ -166,6 +172,7 @@ export const ListSidebarItem = [
 		content: 'referral',
 		href: '/referral',
 		onClick: () => {},
+		bestSale: false,
 	},
 	{
 		id: 8,
@@ -175,6 +182,7 @@ export const ListSidebarItem = [
 		content: 'news',
 		href: '/news',
 		onClick: () => {},
+		bestSale: false,
 	},
 	{
 		id: 9,
@@ -184,6 +192,7 @@ export const ListSidebarItem = [
 		content: 'bug-bounty',
 		extra: '',
 		href: '',
+		bestSale: false,
 		onClick: () => {
 			window.open(
 				'https://arise-finance.medium.com/smart-contract-bug-bounty-program-b8150fa12af',
@@ -199,6 +208,7 @@ export const ListSidebarItem = [
 		content: 'audit-reports',
 		href: '/audit-reports',
 		onClick: () => {},
+		bestSale: false,
 	},
 	{
 		id: 11,
@@ -208,11 +218,13 @@ export const ListSidebarItem = [
 		content: 'my-collection',
 		href: '/my-collection',
 		onClick: () => {},
+		bestSale: true,
 	},
 	{
 		id: 12,
 		title: 'More',
 		icon: faEllipsisH,
+		bestSale: false,
 		child: [
 			// {
 			// 	id: '1',
