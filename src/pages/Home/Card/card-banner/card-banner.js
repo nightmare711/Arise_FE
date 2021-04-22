@@ -7,7 +7,7 @@ export const CardBanner = ({ desktopView, mobileView }) => {
 				onClick={() => {
 					if (desktopView !== mobileView) {
 						window.open(
-							'https://unicrypt.network/amm/pancake/ilo/0xed073C4887cC2a1cD0CCbb8527F705a8c91b2b7D',
+							'https://exchange.pancakeswap.finance/#/swap?outputCurrency=0xa861f33d8ac80b64c1b8c7b4c99599474b79888a',
 							'_blank'
 						)
 					}
