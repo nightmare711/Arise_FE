@@ -130,6 +130,7 @@ export const useUpdateActiveFilter = (filter) => {
 export const useScrollTop = (className = 'sidebar') => {
 	React.useEffect(() => {
 		document.querySelector(`.${className}`).scrollTop = 0
+		document.querySelector(`body`).scrollTop = 0
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 }
