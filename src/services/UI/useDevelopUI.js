@@ -110,7 +110,6 @@ export const useClickOverlay = () => {
 }
 
 export const useUpdateActiveFilter = (filter) => {
-	console.log(filter)
 	const { active, preActive } = filter
 	React.useEffect(() => {
 		try {
@@ -127,4 +126,10 @@ export const useUpdateActiveFilter = (filter) => {
 			console.log('Some thing went wrong')
 		}
 	}, [active, preActive])
+}
+export const useScrollTop = (className = 'sidebar') => {
+	React.useEffect(() => {
+		document.querySelector(`.${className}`).scrollTop = 0
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [])
 }
