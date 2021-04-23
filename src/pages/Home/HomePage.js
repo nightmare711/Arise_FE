@@ -1,5 +1,14 @@
 import React from 'react'
-import { CardIntro, CardInfo, CardRoadmap, CardExtendInfo, CardCopyRight, CardBanner } from './Card'
+import {
+	CardIntro,
+	CardInfo,
+	CardRoadmap,
+	CardExtendInfo,
+	CardCopyRight,
+	CardBanner,
+	CardTitle,
+	CardPriceChart,
+} from './Card'
 import Percent from 'assets/percent.jpg'
 // import BannerMobile from 'assets/banner-mobile.png'
 // import Banner from 'assets/banner.png'
@@ -12,6 +21,8 @@ export const HomePage = () => {
 			{/* <CardSale /> */}
 			{/* <CardBanner desktopView={Banner} mobileView={BannerMobile} /> */}
 			<CardInfo />
+			<CardTitle />
+			<CardPriceChart />
 			<CardRoadmap />
 			<CardExtendInfo />
 			{/* <CardChart />

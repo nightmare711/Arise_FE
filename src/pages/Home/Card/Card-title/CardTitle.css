@@ -1,0 +1,25 @@
+.card-title {
+    font-size: 2rem;
+    background-color: #350747 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:10px 0px;
+    font-weight: 600;
+    color:white;
+}
+@media only screen and (max-width: 1000px) {
+    .card-title {
+        font-size: 1.8rem;
+    }
+}
+@media only screen and (max-width: 865px) {
+    .card-title {
+        font-size: 1.6rem;
+    }
+}
+@media only screen and (max-width: 520px) {
+    .card-title {
+        font-size: 1.4rem;
+    }
+}
