@@ -100,13 +100,13 @@ export const InfoLiquidity = () => {
 		<div className='card-grid card-value info-liquidity info-token'>
 			<span className='title-primary'>Liquidity Locked</span>
 			<div className='percent-chart'>
-				<div className='bg-st'>81%</div>
+				<div className='bg-st'>95%</div>
 			</div>
 			<div className='footer-card'>
 				<div className='info-detail'>
 					<div className='right-txt'>
 						<span className='label'>Token Lock</span>
-						<span>81% total supply</span>
+						<span>95% total supply</span>
 					</div>
 				</div>
 			</div>

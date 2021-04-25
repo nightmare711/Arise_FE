@@ -23,7 +23,12 @@ export const Navbar = () => {
 			<div onClick={onHandleClickMenu} className='menu-btn'>
 				<FontAwesomeIcon icon={faBars} className='menu-icon-bar' />
 			</div>
-			<img className='navbar-logo' src={Logo} alt='logo' />
+			<div className='container-img'>
+				<img className='navbar-logo' src={Logo} alt='logo' />
+				<span>
+					<b>ARI address </b> - 0xcb77d84066f6192ab79bbc6d6450ddbe72661d7c
+				</span>
+			</div>
 			{wallet.status === 'connected' ? (
 				<div className='account btn-mobile' onClick={() => wallet.reset()}>
 					{wallet.account || 'default'}
