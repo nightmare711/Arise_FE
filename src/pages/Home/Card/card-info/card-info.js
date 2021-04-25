@@ -3,6 +3,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExchangeAlt } from '@fortawesome/free-solid-svg-icons'
 import { useTotalSupply } from 'queries/useTokenBalance'
+import LogoImg from 'assets/logo.png'
 import { Link } from 'react-router-dom'
 import { usePrice } from 'queries/usePrice'
 import AuditImg from 'assets/Audit.png'
@@ -22,7 +23,10 @@ const InfoAudit = () => {
 	return (
 		<div className='card-grid card-value info-chart'>
 			<span className='title-primary'>Security Audit</span>
-			<img src={AuditImg} alt='Audit Secure' />
+			<div className='container-img'>
+				<img src={AuditImg} alt='Audit Secure' />
+				<img className='logo' src={LogoImg} alt='logo' />
+			</div>
 			<span className='txt-frame'>No external threat on smart contract</span>
 			<div className='btn-secondary'>
 				<Link to='/audit-reports'>View more</Link>
@@ -60,7 +64,7 @@ const InfoToken = () => {
 						<span className='label'>Marketcap</span>
 						<span>
 							{data
-								? (parseFloat(data.result[0].price) * totalSupply)
+								? (parseFloat(94842656) * totalSupply)
 										.toLocaleString(undefined, {
 											maximumFractionDigits: 2,
 										})
@@ -71,10 +75,10 @@ const InfoToken = () => {
 						</span>
 					</div>
 					<div className='right-txt'>
-						<span className='label'>Total Supply</span>
+						<span className='label'>Circulating Supply</span>
 						{totalSupply ? (
 							<span>
-								{parseInt(totalSupply)
+								{parseInt(94842656)
 									.toLocaleString(undefined, { maximumFractionDigits: 2 })
 									.toString()
 									.substr(0, 4)}{' '}

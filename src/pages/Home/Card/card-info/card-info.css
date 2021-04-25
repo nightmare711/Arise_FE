@@ -45,8 +45,13 @@
     width: 100%;
     padding:0px 20px;
 }
+.info-liquidity .footer-card {
+    flex: 1;
+}
 .info-liquidity .footer-card .info-detail {
     justify-content: center;
+    align-items: flex-end;
+    flex:1;
 }
 .card-grid .footer-card .info-detail .left-txt {
     display: flex;
@@ -108,10 +113,22 @@
 .info-chart .txt-frame {
     text-align: center;
     margin: 20px 0px;
-    max-width: 200px;
 }
 .info-chart .btn-secondary {
     margin:0;
+}
+.info-chart .container-img {
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info-chart .container-img .logo {
+    position:absolute;
+    width: 40px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
 }
 .bg-st {
     width:130px;
