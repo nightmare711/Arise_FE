@@ -62,6 +62,7 @@ const InfoToken = () => {
 					<div className='left-txt'>
 						<span className='label'>Marketcap</span>
 						<span>
+							${' '}
 							{data
 								? (
 										(totalSupply.toNumber() * Math.pow(10, -9) - 94842656) *
@@ -72,8 +73,7 @@ const InfoToken = () => {
 										})
 										.toString()
 										.substr(0, 7)
-								: '--'}{' '}
-							$
+								: '--'}
 						</span>
 					</div>
 					<div className='right-txt'>
@@ -83,8 +83,8 @@ const InfoToken = () => {
 								{(totalSupply.toNumber() * Math.pow(10, -9) - 94842656)
 									.toLocaleString(undefined, { maximumFractionDigits: 2 })
 									.toString()
-									.substr(0, 4)}{' '}
-								mil ARI
+									.substr(0, 9)}{' '}
+								ARI
 							</span>
 						) : (
 							<span>--</span>
