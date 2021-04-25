@@ -1,13 +1,18 @@
 import React from 'react'
 import { DataContext } from 'contexts/DataContext'
 import { Navbar, Sidebar, PaddingContent, Overlay } from 'components'
-import { useUpdateOverlayTrans, useUpdateOverlayColor } from 'services/UI/useDevelopUI'
+import {
+	useUpdateOverlayTrans,
+	useUpdateOverlayColor,
+	useScrollTop,
+} from 'services/UI/useDevelopUI'
 import { Aggregator } from 'pages'
 import { HomePage, ErrorPage, NewsPage, IFOPage, Audit, Collection } from 'pages'
 import { Switch, Route } from 'react-router-dom'
 
 function App() {
 	const data = React.useContext(DataContext)
+	useScrollTop()
 	useUpdateOverlayColor()
 	useUpdateOverlayTrans()
 	return (

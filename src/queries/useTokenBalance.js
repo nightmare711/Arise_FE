@@ -58,3 +58,13 @@ export const useBurnedBalance = (tokenAddress) => {
 
 	return balance
 }
+// export const useGetTokenPrice = () => {
+// 	const [] = React.useState(0)
+// 	React.useEffect(() => {
+// 		const fetchPrice = async () => {
+// 			const res = await fetch(
+// 				'https://api.pancakeswap.info/api/tokens/0xa861f33d8ac80b64c1b8c7b4c99599474b79888a'
+// 			)
+// 		}
+// 	})
+// }

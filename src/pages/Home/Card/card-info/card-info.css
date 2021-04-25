@@ -3,10 +3,13 @@
 .card-info {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 300px;
+    grid-template-rows: 1fr;
     padding-left: 30px;
     padding-top: 10px;
     grid-gap: 30px;
+}
+.title-primary {
+    text-align: center;
 }
 .card-value {
     background-color: white;
@@ -42,11 +45,15 @@
     width: 100%;
     padding:0px 20px;
 }
+.info-liquidity .footer-card .info-detail {
+    justify-content: center;
+}
 .card-grid .footer-card .info-detail .left-txt {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 .card-grid .footer-card .info-detail .label {
     font-size: 14px;
@@ -59,6 +66,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 .info-token {
     justify-content: space-between;
@@ -78,16 +86,6 @@
     display:flex;
     justify-content: flex-start;
 }
-.coming-soon {
-    height:100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size:30px;
-    color:#E4752E;
-    font-weight: 600;
-    text-align: center;
-}
 .info-liquidity .percent-chart {
     font-size:40px;
     font-weight: 600;
@@ -98,10 +96,22 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    margin-top:30px;
     background:conic-gradient( 
-        #E4752E 100deg,
+        #E4752E 90deg,
         rgba(53, 7, 71, 0.3) 0 180deg, 
         #E4752E 0)
+}
+.info-chart img {
+    max-width: 40%;
+}
+.info-chart .txt-frame {
+    text-align: center;
+    margin: 20px 0px;
+    max-width: 200px;
+}
+.info-chart .btn-secondary {
+    margin:0;
 }
 .bg-st {
     width:130px;
@@ -139,6 +149,9 @@
     }
 }
 @media only screen and (max-width: 520px) {
+    .info-chart .txt-frame {
+        font-size: 14px;
+    }
     .card-grid {
         min-width: 240px;
         grid-gap: 0px;
@@ -161,6 +174,9 @@
     .info-liquidity .percent-chart {
         width:100px;
         height:100px;
+    }
+    .card-info .btn-secondary {
+        font-size: 15px;
     }
     .bg-st { 
         width:80px;

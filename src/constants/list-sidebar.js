@@ -272,7 +272,7 @@ export const listRoadmap = [
 		content: '',
 	},
 	{
-		status: 'not-yet',
+		status: true,
 		date: 'April',
 		title: 'Listing on PancakeSwap & JulSwap',
 		content: '',

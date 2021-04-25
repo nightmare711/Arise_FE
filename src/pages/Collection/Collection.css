@@ -22,6 +22,9 @@
     grid-gap: 40px;
     
 }
+@media only screen and (max-width: 1400px) { 
+    
+} 
 @media only screen and (max-width: 1050px) { 
     .collection .container-collection {
         grid-template-columns: 1fr 1fr;

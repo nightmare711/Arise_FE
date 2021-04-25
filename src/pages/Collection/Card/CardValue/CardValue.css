@@ -71,6 +71,16 @@
     border-color: black transparent transparent transparent;
   }
    */
+@media only screen and (min-width: 1600px) {
+    .collection video { 
+        height:800px ;
+    }
+}
+@media only screen and (min-width: 1500px) { 
+    .collection video { 
+        height:700px ;
+    }
+}
 @media only screen and (max-width: 1050px) { 
     .collection video { 
         height:600px;

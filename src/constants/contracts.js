@@ -1,7 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 export default {
 	ari: {
-		56: '0xa861f33d8ac80b64c1b8c7b4c99599474b79888a',
+		56: '0xcb77d84066f6192ab79bbc6d6450ddbe72661d7c',
 		97: '',
 	},
 	cake: {
