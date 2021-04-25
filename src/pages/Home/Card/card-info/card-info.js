@@ -37,15 +37,14 @@ const InfoAudit = () => {
 const InfoToken = () => {
 	const totalSupply = useTotalSupply()
 	const { data } = usePrice()
+	console.log(totalSupply.toNumber() * Math.pow(10, -9) - 94842656)
 	return (
 		<div className='card-grid card-value info-token'>
 			<div className='card-heading'>
 				<span className='title-primary'>ARI Token Information</span>
 				<span className='title-secondary'>Trade ARI Token on Pancake Swap</span>
 			</div>
-			<span className='price'>
-				${data && totalSupply ? parseFloat(data.result[0].price).toFixed(4) : '--'}
-			</span>
+			<span className='price'>${data ? parseFloat(data.result[0].price).toFixed(4) : '--'}</span>
 			<div className='footer-card'>
 				<div
 					onClick={() =>
@@ -64,21 +63,24 @@ const InfoToken = () => {
 						<span className='label'>Marketcap</span>
 						<span>
 							{data
-								? (parseFloat(94842656) * totalSupply)
+								? (
+										(totalSupply.toNumber() * Math.pow(10, -9) - 94842656) *
+										parseFloat(data.result[0].price)
+								  )
 										.toLocaleString(undefined, {
 											maximumFractionDigits: 2,
 										})
 										.toString()
-										.substr(0, 5)
+										.substr(0, 7)
 								: '--'}{' '}
-							mil $
+							$
 						</span>
 					</div>
 					<div className='right-txt'>
 						<span className='label'>Circulating Supply</span>
-						{totalSupply ? (
+						{totalSupply && data ? (
 							<span>
-								{parseInt(94842656)
+								{(totalSupply.toNumber() * Math.pow(10, -9) - 94842656)
 									.toLocaleString(undefined, { maximumFractionDigits: 2 })
 									.toString()
 									.substr(0, 4)}{' '}

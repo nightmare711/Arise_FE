@@ -29,6 +29,7 @@ export const useTotalSupply = () => {
 		async function fetchTotalSupply() {
 			const cakeContract = getContract(ariABI, getCakeAddress())
 			const supply = await cakeContract.methods.totalSupply().call()
+
 			setTotalSupply(new BigNumber(supply))
 		}
 

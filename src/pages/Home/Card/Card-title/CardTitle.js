@@ -6,7 +6,7 @@ export const CardTitle = () => {
 		<div className='card card-title'>
 			<span>ARI PRICE CHART</span>
 			<span className='content'>
-				ARI price chart plugin may show some laggards to the real-time price above
+				Price from chart and price ticker above may show some difference due to data sync.
 			</span>
 		</div>
 	)
