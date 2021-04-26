@@ -7,6 +7,7 @@ import LogoImg from 'assets/logo.png'
 import { Link } from 'react-router-dom'
 import { usePrice } from 'queries/usePrice'
 import AuditImg from 'assets/Audit.png'
+import CountUp from 'react-countup'
 import './card-info.css'
 
 export const CardInfo = () => {
@@ -44,7 +45,14 @@ const InfoToken = () => {
 				<span className='title-primary'>ARI Token Information</span>
 				<span className='title-secondary'>Trade ARI Token on Pancake Swap</span>
 			</div>
-			<span className='price'>${data ? parseFloat(data.result[0].price).toFixed(4) : '--'}</span>
+			<span className='price'>
+				$
+				{data ? (
+					<CountUp decimals={4} duration={3} start={0} end={parseFloat(data.result[0].price)} />
+				) : (
+					'--'
+				)}
+			</span>
 			<div className='footer-card'>
 				<div
 					onClick={() =>
@@ -63,27 +71,35 @@ const InfoToken = () => {
 						<span className='label'>Marketcap</span>
 						<span>
 							${' '}
-							{data
-								? (
+							{data ? (
+								<CountUp
+									separator=','
+									decimals={0}
+									duration={3}
+									start={0}
+									end={
 										(totalSupply.toNumber() * Math.pow(10, -9) - 94842656) *
 										parseFloat(data.result[0].price)
-								  )
-										.toLocaleString(undefined, {
-											maximumFractionDigits: 2,
-										})
-										.toString()
-										.substr(0, 7)
-								: '--'}
+									}
+								/>
+							) : (
+								'--'
+							)}
 						</span>
 					</div>
 					<div className='right-txt'>
 						<span className='label'>Circulating Supply</span>
 						{totalSupply && data ? (
 							<span>
-								{(totalSupply.toNumber() * Math.pow(10, -9) - 94842656)
-									.toLocaleString(undefined, { maximumFractionDigits: 2 })
-									.toString()
-									.substr(0, 9)}{' '}
+								{
+									<CountUp
+										separator=','
+										decimals={0}
+										duration={3}
+										start={0}
+										end={totalSupply.toNumber() * Math.pow(10, -9) - 94842656}
+									/>
+								}{' '}
 								ARI
 							</span>
 						) : (

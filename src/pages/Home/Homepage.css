@@ -56,6 +56,9 @@ body {
      }
 }
 @media only screen and (max-width: 865px) {
+    body {
+        background-color: white;
+    }
     .card {
         margin-left:0px;
     }
@@ -64,9 +67,7 @@ body {
     }
 }
 @media only screen and (max-width: 520px) {
-    body {
-        background-color: white;
-    }
+    
     .card {
         margin-top: 10px;
     }
