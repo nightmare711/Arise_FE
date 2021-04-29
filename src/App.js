@@ -7,7 +7,7 @@ import {
 	useScrollTop,
 } from 'services/UI/useDevelopUI'
 import { Aggregator } from 'pages'
-import { HomePage, ErrorPage, NewsPage, IFOPage, Audit, Collection } from 'pages'
+import { HomePage, ErrorPage, NewsPage, IFOPage, Audit, Collection, FlappyBird } from 'pages'
 import { Switch, Route } from 'react-router-dom'
 
 function App() {
@@ -30,6 +30,7 @@ function App() {
 					<Route exact path='/ifo' component={IFOPage} />
 					<Route exact path='/audit-reports' component={Audit} />
 					<Route exact path='/my-collection' component={Collection} />
+					<Route exact path='/air-drop' component={FlappyBird} />
 					<Route component={ErrorPage} />
 				</Switch>
 			</PaddingContent>
