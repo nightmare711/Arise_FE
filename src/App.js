@@ -7,7 +7,7 @@ import {
 	useScrollTop,
 } from 'services/UI/useDevelopUI'
 import { Aggregator } from 'pages'
-import { HomePage, ErrorPage, NewsPage, IFOPage, Audit, Collection, FlappyBird } from 'pages'
+import { HomePage, ErrorPage, NewsPage, IFOPage, Audit, Collection } from 'pages'
 import { Switch, Route } from 'react-router-dom'
 
 function App() {
