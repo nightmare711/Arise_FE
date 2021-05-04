@@ -11,7 +11,6 @@ export const CardValue = ({ title, image, scarcity, video }) => {
 				// height={500}
 				// width={300}
 				playsInline
-				aspectRatio='4:3'
 				loop
 				muted
 				autoPlay

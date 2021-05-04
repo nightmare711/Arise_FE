@@ -1,6 +1,7 @@
 import React from 'react'
 import { Player, ControlBar, VolumeMenuButton } from 'video-react'
 import NFTsVideo from 'assets/NFTs/NFTs.mp4'
+import Poster from 'assets/NFTs/Poster.jpg'
 import { Link } from 'react-router-dom'
 import './CardVideo.css'
 
@@ -18,6 +19,7 @@ export const CardVideo = () => {
 					muted
 					autoPlay
 					src={NFTsVideo}
+					poster={Poster}
 				>
 					<ControlBar autoHide={false} disableDefaultControls>
 						<VolumeMenuButton />
