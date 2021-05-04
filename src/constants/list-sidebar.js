@@ -50,6 +50,16 @@ export const ListSidebarItem = [
 		onClick: () => {},
 		bestSale: true,
 	},
+	{
+		id: 6,
+		title: 'Dex Aggregator',
+		icon: faBinoculars,
+		child: [],
+		content: 'swap-aggregator',
+		href: '/swap-aggregator',
+		onClick: () => {},
+		bestSale: true,
+	},
 	// {
 	// 	id: 2,
 	// 	title: 'Swap',
@@ -149,16 +159,6 @@ export const ListSidebarItem = [
 		href: '/ifo',
 		onClick: () => {},
 		bestSale: false,
-	},
-	{
-		id: 6,
-		title: 'Dex Aggregator',
-		icon: faBinoculars,
-		child: [],
-		content: 'swap-aggregator',
-		href: '/swap-aggregator',
-		onClick: () => {},
-		bestSale: true,
 	},
 	{
 		id: 7,
