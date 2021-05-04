@@ -2,6 +2,8 @@
     font-family: 'Kanit';font-size: 22px;
     display: flex;
     flex-direction: column;
+    background-image: url('../../assets/ari-bird/bg-all.jpg');
+    background-size: cover;
 }
 .flappy-bird.card {
     background-color: transparent;
@@ -15,7 +17,9 @@
     width: auto;
     display:inline-block;
     position:relative;
-    padding-bottom:80px;
+    padding-bottom:90px;
+    border-bottom: 1px solid #ababab;
+    box-shadow: 0px 10px 24px -6px rgba(255,255,255,1);
 }
 
 .flappy-bird .box .txt-frame {
@@ -37,13 +41,13 @@
     justify-content: flex-start;
 }
 .flappy-bird .box-1 {
-    z-index: 1;
+    z-index: 7;
     position:relative;
     color:white;
     display:flex;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(329.58% 50% at 50% 50%, rgb(59, 40, 100) 0%, rgb(25, 19, 38) 100%);
+    
 }
 .flappy-bird  .title-secondary {
     background: linear-gradient(rgb(255, 216, 0) 0%, rgb(235, 140, 0) 100%);
@@ -59,10 +63,8 @@
     font-size: 20px;
 }
 .flappy-bird .box.box-2 {
-    background:linear-gradient(rgb(203, 215, 239) 0%, rgb(154, 159, 208) 100%); ;
-    z-index:-1;
-    border-radius: -50px/0px;
-    margin-top: -50px;
+    background-size: cover;
+    z-index:6;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -151,4 +153,169 @@
 }
 .flappy-bird .road-container .active .title-extra {
     color: #1cba46;
+}
+.flappy-bird .box.box-2 .account-score {
+    margin-top: 90px;
+}
+.flappy-bird .box.box-2 .account-score .container-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.flappy-bird .box.box-2 .account-score .container-logo img {
+    width:50px;
+}
+.flappy-bird .box.box-2 .account-score .container-logo .container-img {
+    width:100px;
+    height:100px;
+    background-color: #ced0d1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flappy-bird .box.box-2 .icon-left {
+    transform:  rotateY(180deg)  !important;
+}
+.flappy-bird .box.box-2 .account-score .icon {
+    margin: 0px 10px;
+    color: #717688;
+    font-size: 50px;
+}
+.flappy-bird .box.box-2 .account-score .score {
+    margin-top: 80px;
+    background-color: white;
+    border-radius: 20px;
+    min-height: 100px;
+    position:relative;
+    min-width: 250px;
+}
+.flappy-bird .box.box-2 .account-score .score .bg-with-text img{
+}
+.flappy-bird .box.box-2 .account-score .score .bg-with-text {
+    position: absolute;
+    top: 0;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:250px;
+}
+.flappy-bird .box.box-2 .account-score .score .bg-with-text .txt {
+    position: absolute;
+    top:50%;
+    color:white;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: 600;
+    width:150px;
+    text-shadow: 2px 0 0 #6A3FC1, -2px 0 0 #6A3FC1, 0 2px 0 #6A3FC1, 0 -2px 0 #6A3FC1, 1px 1px #6A3FC1, -1px -1px 0 #6A3FC1, 1px -1px 0 #6A3FC1, -1px 1px 0 #6A3FC1;
+}
+.flappy-bird .box.box-3 {
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flappy-bird .box.box-3 .box-3-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top:90px;
+    max-width: 1200px;
+    justify-content: center;
+   
+}
+.flappy-bird .box.box-3 .box-3-content .rank-score {
+    width:850px;
+    max-width: 40%;
+    position:relative;
+    color:white;
+}
+.flappy-bird .box.box-3 .box-3-content .rank-score .score {
+    position:absolute;
+    top:100%;
+    left:50%;
+    transform: translate(-50%,0%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 16px;
+    width: 100%;
+    padding:0px 20px;
+    line-height: 20px;
+}
+.flappy-bird .box.box-3 .box-3-content .table-score {
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    font-size: 16px;
+    margin-left:15px;
+    width: 40%;
+}
+
+.flappy-bird .box.box-3 .box-3-content .table-score .table-header {
+    padding:15px;
+    background: linear-gradient(
+        111.68deg
+        , rgb(242, 236, 242) 0%, rgb(232, 242, 246) 100%);
+    border-radius: 20px 20px 0px 0px;
+}
+.flappy-bird .box.box-3 .box-3-content .table-score .table-header h1 {
+    font-weight: 600;
+    line-height: 25px;
+    font-size: 30px;
+    color:#7949D9;
+}
+.flappy-bird .box.box-3 .box-3-content .table-score .table-header span {
+    font-size: 14px;
+    line-height: 0px;
+    color:#8F80BA;
+}
+.flappy-bird .box.box-3 .box-3-content .table-score table {
+    border-top:2px solid rgb(143,128,186);
+    font-weight: 600;
+    width: 100%;
+    color:#452a7a;
+}
+.flappy-bird .box.box-3 .box-3-content .table-score   td {
+    align-items: center;
+    padding:20px;
+    border-bottom: 1px solid #BDC2C4;
+}
+.flappy-bird .box.box-3 .box-3-content .table-score table .score-value {
+
+}
+.flappy-bird .box.box-3 .box-3-content .table-score table .rank {
+    color:#7645D9;
+}
+.flappy-bird .box.box-3 .box-3-content .table-score table .address {
+    color:#1CC7D3;
+}
+.header-below {
+    position: absolute;
+    top:100%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index:100;
+}
+
+.header-below .bg-with-text {
+    position: absolute;
+    top: 0;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:250px;
+}
+.header-below .bg-with-text .txt {
+    position: absolute;
+    top:50%;
+    color:white;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: 600;
+    width:150px;
+    text-shadow: 2px 0 0 #6A3FC1, -2px 0 0 #6A3FC1, 0 2px 0 #6A3FC1, 0 -2px 0 #6A3FC1, 1px 1px #6A3FC1, -1px -1px 0 #6A3FC1, 1px -1px 0 #6A3FC1, -1px 1px 0 #6A3FC1;
 }
