@@ -1,0 +1,78 @@
+.connect-wallet {
+    width: 100vw;
+    height:100vh;
+    position:fixed;
+    top:0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+.connect-wallet .overlay {
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+    background-color: rgba(228, 116, 46, 0.3)
+}
+.connect-wallet .wallet {
+    background-color: white;
+    border-radius: 20px;
+}
+.connect-wallet .header-primary {
+    
+    font-size:22px;
+    width: 300px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #E9EAEB;
+    padding: 20px;
+    color: #452A7A;
+}
+.connect-wallet .header-primary .icon {
+    cursor:pointer;
+}
+.connect-wallet .header-primary .icon:hover{ 
+    opacity: 0.6;
+}
+.connect-wallet .header-primary .icon:active {
+    transform: translateY(3px);
+}
+.connect-wallet .wallet .list-dex {
+    padding:20px 15px;
+}
+.connect-wallet .wallet .list-dex .item {
+    display: flex;
+    flex-direction: row;
+    background-color: #EFF4F5;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    color: #E4752E;
+    transition:all .3s;
+    cursor: pointer;
+
+}
+.connect-wallet .wallet .list-dex .item:hover {
+    opacity: 0.6;
+}
+.connect-wallet .wallet .list-dex .item .container-img {
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+.connect-wallet .wallet .list-dex .item img{
+    width:25px;
+}

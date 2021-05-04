@@ -30,15 +30,17 @@ export const Navbar = () => {
 				</span>
 			</div>
 			{wallet.status === 'connected' ? (
-				<div className='account btn-mobile' onClick={() => wallet.reset()}>
-					{wallet.account || 'default'}
+				<div className='account btn-mobile' onClick={() => data.setIsOpenDetailWallet(true)}>
+					{wallet.account.substr(0, 5) +
+						'...' +
+						wallet.account.substr(wallet.account.length - 5, wallet.account.length) || 'default'}
 					{/* <div>Balance: {wallet.balance}</div>
 					<button onClick={() => wallet.reset()}>disconnect</button> */}
 				</div>
 			) : (
 				<div
-					onClick={async () => {
-						await wallet.connect()
+					onClick={() => {
+						data.setIsOpenConnectWallet(true)
 					}}
 					className='btn-primary'
 				>

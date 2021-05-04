@@ -15,6 +15,8 @@ const Providers = ({ children }) => {
 	const [isOpenSelectTokenTo, setIsOpenSelectTokenTo] = React.useState(false)
 	const [isOpenOverlayTrans, setIsOpenOverlayTrans] = React.useState(false)
 	const [aggregator, setAggregator] = React.useState([])
+	const [isOpenConnectWallet, setIsOpenConnectWallet] = React.useState(false)
+	const [isOpenDetailWallet, setIsOpenDetailWallet] = React.useState(false)
 	return (
 		<UseWalletProvider
 			chainId={parseInt(REACT_APP_CHAIN_ID)}
@@ -39,6 +41,10 @@ const Providers = ({ children }) => {
 							setIsOpenSelectTokenTo,
 							aggregator,
 							setAggregator,
+							isOpenConnectWallet,
+							setIsOpenConnectWallet,
+							isOpenDetailWallet,
+							setIsOpenDetailWallet,
 						}}
 					>
 						{children}

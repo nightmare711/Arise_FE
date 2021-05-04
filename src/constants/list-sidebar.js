@@ -27,32 +27,28 @@ export const ListSidebarItem = [
 		onClick: () => {},
 	},
 	{
+		id: 11,
+		title: 'NFT Marketplace',
+		icon: faGem,
+		child: [],
+		content: 'my-collection',
+		href: '/my-collection',
+		onClick: () => {},
+		bestSale: true,
+	},
+	{
 		id: 1,
 		title: 'Buy ARI',
 		icon: faCartArrowDown,
-		child: [
-			{
-				id: '1',
-				title: 'Buy on Pancake',
-				href: '/buy-on-pancake',
-				content: 'buy-ari',
-			},
-			{
-				id: '2',
-				title: 'ARI Live chart',
-				href: '/ari-live-chart',
-				content: 'buy-ari',
-			},
-			// {
-			// 	id: '3',
-			// 	title: 'DEX Aggregator',
-			// 	href: '/dex-aggregator',
-			// 	content: 'buy-ari',
-			// },
-		],
+		child: [],
 		bestSale: false,
 		content: 'buy-ari',
-		onClick: () => {},
+		onClick: () => {
+			window.open(
+				'https://v1exchange.pancakeswap.finance/#/swap?outputCurrency=0xcb77d84066f6192ab79bbc6d6450ddbe72661d7c',
+				'_blank'
+			)
+		},
 	},
 	{
 		id: 2,
@@ -209,16 +205,6 @@ export const ListSidebarItem = [
 		href: '/audit-reports',
 		onClick: () => {},
 		bestSale: false,
-	},
-	{
-		id: 11,
-		title: 'NFT Marketplace',
-		icon: faGem,
-		child: [],
-		content: 'my-collection',
-		href: '/my-collection',
-		onClick: () => {},
-		bestSale: true,
 	},
 	{
 		id: 12,

@@ -1,0 +1,154 @@
+.flappy-bird {
+    font-family: 'Kanit';font-size: 22px;
+    display: flex;
+    flex-direction: column;
+}
+.flappy-bird.card {
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0px;
+}
+.flappy-bird .box {
+    border-radius: 500px/50px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    width: auto;
+    display:inline-block;
+    position:relative;
+    padding-bottom:80px;
+}
+
+.flappy-bird .box .txt-frame {
+    display: flex;
+    flex-direction: column;
+    padding:50px;
+}
+.flappy-bird .box .txt-frame .title-name {
+    font-size:64px;
+    font-weight: 900;
+    color:white;
+    text-shadow: 2px 0 0 #6A3FC1, -2px 0 0 #6A3FC1, 0 2px 0 #6A3FC1, 0 -2px 0 #6A3FC1, 1px 1px #6A3FC1, -1px -1px 0 #6A3FC1, 1px -1px 0 #6A3FC1, -1px 1px 0 #6A3FC1;
+}
+.flappy-bird .box-1 .box-content {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.flappy-bird .box-1 {
+    z-index: 1;
+    position:relative;
+    color:white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(329.58% 50% at 50% 50%, rgb(59, 40, 100) 0%, rgb(25, 19, 38) 100%);
+}
+.flappy-bird  .title-secondary {
+    background: linear-gradient(rgb(255, 216, 0) 0%, rgb(235, 140, 0) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 40px;
+    font-weight: 600;    
+    
+}
+.flappy-bird .txt-frame .title-tertiary {
+    color: #D7CAEB;
+    font-weight: 600;
+    font-size: 20px;
+}
+.flappy-bird .box.box-2 {
+    background:linear-gradient(rgb(203, 215, 239) 0%, rgb(154, 159, 208) 100%); ;
+    z-index:-1;
+    border-radius: -50px/0px;
+    margin-top: -50px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.flappy-bird .box.box-1 .container-btn {
+    padding: 30px 20px;
+    background: linear-gradient(rgb(118, 69, 217) 0%, rgb(69, 42, 122) 100%);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    position:absolute;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    top:100%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.flappy-bird .box.box-1 .container-btn .icon-left {
+    transform:  rotateY(180deg) rotate(20deg) !important;
+}
+.flappy-bird .box.box-1 .container-btn .btn-primary {
+    background-color:  #E4752E;
+    padding:8px 15px;
+    font-weight: 700;
+    font-size: 18px;
+    color:white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 17px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    transition:all .3s;
+}
+.flappy-bird .box.box-1 .container-btn .btn-primary:active {
+    transform:translateY(3px)
+}
+.flappy-bird .box.box-1 .container-btn .icon {
+    margin: 0px 15px;
+    color: #F8b238;
+    font-size: 30px;
+    transform: rotate(20deg);
+}
+.flappy-bird .time-frame {
+    width:270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background:linear-gradient(rgb(118, 69, 217) 0%, rgb(69, 42, 122) 100%);
+    border-radius: 0px 0px 20px 20px;
+    padding:15px 0px;
+}
+.flappy-bird .time-frame .icon {
+    background:linear-gradient(rgb(255, 216, 0) 0%, rgb(235, 140, 0) 100%); 
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color:transparent;
+    font-size: 50px;
+}
+.flappy-bird .road-container {
+    display: flex;
+    flex-direction: row;
+    margin-top:15px;
+}
+.flappy-bird .road-container .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.5;
+    font-weight: 600;
+}
+.flappy-bird .road-container .item:not(:last-child) {
+    margin-right:30px;
+}
+.flappy-bird .road-container .item:not(:first-child)::after {
+    content: '';
+    width: 35px;
+    border: 2px solid white;
+    transform: translate(-31.5px,-30px);
+}
+.flappy-bird .time-frame .time-lock {
+    font-size: 30px;
+    margin-top:15px;
+}
+.flappy-bird .road-container .active{
+    opacity: 1;
+}
+.flappy-bird .road-container .active .title-extra {
+    color: #1cba46;
+}
