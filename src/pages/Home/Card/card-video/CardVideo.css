@@ -1,0 +1,13 @@
+.card-video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+.card-video video {
+    width: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    outline: none;
+    border-radius: 20px;
+}

@@ -5,7 +5,7 @@
     justify-content: center;
     
 }
-.collection .video-react-controls-enabled {
+.video-react-controls-enabled {
     padding:0 !important;
     outline: none;
 }
@@ -28,13 +28,13 @@
     position:relative;
     margin-top:20px;
 }
-.collection .video-react-control-bar {
+.video-react-control-bar {
     display: none;
 }
-.collection .video-react-big-play-button {
+.video-react-big-play-button {
     display: none;
 }
-.collection .card-value-collection .scarcity-level {
+.scarcity-level {
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;

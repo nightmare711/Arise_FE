@@ -148,9 +148,7 @@ export const FlappyBird = () => {
 					</div>
 				</div>
 			</div>
-			<div className='box box-4'>
-				
-			</div>
+			<div className='box box-4'></div>
 		</div>
 	)
 }
