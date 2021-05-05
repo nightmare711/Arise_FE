@@ -42,7 +42,7 @@ export const ListSidebarItem = [
 	},
 	{
 		id: 11,
-		title: 'NFT Marketplace',
+		title: 'NFTs Marketplace',
 		icon: faGem,
 		child: [],
 		content: 'my-collection',

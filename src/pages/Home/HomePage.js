@@ -26,7 +26,7 @@ export const HomePage = () => {
 			<CardInfo />
 			<CardTitle />
 			<CardPriceChart />
-			<CardVideo video={NFTsVideo} poster={Poster} />
+			<CardVideo video={NFTsVideo} poster={Poster} href={'/my-collection'} />
 			<CardRoadmap />
 			<CardExtendInfo />
 			{/* <CardChart />
