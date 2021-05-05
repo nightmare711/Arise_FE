@@ -1,8 +1,11 @@
 import React from 'react'
-import { CardValue } from './Card/CardValue/CardValue'
-import { listBeat, listUnicorn } from 'constants/NFTs'
 import { CardCopyRight } from 'pages/Home/Card'
 import { CardText } from './Card/CardText/CardText'
+import AriseUnicorn from 'assets/NFTs/AriseUnicorn/ARISE UNICORN.mp4'
+import AriseBeat from 'assets/NFTs/AriseBeat/ARISE BEAT.mp4'
+import ArisePhoenix from 'assets/NFTs/ArisePhoenix/ARISE PHOENIX.mp4'
+import { CardVideo } from 'pages/Home/Card'
+import './Card/CardValue/CardValue.css'
 import './Collection.css'
 
 export const Collection = () => {
@@ -16,30 +19,14 @@ export const Collection = () => {
 						FINANCE
 					</span>
 				</div>
+
 				<div className='txt-public-sale'>Arise Unicorn - Private Sale Launched</div>
-				<div className='container-news container-collection'>
-					{listUnicorn.map((item, index) => (
-						<CardValue
-							key={index}
-							title={item.title}
-							image={item.image}
-							scarcity={item.scarcity}
-							video={item.video}
-						/>
-					))}
-				</div>
+				<CardVideo video={AriseUnicorn} />
+
 				<div className='txt-public-sale'>Arise Beat - Public Sale Launched</div>
-				<div className='container-news container-collection'>
-					{listBeat.map((item, index) => (
-						<CardValue
-							key={index}
-							title={item.title}
-							image={item.image}
-							scarcity={item.scarcity}
-							video={item.video}
-						/>
-					))}
-				</div>
+				<CardVideo video={AriseBeat} />
+				<div className='txt-public-sale'>Arise Phoenix - Arise from the ashes</div>
+				<CardVideo video={ArisePhoenix} />
 				<CardText />
 			</div>
 			<CardCopyRight />
