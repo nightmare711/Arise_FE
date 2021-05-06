@@ -1,7 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPagelines } from '@fortawesome/free-brands-svg-icons'
-import { Link } from 'react-router-dom'
 import BirdVideo from 'assets/ari-bird/Ari-bird.mp4'
 import BirdPoster from 'assets/ari-bird/Ari-bird.jpg'
 import { Player, ControlBar, VolumeMenuButton } from 'video-react'

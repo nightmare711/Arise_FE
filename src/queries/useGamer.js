@@ -137,7 +137,7 @@ export const usePlayFlappyBird = (setIsNotEnough) => {
 	return () => {
 		if (gamerFound) {
 			if (gamerFound.amount >= 1) {
-				window.location.href = 'http://localhost:3000/ari-bird/game'
+				window.open('/ari-bird/game', '_self')
 			} else {
 				setIsNotEnough(true)
 			}
