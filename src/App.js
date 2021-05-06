@@ -23,9 +23,10 @@ function App() {
 			{data.isOpenDetailWallet ? <AccountDetail /> : null}
 			<Navbar />
 			<Sidebar />
-			<Switch>
-				<Route exact path='/ari-bird' component={FlappyBird} />
-				<PaddingContent>
+
+			<Route exact path='/ari-bird' component={FlappyBird} />
+			<PaddingContent>
+				<Switch>
 					<Route exact path='/swap-aggregator' component={Aggregator} />
 					<Route exact path='/' component={HomePage} />
 					<Route exact path='/home' component={HomePage} />
@@ -34,8 +35,8 @@ function App() {
 					<Route exact path='/audit-reports' component={Audit} />
 					<Route exact path='/my-collection' component={Collection} />
 					<Route component={ErrorPage} />
-				</PaddingContent>
-			</Switch>
+				</Switch>
+			</PaddingContent>
 		</div>
 	)
 }
