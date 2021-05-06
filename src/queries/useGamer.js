@@ -30,47 +30,51 @@ export const useGetGamers = () => {
 export const useUpdateGamer = (setIsLoading) => {
 	const { data: gamers } = useGetGamers()
 	return useMutation((address) => {
-		const gamer = gamers.find((account) => account.address === address)
-		if (gamer) {
-			return fetch(`${AUTH_API_1}/admin/gamers/details`, {
-				method: 'POST',
-				headers: {
-					'Content-type': 'application/json',
-				},
-				body: JSON.stringify({
-					params: encrypt({
-						info: AUTH,
-						...gamer,
-						amount: gamer.amount + 1,
+		try {
+			if (gamers) {
+				const gamer = gamers.find((account) => account.address === address)
+				if (gamer) {
+					return fetch(`${AUTH_API_1}/admin/gamers/details`, {
+						method: 'POST',
+						headers: {
+							'Content-type': 'application/json',
+						},
+						body: JSON.stringify({
+							params: encrypt({
+								info: AUTH,
+								...gamer,
+								amount: gamer.amount + 1,
+							}),
+						}),
+					})
+						.then((res) => res.json())
+						.then((result) => setIsLoading(false))
+						.catch((err) => console.log(err))
+				}
+				return fetch(`${AUTH_API_1}/admin/gamers/details`, {
+					headers: {
+						'Content-type': 'application/json',
+					},
+					method: 'POST',
+					body: JSON.stringify({
+						params: encrypt({
+							info: AUTH,
+							highest_score: 0,
+							address: address,
+							amount: 1,
+							game: 'flappy-bird',
+						}),
 					}),
-				}),
-			})
-				.then((res) => res.json())
-				.then((result) => setIsLoading(false))
-				.catch((err) => console.log(err))
-		}
-		return fetch(`${AUTH_API_1}/admin/gamers/details`, {
-			headers: {
-				'Content-type': 'application/json',
-			},
-			method: 'POST',
-			body: JSON.stringify({
-				params: encrypt({
-					info: AUTH,
-					highest_score: 0,
-					address: address,
-					amount: 1,
-					game: 'flappy-bird',
-				}),
-			}),
-		})
-			.then((res) => res.json())
-			.then((result) => {
-				return setIsLoading(false)
-			})
-			.catch((err) => {
-				return 0
-			})
+				})
+					.then((res) => res.json())
+					.then((result) => {
+						return setIsLoading(false)
+					})
+					.catch((err) => {
+						return 0
+					})
+			}
+		} catch {}
 	})
 }
 export const useGetScore = () => {
@@ -168,17 +172,21 @@ export const onRebuy = () => {
 	document.getElementById('btn-buy-turn').click()
 }
 export const onFilterGamers = (gamers) => {
-	if (gamers) {
-		if (gamers.length < 10) {
-			gamers.length = 10
-			return gamers
-		} else {
-			const gamersFilter = []
-			for (let i = 0; i < 10; i++) {
-				gamersFilter.push(gamers[i])
+	try {
+		if (gamers) {
+			if (gamers.length < 10) {
+				gamers.length = 10
+				return gamers
+			} else {
+				const gamersFilter = []
+				for (let i = 0; i < 10; i++) {
+					gamersFilter.push(gamers[i])
+				}
+				return gamersFilter
 			}
-			return gamersFilter
 		}
+	} catch {
+		return []
 	}
 	return []
 }
