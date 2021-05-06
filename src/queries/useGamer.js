@@ -1,13 +1,13 @@
 import React from 'react'
 import { DataContext } from 'contexts/DataContext'
 import { useQuery, useMutation } from 'react-query'
-import { TEST_API } from 'constants/api'
+import { AUTH_API_1 } from 'constants/api'
 import { encrypt, decrypt } from 'services/utils/crypto'
 import { AUTH } from 'constants/Secret'
 
 export const useGetGamers = () => {
 	return useQuery(['useGetGamers.name'], () => {
-		return fetch(`${TEST_API}/admin/gamers`, {
+		return fetch(`${AUTH_API_1}/admin/gamers`, {
 			method: 'POST',
 			headers: {
 				'Content-type': 'application/json',
@@ -33,7 +33,7 @@ export const useUpdateGamer = (setIsLoading) => {
 	return useMutation((address) => {
 		const gamer = gamers.find((account) => account.address === address)
 		if (gamer) {
-			return fetch(`${TEST_API}/admin/gamers/details`, {
+			return fetch(`${AUTH_API_1}/admin/gamers/details`, {
 				method: 'POST',
 				headers: {
 					'Content-type': 'application/json',
@@ -50,7 +50,7 @@ export const useUpdateGamer = (setIsLoading) => {
 				.then((result) => setIsLoading(false))
 				.catch((err) => console.log(err))
 		}
-		return fetch(`${TEST_API}/admin/gamers/details`, {
+		return fetch(`${AUTH_API_1}/admin/gamers/details`, {
 			headers: {
 				'Content-type': 'application/json',
 			},
@@ -78,7 +78,7 @@ export const useGetScore = () => {
 	return useQuery(
 		['useGetScore.name'],
 		() => {
-			return fetch(`${TEST_API}/admin/gamer`, {
+			return fetch(`${AUTH_API_1}/admin/gamer`, {
 				method: 'POST',
 				headers: {
 					'Content-type': 'application/json',
