@@ -14,6 +14,7 @@
     width: auto;
     display:inline-block;
     position:relative;
+    padding-top: 100px;
     padding-bottom:150px;
 }
 .flappy-bird .video-react-controls-enabled {
