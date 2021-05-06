@@ -170,6 +170,7 @@ export const onRebuy = () => {
 export const onFilterGamers = (gamers) => {
 	if (gamers) {
 		if (gamers.length < 10) {
+			gamers.length = 10
 			return gamers
 		} else {
 			const gamersFilter = []
