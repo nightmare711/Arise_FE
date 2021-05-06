@@ -17,6 +17,7 @@ const Providers = ({ children }) => {
 	const [aggregator, setAggregator] = React.useState([])
 	const [isOpenConnectWallet, setIsOpenConnectWallet] = React.useState(false)
 	const [isOpenDetailWallet, setIsOpenDetailWallet] = React.useState(false)
+	const [isOpenFlappyBird, setIsOpenFlappyBird] = React.useState(false)
 	return (
 		<UseWalletProvider
 			chainId={parseInt(REACT_APP_CHAIN_ID)}
@@ -45,6 +46,8 @@ const Providers = ({ children }) => {
 							setIsOpenConnectWallet,
 							isOpenDetailWallet,
 							setIsOpenDetailWallet,
+							isOpenFlappyBird,
+							setIsOpenFlappyBird,
 						}}
 					>
 						{children}

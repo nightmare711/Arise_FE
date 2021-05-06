@@ -1,10 +1,12 @@
+import React from 'react'
+import { DataContext } from 'contexts/DataContext'
 import { useQuery, useMutation } from 'react-query'
 import { TEST_API } from 'constants/api'
-import { encrypt } from 'services/utils/crypto'
+import { encrypt, decrypt } from 'services/utils/crypto'
 import { AUTH } from 'constants/Secret'
 
-export const useGetGamer = () => {
-	return useQuery(['useGetGamer.name'], () => {
+export const useGetGamers = () => {
+	return useQuery(['useGetGamers.name'], () => {
 		return fetch(`${TEST_API}/admin/gamers`, {
 			method: 'POST',
 			headers: {
@@ -17,12 +19,17 @@ export const useGetGamer = () => {
 			}),
 		})
 			.then((res) => res.json())
-			.then((result) => result.result)
+			.then((res) => {
+				const result = decrypt(res.result)
+				return result.sort(function (a, b) {
+					return b.highest_score - a.highest_score
+				})
+			})
 			.catch((err) => console.log(err))
 	})
 }
-export const useUpdateGamer = () => {
-	const { data: gamers } = useGetGamer()
+export const useUpdateGamer = (setIsLoading) => {
+	const { data: gamers } = useGetGamers()
 	return useMutation((address) => {
 		const gamer = gamers.find((account) => account.address === address)
 		if (gamer) {
@@ -40,7 +47,7 @@ export const useUpdateGamer = () => {
 				}),
 			})
 				.then((res) => res.json())
-				.then((result) => result.result)
+				.then((result) => setIsLoading(false))
 				.catch((err) => console.log(err))
 		}
 		return fetch(`${TEST_API}/admin/gamers/details`, {
@@ -60,11 +67,86 @@ export const useUpdateGamer = () => {
 		})
 			.then((res) => res.json())
 			.then((result) => {
-				console.log(result)
-				return result.result
+				return setIsLoading(false)
 			})
 			.catch((err) => {
-				console.log(err)
+				return 0
 			})
 	})
+}
+export const useGetScore = () => {
+	return useQuery(
+		['useGetScore.name'],
+		() => {
+			return fetch(`${TEST_API}/admin/gamer`, {
+				method: 'POST',
+				headers: {
+					'Content-type': 'application/json',
+				},
+				body: JSON.stringify({
+					params: encrypt({
+						info: AUTH,
+						address: window.ethereum.selectedAddress,
+						game: 'flappy-bird',
+					}),
+				}),
+			})
+				.then((res) => res.json())
+				.then((result) => {
+					const res = decrypt(result.result)?.highest_score
+					if (res) {
+						return res
+					}
+					return 0
+				})
+				.catch((err) => {
+					return 0
+				})
+		},
+		{
+			refetchInterval: 3000,
+		}
+	)
+}
+export const usePlayFlappyBird = () => {
+	const data = React.useContext(DataContext)
+	const { data: gamers } = useGetGamers()
+	const [gamerFound, setGamerFound] = React.useState(null)
+
+	React.useEffect(() => {
+		if (gamers) {
+			const gamer = gamers.find((item) => item.address === window.ethereum.selectedAddress)
+			setGamerFound(gamer)
+		}
+	}, [gamers])
+	return () => {
+		if (gamerFound) {
+			if (gamerFound.amount >= 1) {
+				data.setIsOpenFlappyBird(true)
+			} else {
+				alert('Please paid coin before play game')
+			}
+		} else {
+			alert('Please paid coin before play game')
+		}
+	}
+}
+export const useFindRank = () => {
+	const { data: gamers } = useGetGamers()
+	const [index, setIndex] = React.useState(0)
+	React.useEffect(() => {
+		try {
+			console.log(gamers)
+			if (gamers) {
+				const gamer = gamers.find((gamer) => gamer.address === window.ethereum.selectedAddress)
+				const indexTemp = gamers.indexOf(gamer)
+				console.log(gamers, gamer)
+				setIndex(indexTemp + 1)
+			}
+		} catch {
+			return 0
+		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [gamers, window.ethereum.selectedAddress])
+	return index
 }

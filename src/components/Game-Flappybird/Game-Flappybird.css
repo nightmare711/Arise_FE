@@ -1,0 +1,20 @@
+.game-flappybird {
+    width:100vw;
+    height:100vh;
+    position:absolute;
+    top:0;
+    left:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+.game-flappybird .overlay {
+    background-color: rgba(0,0,0,0.4);
+    position:absolute;
+    z-index: -1;
+}
+.game-flappybird iframe {
+    width:90vw;
+    height:90vh;
+}

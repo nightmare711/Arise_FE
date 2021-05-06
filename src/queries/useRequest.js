@@ -1,15 +1,14 @@
-import { getContract, getWeb3 } from './ultils/web3'
+import { getContract } from './ultils/web3'
 import { getCakeAddress } from 'services/utils/addressHelpers'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { useUpdateGamer } from './useGamer'
 import ariABI from 'constants/abi/ari.json'
 
-export const useRequestSend = () => {
+export const useRequestSend = (setIsLoading) => {
 	const wallet = useWallet()
-	const { mutate: updateGamer } = useUpdateGamer()
+	const { mutate: updateGamer } = useUpdateGamer(setIsLoading)
 
 	return async () => {
-		const web3 = await getWeb3()
 		const ariContract = getContract(ariABI, getCakeAddress())
 		const contractData = ariContract.methods
 			.transfer('0x36380294d3f0CFDd5B0EfA8Fa90709a35476c0F7', 1)
