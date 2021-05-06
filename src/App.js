@@ -7,7 +7,7 @@ import {
 	useScrollTop,
 } from 'services/UI/useDevelopUI'
 import { Aggregator } from 'pages'
-import { HomePage, ErrorPage, NewsPage, IFOPage, Audit, Collection } from 'pages'
+import { HomePage, ErrorPage, NewsPage, IFOPage, Audit, Collection, FlappyBird } from 'pages'
 import { Switch, Route } from 'react-router-dom'
 
 function App() {
@@ -23,8 +23,9 @@ function App() {
 			{data.isOpenDetailWallet ? <AccountDetail /> : null}
 			<Navbar />
 			<Sidebar />
-			<PaddingContent>
-				<Switch>
+			<Switch>
+				<Route exact path='/ari-bird' component={FlappyBird} />
+				<PaddingContent>
 					<Route exact path='/swap-aggregator' component={Aggregator} />
 					<Route exact path='/' component={HomePage} />
 					<Route exact path='/home' component={HomePage} />
@@ -32,10 +33,9 @@ function App() {
 					<Route exact path='/ifo' component={IFOPage} />
 					<Route exact path='/audit-reports' component={Audit} />
 					<Route exact path='/my-collection' component={Collection} />
-					{/* <Route exact path='/air-drop' component={FlappyBird} /> */}
 					<Route component={ErrorPage} />
-				</Switch>
-			</PaddingContent>
+				</PaddingContent>
+			</Switch>
 		</div>
 	)
 }

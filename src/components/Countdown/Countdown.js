@@ -9,7 +9,7 @@ export const Countdown = () => {
 			minute = second * 60,
 			hour = minute * 60,
 			day = hour * 24
-		let saleDay = 1618057929006,
+		let saleDay = 1620525283808 - 3600000 * 2 + 60000 * 5 + 6000 * 3 - 2000,
 			countDown = new Date(saleDay).getTime(),
 			x = setInterval(function () {
 				let now = new Date().getTime()
