@@ -11,12 +11,12 @@ export const useRequestSend = (setIsLoading, setBuyError) => {
 	return async () => {
 		const ariContract = getContract(ariABI, getCakeAddress())
 		const contractData = ariContract.methods
-			.transfer('0x36380294d3f0CFDd5B0EfA8Fa90709a35476c0F7', 1)
+			.transfer('0x36380294d3f0CFDd5B0EfA8Fa90709a35476c0F7', 1 * Math.pow(10, 9))
 			.encodeABI()
 		const params = [
 			{
 				from: window.ethereum.selectedAddress,
-				to: '0xa861f33d8ac80b64c1b8c7b4c99599474b79888a',
+				to: '0xcb77d84066f6192ab79bbc6d6450ddbe72661d7c',
 				data: contractData,
 				chainId: '38',
 				contractAddress: '',
