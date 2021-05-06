@@ -4,7 +4,7 @@ import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { useUpdateGamer } from './useGamer'
 import ariABI from 'constants/abi/ari.json'
 
-export const useRequestSend = (setIsLoading) => {
+export const useRequestSend = (setIsLoading, setBuyError) => {
 	const wallet = useWallet()
 	const { mutate: updateGamer } = useUpdateGamer(setIsLoading)
 
@@ -31,7 +31,14 @@ export const useRequestSend = (setIsLoading) => {
 				.then((res) => {
 					if (res) {
 						updateGamer(window.ethereum.selectedAddress)
+					} else {
+						setBuyError(true)
+						setIsLoading(false)
 					}
+				})
+				.catch((err) => {
+					setBuyError(true)
+					setIsLoading(false)
 				})
 		} else {
 			wallet.connect()

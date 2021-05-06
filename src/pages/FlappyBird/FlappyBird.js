@@ -3,7 +3,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStopwatch } from '@fortawesome/free-solid-svg-icons'
 import { faPagelines } from '@fortawesome/free-brands-svg-icons'
 import { faCheckCircle } from '@fortawesome/free-regular-svg-icons'
-import { useGetScore, useGetGamers, usePlayFlappyBird, useFindRank } from 'queries/useGamer'
+import {
+	useGetScore,
+	useGetGamers,
+	usePlayFlappyBird,
+	useFindRank,
+	onFilterGamers,
+} from 'queries/useGamer'
+import { Message, MessageEnough } from './components'
 import { SpinnerButton } from 'components'
 import { useRequestSend } from 'queries/useRequest'
 import PrizesIcon from 'assets/ari-bird/PrizeIcon.png'
@@ -332,15 +339,18 @@ const PrizesData = [
 
 export const FlappyBird = () => {
 	const wallet = useWallet()
+	const [isNotEnough, setIsNotEnough] = React.useState(false)
+	const [buyError, setBuyError] = React.useState(false)
 	const [isLoading, setIsLoading] = React.useState(false)
-	const requestSend = useRequestSend(setIsLoading)
+	const requestSend = useRequestSend(setIsLoading, setBuyError)
 	const { data: score } = useGetScore()
 	const { data: gamers } = useGetGamers()
-	const playGame = usePlayFlappyBird()
+	const playGame = usePlayFlappyBird(setIsNotEnough)
 	const rank = useFindRank()
-
 	return (
 		<div className=' flappy-bird card'>
+			{buyError ? <Message onClose={() => setBuyError(false)} /> : null}
+			{isNotEnough ? <MessageEnough onClose={() => setIsNotEnough(false)} /> : null}
 			<div className='box box-1'>
 				<div className='box-content'>
 					<div className='txt-frame'>
@@ -386,6 +396,7 @@ export const FlappyBird = () => {
 								Let's play
 							</div>
 							<div
+								id='btn-buy-turn'
 								onClick={() => {
 									setIsLoading(true)
 									requestSend()
@@ -446,14 +457,15 @@ export const FlappyBird = () => {
 							<span className='extra'>Since start of competition</span>
 						</div>
 						<table>
-							{/* <thead>
-								<tr>a</tr>
-								<tr>b</tr>
-								<tr>c</tr>
-								<tr>d</tr>
-							</thead> */}
+							<thead>
+								<tr>
+									<th>RANK</th>
+									<th>SCORE</th>
+									<th>ADDRESS</th>
+								</tr>
+							</thead>
 							<tbody>
-								{gamers?.map((item, index) => (
+								{onFilterGamers(gamers).map((item, index) => (
 									<tr>
 										<td className='rank'>
 											{'#'}

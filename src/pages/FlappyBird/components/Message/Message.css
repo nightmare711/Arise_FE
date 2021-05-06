@@ -1,0 +1,35 @@
+.message-game {
+}
+.message-game .header-primary {
+    width:100%;
+}
+.message-game .content-container{
+    background-color: white;
+    border-radius: 20px;
+    width:350px;
+}
+.message-game .content-container .content {
+    padding:20px;
+}
+.message-game .content-container .content .btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top:20px;
+}
+.message-game .content-container .content .btn-container .btn-secondary{
+    margin:0;
+    padding:10px 20px;
+    font-size: 15px;
+
+}
+.message-game .content-container .content .btn-container .btn-secondary:active {
+    transform:translateY(3px)
+}
+.message-game .content-container .content .btn-container .btn-secondary.re-ex {
+    background-color: #44297A;
+}
+.message-game .content-container .content .btn-container .btn-secondary.btn-cancel {
+    margin-right:20px;
+    background-color: #db5853;
+}

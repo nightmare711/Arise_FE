@@ -95,8 +95,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width:110px;
-    padding: 10px 0px;
+    padding: 10px;
     font-weight: 700;
     font-size: 18px;
     color:white;
@@ -104,6 +103,10 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 17px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer;
     transition:all .3s;
+}
+.flappy-bird .box.box-1 .container-btn .btn-container .btn-primary {
+    width:110px;
+    padding: 10px 0px;
 }
 .flappy-bird .box.box-1 .container-btn .btn-primary:active {
     transform:translateY(3px)

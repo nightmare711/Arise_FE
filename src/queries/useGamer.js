@@ -108,7 +108,7 @@ export const useGetScore = () => {
 		}
 	)
 }
-export const usePlayFlappyBird = () => {
+export const usePlayFlappyBird = (setIsNotEnough) => {
 	const data = React.useContext(DataContext)
 	const { data: gamers } = useGetGamers()
 	const [gamerFound, setGamerFound] = React.useState(null)
@@ -124,10 +124,10 @@ export const usePlayFlappyBird = () => {
 			if (gamerFound.amount >= 1) {
 				data.setIsOpenFlappyBird(true)
 			} else {
-				alert('Please paid coin before play game')
+				setIsNotEnough(true)
 			}
 		} else {
-			alert('Please paid coin before play game')
+			setIsNotEnough(true)
 		}
 	}
 }
@@ -136,7 +136,6 @@ export const useFindRank = () => {
 	const [index, setIndex] = React.useState(0)
 	React.useEffect(() => {
 		try {
-			console.log(gamers)
 			if (gamers) {
 				const gamer = gamers.find((gamer) => gamer.address === window.ethereum.selectedAddress)
 				const indexTemp = gamers.indexOf(gamer)
@@ -149,4 +148,21 @@ export const useFindRank = () => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [gamers, window.ethereum.selectedAddress])
 	return index
+}
+export const onRebuy = () => {
+	document.getElementById('btn-buy-turn').click()
+}
+export const onFilterGamers = (gamers) => {
+	if (gamers) {
+		if (gamers.length < 10) {
+			return gamers
+		} else {
+			const gamersFilter = []
+			for (let i = 0; i < 10; i++) {
+				gamersFilter.push(gamers[i])
+			}
+			return gamersFilter
+		}
+	}
+	return []
 }
