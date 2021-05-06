@@ -8,6 +8,18 @@
     border-radius: 20px;
     width:350px;
 }
+.message-game .message {
+}
+.message-game .message input {
+    width:20%;
+    border-bottom: 1px solid #44297A;
+    outline: none;
+    
+}
+.message-game .message  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 .message-game .content-container .content {
     padding:20px;
 }

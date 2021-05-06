@@ -4,8 +4,14 @@ import { faPagelines } from '@fortawesome/free-brands-svg-icons'
 import BirdVideo from 'assets/ari-bird/Ari-bird.mp4'
 import BirdPoster from 'assets/ari-bird/Ari-bird.jpg'
 import { Player, ControlBar, VolumeMenuButton } from 'video-react'
-import { useGetScore, useGetGamers, usePlayFlappyBird, onFilterGamers } from 'queries/useGamer'
-import { Message, MessageEnough } from './components'
+import {
+	useGetScore,
+	useGetGamers,
+	usePlayFlappyBird,
+	onFilterGamers,
+	useFindRank,
+} from 'queries/useGamer'
+import { Message, MessageEnough, MessageBuy } from './components'
 import { SpinnerButton } from 'components'
 import { useRequestSend } from 'queries/useRequest'
 import PrizesIcon from 'assets/ari-bird/PrizeIcon.png'
@@ -44,15 +50,27 @@ export const FlappyBird = () => {
 	const wallet = useWallet()
 	const [isNotEnough, setIsNotEnough] = React.useState(false)
 	const [buyError, setBuyError] = React.useState(false)
+	const [isOpenBuy, setIsOpenBuy] = React.useState(false)
 	const [isLoading, setIsLoading] = React.useState(false)
 	const requestSend = useRequestSend(setIsLoading, setBuyError)
 	const { data: score } = useGetScore()
 	const { data: gamers } = useGetGamers()
 	const playGame = usePlayFlappyBird(setIsNotEnough)
+	const rank = useFindRank()
 	return (
 		<div className=' flappy-bird card'>
 			{buyError ? <Message onClose={() => setBuyError(false)} /> : null}
 			{isNotEnough ? <MessageEnough onClose={() => setIsNotEnough(false)} /> : null}
+			{isOpenBuy ? (
+				<MessageBuy
+					onClose={() => {
+						setIsOpenBuy(false)
+						setIsLoading(false)
+					}}
+					setIsLoading={setIsLoading}
+					requestSend={requestSend}
+				/>
+			) : null}
 			<div className='box box-1'>
 				<div className='box-content'>
 					<Player
@@ -90,8 +108,8 @@ export const FlappyBird = () => {
 							<div
 								id='btn-buy-turn'
 								onClick={() => {
+									setIsOpenBuy(true)
 									setIsLoading(true)
-									requestSend()
 								}}
 								className={`btn-primary btn-buy ${isLoading ? 'loading' : ''}`}
 							>
@@ -104,14 +122,19 @@ export const FlappyBird = () => {
 			</div>
 			<div className='box box-2'>
 				<div className='score'>
-					<div className='frame frame-left'>
-						<span className='score-value'>{score?.highest_score || 0}</span>
-						<span className='rank-value'>Highest Score</span>
+					<div className='score-row'>
+						<div className='frame frame-left'>
+							<span className='score-value'>{score?.highest_score || 0}</span>
+							<span className='rank-value'>Highest Score</span>
+						</div>
+						<div className='frame frame-right'>
+							<span className='score-value'>{score?.amount || 0}</span>
+							<span className='rank-value'>Remaining Turns</span>
+						</div>
 					</div>
-					<div className='frame frame-right'>
-						<span className='score-value'>{score?.amount || 0}</span>
-						<span className='rank-value'>Remaining Turns</span>
-					</div>
+					<span className='rank-value'>
+						Rank: <b>#{rank}</b>
+					</span>
 				</div>
 				<div className='header-below'>
 					<div className='bg-with-text'>

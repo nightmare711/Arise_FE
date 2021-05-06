@@ -3,6 +3,55 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import { onRebuy } from 'queries/useGamer'
 import './Message.css'
+export const MessageBuy = ({ onClose, requestSend, setIsLoading }) => {
+	const [quantity, setQuantity] = React.useState(1)
+	return (
+		<div className='connect-wallet message-game'>
+			<div onClick={() => onClose()} className='overlay'></div>
+			<div className='content-container'>
+				<div className='header-primary'>
+					Enter Buy Amount
+					<FontAwesomeIcon className='icon' onClick={() => onClose()} icon={faTimes} />
+				</div>
+				<div className='content'>
+					<div className='message'>
+						<input
+							value={quantity}
+							onChange={(e) => setQuantity(e.target.value)}
+							type='number'
+							className='quantity-turns-bird'
+							min={1}
+							max={10}
+							step={1}
+							pattern='\d*'
+						/>{' '}
+						turns = {quantity} ARI
+					</div>
+					<div className='btn-container'>
+						<div onClick={onClose} className='btn-secondary btn-cancel'>
+							Cancel
+						</div>
+						<div
+							onClick={() => {
+								if (quantity % 1 === 0 && quantity < 10) {
+									requestSend(quantity || 1)
+									onClose()
+									setIsLoading(true)
+								} else {
+									document.querySelector('.quantity-turns-bird').style.borderBottom =
+										'1px solid red'
+								}
+							}}
+							className='btn-secondary re-ex'
+						>
+							Confirm
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	)
+}
 
 export const Message = ({ onClose }) => {
 	return (

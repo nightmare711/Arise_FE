@@ -29,10 +29,10 @@ export const useGetGamers = () => {
 }
 export const useUpdateGamer = (setIsLoading) => {
 	const { data: gamers } = useGetGamers()
-	return useMutation((address) => {
+	return useMutation((quantity) => {
 		try {
 			if (gamers) {
-				const gamer = gamers.find((account) => account.address === address)
+				const gamer = gamers.find((account) => account.address === window.ethereum.selectedAddress)
 				if (gamer) {
 					return fetch(`${AUTH_API_1}/admin/gamers/details`, {
 						method: 'POST',
@@ -43,7 +43,7 @@ export const useUpdateGamer = (setIsLoading) => {
 							params: encrypt({
 								info: AUTH,
 								...gamer,
-								amount: gamer.amount + 1,
+								amount: gamer.amount + 1 * quantity,
 							}),
 						}),
 					})
@@ -60,8 +60,8 @@ export const useUpdateGamer = (setIsLoading) => {
 						params: encrypt({
 							info: AUTH,
 							highest_score: 0,
-							address: address,
-							amount: 1,
+							address: window.ethereum.selectedAddress,
+							amount: 1 * quantity,
 							game: 'flappy-bird',
 						}),
 					}),

@@ -8,10 +8,10 @@ export const useRequestSend = (setIsLoading, setBuyError) => {
 	const wallet = useWallet()
 	const { mutate: updateGamer } = useUpdateGamer(setIsLoading)
 
-	return async () => {
+	return async (quantity = 1) => {
 		const ariContract = getContract(ariABI, getCakeAddress())
 		const contractData = ariContract.methods
-			.transfer('0x36380294d3f0CFDd5B0EfA8Fa90709a35476c0F7', 1 * Math.pow(10, 9))
+			.transfer('0x36380294d3f0CFDd5B0EfA8Fa90709a35476c0F7', quantity * 1 * Math.pow(10, 9))
 			.encodeABI()
 		const params = [
 			{
@@ -30,7 +30,7 @@ export const useRequestSend = (setIsLoading, setBuyError) => {
 				})
 				.then((res) => {
 					if (res) {
-						updateGamer(window.ethereum.selectedAddress)
+						updateGamer(quantity)
 					} else {
 						setBuyError(true)
 						setIsLoading(false)
