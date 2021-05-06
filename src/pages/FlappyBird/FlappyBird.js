@@ -366,11 +366,11 @@ export const FlappyBird = () => {
 						<FontAwesomeIcon icon={faStopwatch} className='icon title-secondary' />
 						<span className='title-secondary time-lock'>Finished</span>
 						<div className='road-container'>
-							<div className='item item1 active'>
+							<div className='item item1'>
 								<FontAwesomeIcon icon={faCheckCircle} className='icon-tick' />
 								<span className='title-extra'>Entry</span>
 							</div>
-							<div className='item item2'>
+							<div className='item item2 active'>
 								<FontAwesomeIcon icon={faCheckCircle} className='icon-tick' />
 								<span className='title-extra'>Live</span>
 							</div>

@@ -307,7 +307,7 @@
 .flappy-bird .box .table-score td {
     padding:15px 0px;
     text-align: center;
-    border-bottom: 1px solid #BDC2C4;
+    border-top: 1px solid #BDC2C4;
 }
 
 .flappy-bird .box .table-score table .score-value {
