@@ -1,20 +1,15 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStopwatch } from '@fortawesome/free-solid-svg-icons'
 import { faPagelines } from '@fortawesome/free-brands-svg-icons'
-import { faCheckCircle } from '@fortawesome/free-regular-svg-icons'
-import {
-	useGetScore,
-	useGetGamers,
-	usePlayFlappyBird,
-	useFindRank,
-	onFilterGamers,
-} from 'queries/useGamer'
+import { Link } from 'react-router-dom'
+import BirdVideo from 'assets/ari-bird/Ari-bird.mp4'
+import BirdPoster from 'assets/ari-bird/Ari-bird.jpg'
+import { Player, ControlBar, VolumeMenuButton } from 'video-react'
+import { useGetScore, useGetGamers, usePlayFlappyBird, onFilterGamers } from 'queries/useGamer'
 import { Message, MessageEnough } from './components'
 import { SpinnerButton } from 'components'
 import { useRequestSend } from 'queries/useRequest'
 import PrizesIcon from 'assets/ari-bird/PrizeIcon.png'
-import LogoImg from 'assets/logo.png'
 import BgText from 'assets/bg-text.png'
 import RankImg from 'assets/rank-img.png'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
@@ -28,7 +23,7 @@ const PrizesData = [
 				color='text'
 				width='20px'
 				xmlns='http://www.w3.org/2000/svg'
-				class='sc-bdvvaa eomlrw'
+				className='sc-bdvvaa eomlrw'
 			>
 				<path
 					d='M16.7095 3.10222C17.1006 1.8767 16.1861 0.625 14.8997 0.625C13.8505 0.625 13 1.47554 13 2.52473L13 6.16735C13 6.90335 13.5966 7.5 14.3326 7.5C14.9126 7.5 15.4259 7.12495 15.6022 6.57247L16.7095 3.10222Z'
@@ -91,7 +86,7 @@ const PrizesData = [
 				color='text'
 				width='20px'
 				xmlns='http://www.w3.org/2000/svg'
-				class='sc-bdvvaa eomlrw'
+				className='sc-bdvvaa eomlrw'
 			>
 				<path
 					d='M16.7095 3.10222C17.1006 1.8767 16.1861 0.625 14.8997 0.625C13.8505 0.625 13 1.47554 13 2.52473L13 6.16735C13 6.90335 13.5966 7.5 14.3326 7.5C14.9126 7.5 15.4259 7.12495 15.6022 6.57247L16.7095 3.10222Z'
@@ -154,7 +149,7 @@ const PrizesData = [
 				color='text'
 				width='20px'
 				xmlns='http://www.w3.org/2000/svg'
-				class='sc-bdvvaa eomlrw'
+				className='sc-bdvvaa eomlrw'
 			>
 				<path
 					d='M16.7095 3.10222C17.1006 1.8767 16.1861 0.625 14.8997 0.625C13.8505 0.625 13 1.47554 13 2.52473L13 6.16735C13 6.90335 13.5966 7.5 14.3326 7.5C14.9126 7.5 15.4259 7.12495 15.6022 6.57247L16.7095 3.10222Z'
@@ -217,7 +212,7 @@ const PrizesData = [
 				color='text'
 				width='20px'
 				xmlns='http://www.w3.org/2000/svg'
-				class='sc-bdvvaa eomlrw'
+				className='sc-bdvvaa eomlrw'
 			>
 				<path
 					d='M16.7095 3.10222C17.1006 1.8767 16.1861 0.625 14.8997 0.625C13.8505 0.625 13 1.47554 13 2.52473L13 6.16735C13 6.90335 13.5966 7.5 14.3326 7.5C14.9126 7.5 15.4259 7.12495 15.6022 6.57247L16.7095 3.10222Z'
@@ -280,7 +275,7 @@ const PrizesData = [
 				color='text'
 				width='20px'
 				xmlns='http://www.w3.org/2000/svg'
-				class='sc-bdvvaa eomlrw'
+				className='sc-bdvvaa eomlrw'
 			>
 				<path
 					d='M16.7095 3.10222C17.1006 1.8767 16.1861 0.625 14.8997 0.625C13.8505 0.625 13 1.47554 13 2.52473L13 6.16735C13 6.90335 13.5966 7.5 14.3326 7.5C14.9126 7.5 15.4259 7.12495 15.6022 6.57247L16.7095 3.10222Z'
@@ -346,40 +341,29 @@ export const FlappyBird = () => {
 	const { data: score } = useGetScore()
 	const { data: gamers } = useGetGamers()
 	const playGame = usePlayFlappyBird(setIsNotEnough)
-	const rank = useFindRank()
 	return (
 		<div className=' flappy-bird card'>
 			{buyError ? <Message onClose={() => setBuyError(false)} /> : null}
 			{isNotEnough ? <MessageEnough onClose={() => setIsNotEnough(false)} /> : null}
 			<div className='box box-1'>
 				<div className='box-content'>
-					<div className='txt-frame'>
-						<span className='date'>{new Date().toTimeString()}</span>
-						<span className='title-name'>ARI Bird</span>
-						<span className='title-secondary'>$10,000 weekly prizes!</span>
-						<span className='title-tertiary'>
-							Join the 1st innovative crypto arcade game to win weekly prize and collectible NFTs
-						</span>
-					</div>
-
-					<div className='time-frame'>
-						<FontAwesomeIcon icon={faStopwatch} className='icon title-secondary' />
-						<span className='title-secondary time-lock'>Finished</span>
-						<div className='road-container'>
-							<div className='item item1'>
-								<FontAwesomeIcon icon={faCheckCircle} className='icon-tick' />
-								<span className='title-extra'>Entry</span>
-							</div>
-							<div className='item item2 active'>
-								<FontAwesomeIcon icon={faCheckCircle} className='icon-tick' />
-								<span className='title-extra'>Live</span>
-							</div>
-							<div className='item item3'>
-								<FontAwesomeIcon icon={faCheckCircle} className='icon-tick' />
-								<span className='title-extra'>End</span>
-							</div>
-						</div>
-					</div>
+					<Player
+						// fluid={false}
+						// height={500}
+						// width={300}
+						playsInline
+						aspectRatio='4:3'
+						loop
+						muted
+						autoPlay
+						src={BirdVideo}
+						poster={BirdPoster}
+					>
+						<ControlBar autoHide={false} disableDefaultControls>
+							<VolumeMenuButton />
+							<VolumeMenuButton vertical />
+						</ControlBar>
+					</Player>
 				</div>
 				<div className='container-btn'>
 					<FontAwesomeIcon icon={faPagelines} className='icon icon-left' />
@@ -389,12 +373,14 @@ export const FlappyBird = () => {
 						</div>
 					) : (
 						<div className='btn-container'>
-							<div
-								onClick={() => playGame()}
-								className={`btn-primary btn-play  ${isLoading ? 'loading' : ''}`}
-							>
-								Let's play
-							</div>
+							<Link to='/ari-bird/game'>
+								<div
+									onClick={() => playGame()}
+									className={`btn-primary btn-play  ${isLoading ? 'loading' : ''}`}
+								>
+									Let's play
+								</div>
+							</Link>
 							<div
 								id='btn-buy-turn'
 								onClick={() => {
@@ -411,21 +397,14 @@ export const FlappyBird = () => {
 				</div>
 			</div>
 			<div className='box box-2'>
-				<div className='account-score'>
-					<div className='container-logo'>
-						<FontAwesomeIcon icon={faPagelines} className='icon icon-left' />
-						<div className='container-img'>
-							<img src={LogoImg} alt='logo' />
-						</div>
-						<FontAwesomeIcon icon={faPagelines} className='icon icon-right' />
+				<div className='score'>
+					<div className='frame frame-left'>
+						<span className='score-value'>{score?.highest_score || 0}</span>
+						<span className='rank-value'>Highest Score</span>
 					</div>
-					<div className='score'>
-						<div className='bg-with-text'>
-							<img src={BgText} alt='Background text' />
-							<span className='txt'>Your Score</span>
-						</div>
-						<span className='score-value'>{score || 0}</span>
-						<span className='rank-value'>#{rank}</span>
+					<div className='frame frame-right'>
+						<span className='score-value'>{score?.amount || 0}</span>
+						<span className='rank-value'>Remaining Turns</span>
 					</div>
 				</div>
 				<div className='header-below'>

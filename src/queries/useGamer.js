@@ -1,5 +1,4 @@
 import React from 'react'
-import { DataContext } from 'contexts/DataContext'
 import { useQuery, useMutation } from 'react-query'
 import { AUTH_API_1 } from 'constants/api'
 import { encrypt, decrypt } from 'services/utils/crypto'
@@ -93,7 +92,7 @@ export const useGetScore = () => {
 			})
 				.then((res) => res.json())
 				.then((result) => {
-					const res = decrypt(result.result)?.highest_score
+					const res = decrypt(result.result)
 					if (res) {
 						return res
 					}
@@ -108,8 +107,24 @@ export const useGetScore = () => {
 		}
 	)
 }
+export const useCheckAccount = () => {
+	const { data: gamers } = useGetGamers()
+	const [gamerFound, setGamerFound] = React.useState(null)
+	React.useEffect(() => {
+		if (gamers) {
+			const gamer = gamers.find((item) => item.address === window.ethereum.selectedAddress)
+			setGamerFound(gamer)
+		}
+	}, [gamers])
+	if (gamerFound) {
+		if (gamerFound.amount >= 1) {
+			return true
+		}
+		return false
+	}
+	return false
+}
 export const usePlayFlappyBird = (setIsNotEnough) => {
-	const data = React.useContext(DataContext)
 	const { data: gamers } = useGetGamers()
 	const [gamerFound, setGamerFound] = React.useState(null)
 
@@ -122,7 +137,7 @@ export const usePlayFlappyBird = (setIsNotEnough) => {
 	return () => {
 		if (gamerFound) {
 			if (gamerFound.amount >= 1) {
-				data.setIsOpenFlappyBird(true)
+				window.location.href = 'http://localhost:3000/ari-bird/game'
 			} else {
 				setIsNotEnough(true)
 			}

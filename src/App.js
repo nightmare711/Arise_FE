@@ -14,26 +14,40 @@ import {
 	useUpdateOverlayColor,
 	useScrollTop,
 } from 'services/UI/useDevelopUI'
+import { useCheckAccount } from 'queries/useGamer'
 import { Aggregator } from 'pages'
 import { HomePage, ErrorPage, NewsPage, IFOPage, Audit, Collection, FlappyBird } from 'pages'
-import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { Switch, Route } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
+
+const returnSticky = (location, isAccountConfirm) => {
+	if (location !== '/ari-bird/game') {
+		return (
+			<>
+				<Navbar />
+				<Sidebar />
+			</>
+		)
+	}
+	return null
+}
 
 function App() {
+	const isAccountConfirm = useCheckAccount()
 	const data = React.useContext(DataContext)
 	useScrollTop()
 	useUpdateOverlayColor()
 	useUpdateOverlayTrans()
-	const wallet = useWallet()
+	const location = useLocation()
 	return (
 		<div>
 			{data.isOpenOverlay ? <Overlay /> : null}
 			{data.isOpenOverlayTrans ? <Overlay transparent /> : null}
 			{data.isOpenConnectWallet ? <ConnectWallet /> : null}
 			{data.isOpenDetailWallet ? <AccountDetail /> : null}
-			{data.isOpenFlappyBird && wallet.status === 'connected' ? <GameFlappyBird /> : null}
-			<Navbar />
-			<Sidebar />
+			{returnSticky(location.pathname, isAccountConfirm)}
+
+			<Route exact path='/ari-bird/game' component={GameFlappyBird} />
 			<PaddingContent>
 				<Switch>
 					<Route exact path='/swap-aggregator' component={Aggregator} />
@@ -43,7 +57,7 @@ function App() {
 					<Route exact path='/ifo' component={IFOPage} />
 					<Route exact path='/audit-reports' component={Audit} />
 					<Route exact path='/my-collection' component={Collection} />
-					<Route exact path='/air-drop' component={FlappyBird} />
+					<Route exact path='/ari-bird' component={FlappyBird} />
 					<Route component={ErrorPage} />
 				</Switch>
 			</PaddingContent>

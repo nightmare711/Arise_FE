@@ -1,13 +1,12 @@
 .game-flappybird {
     width:100vw;
     height:100vh;
-    position:absolute;
-    top:0;
-    left:0;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 100;
+    background-image: url('../../assets/ari-bird/bg-game.jpeg');
+    background-size: cover;
 }
 .game-flappybird .overlay {
     background-color: rgba(0,0,0,0.4);

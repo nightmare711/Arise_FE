@@ -42,7 +42,7 @@ export const ListSidebarItem = [
 	},
 	{
 		id: 11,
-		title: 'NFT Marketplace',
+		title: 'NFTs Marketplace',
 		icon: faGem,
 		child: [],
 		content: 'my-collection',
@@ -124,29 +124,30 @@ export const ListSidebarItem = [
 	// },
 	{
 		id: 4,
-		title: 'Game',
+		title: 'GAME - ARI BIRD',
 		icon: faGamepad,
 		onClick: () => {},
 		bestSale: false,
+		href: '/ari-bird',
 		child: [
-			{
-				id: '1',
-				title: 'Air drop',
-				href: '/air-drop',
-				content: 'game',
-			},
-			{
-				id: '2',
-				title: 'Raffles',
-				href: '/raffles',
-				content: 'game',
-			},
-			{
-				id: '3',
-				title: 'Lottery',
-				href: '/lottery',
-				content: 'game',
-			},
+			// {
+			// 	id: '1',
+			// 	title: 'Air drop',
+			// 	href: '/air-drop',
+			// 	content: 'game',
+			// },
+			// {
+			// 	id: '2',
+			// 	title: 'Raffles',
+			// 	href: '/raffles',
+			// 	content: 'game',
+			// },
+			// {
+			// 	id: '3',
+			// 	title: 'Lottery',
+			// 	href: '/lottery',
+			// 	content: 'game',
+			// },
 		],
 		content: 'game',
 	},

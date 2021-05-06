@@ -11,15 +11,13 @@
     border-radius: 0px;
 }
 .flappy-bird .box {
-    border-radius: 500px/50px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
     width: auto;
     display:inline-block;
     position:relative;
-    padding-bottom:90px;
-    border-bottom: 1px solid #ababab;
-    box-shadow: 0px 10px 24px -6px rgba(255,255,255,1);
+    padding-bottom:150px;
+}
+.flappy-bird .video-react-controls-enabled {
+    pointer-events: none;
 }
 
 .flappy-bird .box .txt-frame {
@@ -36,7 +34,7 @@
 .flappy-bird .box-1 .box-content {
     display: flex;
     flex-direction: row;
-    max-width: 1200px;
+    max-width: 100%;
     align-items: flex-start;
     justify-content: flex-start;
 }
@@ -47,6 +45,7 @@
     display:flex;
     align-items: center;
     justify-content: center;
+    padding:0;
     
 }
 .flappy-bird  .title-secondary {
@@ -64,7 +63,6 @@
 }
 .flappy-bird .box.box-2 {
     background-size: cover;
-    z-index:6;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -165,19 +163,17 @@
 .flappy-bird .road-container .active .title-extra {
     color: #1cba46;
 }
-.flappy-bird .box.box-2 .account-score {
-    margin-top: 90px;
-}
-.flappy-bird .box.box-2 .account-score .container-logo {
+
+.flappy-bird .box.box-2  .container-logo {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
-.flappy-bird .box.box-2 .account-score .container-logo img {
+.flappy-bird .box.box-2  .container-logo img {
     width:50px;
 }
-.flappy-bird .box.box-2 .account-score .container-logo .container-img {
+.flappy-bird .box.box-2  .container-logo .container-img {
     width:100px;
     height:100px;
     background-color: #ced0d1;
@@ -189,42 +185,52 @@
 .flappy-bird .box.box-2 .icon-left {
     transform:  rotateY(180deg)  !important;
 }
-.flappy-bird .box.box-2 .account-score .icon {
+.flappy-bird .box.box-2  .icon {
     margin: 0px 10px;
     color: #717688;
     font-size: 50px;
 }
-.flappy-bird .box.box-2 .account-score .score {
-    margin-top: 80px;
+.flappy-bird .box.box-2  .score {
     background-color: white;
     border-radius: 20px;
     min-height: 100px;
     position:relative;
-    min-width: 250px;
+    min-width: 450px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top:40px;
+    padding-top:50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom:30px;
 }
-.flappy-bird .box.box-2 .account-score .score .score-value {
+.flappy-bird .box.box-2  .score .frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.flappy-bird .box.box-2  .score .score-value {
     font-size: 50px;
     font-weight: 600;
     color:#C01C1C;
 }
-.flappy-bird .box.box-2 .account-score .score .rank-value  {
-    font-size: 30px;;
+.flappy-bird .box.box-2  .score .rank-value  {
+    font-size: 20px;;
 }
-.flappy-bird .box.box-2 .account-score .score .bg-with-text img{
+.flappy-bird .box.box-2  .score .bg-with-text img{
 }
-.flappy-bird .box.box-2 .account-score .score .bg-with-text {
+.flappy-bird .box.box-2  .score .bg-with-text {
     position: absolute;
     top: 0;
     left:50%;
     transform: translate(-50%,-50%);
     width:250px;
 }
-.flappy-bird .box.box-2 .account-score .score .bg-with-text .txt {
+.flappy-bird .box.box-2  .score .bg-with-text .txt {
     position: absolute;
     top:50%;
     color:white;
