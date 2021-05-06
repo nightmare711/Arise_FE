@@ -115,9 +115,13 @@ export const useCheckAccount = () => {
 	const { data: gamers } = useGetGamers()
 	const [gamerFound, setGamerFound] = React.useState(null)
 	React.useEffect(() => {
-		if (gamers) {
-			const gamer = gamers.find((item) => item.address === window.ethereum.selectedAddress)
-			setGamerFound(gamer)
+		try {
+			if (gamers) {
+				const gamer = gamers.find((item) => item.address === window.ethereum.selectedAddress)
+				setGamerFound(gamer)
+			}
+		} catch {
+			console.log('Something went wrong')
 		}
 	}, [gamers])
 	if (gamerFound) {
@@ -133,21 +137,27 @@ export const usePlayFlappyBird = (setIsNotEnough) => {
 	const [gamerFound, setGamerFound] = React.useState(null)
 
 	React.useEffect(() => {
-		if (gamers) {
-			const gamer = gamers.find((item) => item.address === window.ethereum.selectedAddress)
-			setGamerFound(gamer)
+		try {
+			if (gamers) {
+				const gamer = gamers.find((item) => item.address === window.ethereum.selectedAddress)
+				setGamerFound(gamer)
+			}
+		} catch {
+			console.log('something went wrong')
 		}
 	}, [gamers])
 	return () => {
-		if (gamerFound) {
-			if (gamerFound.amount >= 1) {
-				window.open('/ari-bird/game', '_self')
+		try {
+			if (gamerFound) {
+				if (gamerFound.amount >= 1) {
+					window.open('/ari-bird/game', '_self')
+				} else {
+					setIsNotEnough(true)
+				}
 			} else {
 				setIsNotEnough(true)
 			}
-		} else {
-			setIsNotEnough(true)
-		}
+		} catch {}
 	}
 }
 export const useFindRank = () => {
@@ -175,7 +185,6 @@ export const onFilterGamers = (gamers) => {
 	try {
 		if (gamers) {
 			if (gamers.length < 10) {
-				gamers.length = 10
 				return gamers
 			} else {
 				const gamersFilter = []
