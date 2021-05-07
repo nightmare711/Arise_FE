@@ -33,7 +33,7 @@ export const MessageBuy = ({ onClose, requestSend, setIsLoading }) => {
 						</div>
 						<div
 							onClick={() => {
-								if (quantity % 1 === 0 && quantity < 10) {
+								if (quantity % 1 === 0 && quantity > 0) {
 									requestSend(quantity || 1)
 									onClose()
 									setIsLoading(true)

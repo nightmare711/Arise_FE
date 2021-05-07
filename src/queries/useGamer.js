@@ -5,27 +5,33 @@ import { encrypt, decrypt } from 'services/utils/crypto'
 import { AUTH } from 'constants/Secret'
 
 export const useGetGamers = () => {
-	return useQuery(['useGetGamers.name'], () => {
-		return fetch(`${AUTH_API_1}/admin/gamers`, {
-			method: 'POST',
-			headers: {
-				'Content-type': 'application/json',
-			},
-			body: JSON.stringify({
-				params: encrypt({
-					info: AUTH,
+	return useQuery(
+		['useGetGamers.name'],
+		() => {
+			return fetch(`${AUTH_API_1}/admin/gamers`, {
+				method: 'POST',
+				headers: {
+					'Content-type': 'application/json',
+				},
+				body: JSON.stringify({
+					params: encrypt({
+						info: AUTH,
+					}),
 				}),
-			}),
-		})
-			.then((res) => res.json())
-			.then((res) => {
-				const result = decrypt(res.result)
-				return result.sort(function (a, b) {
-					return b.highest_score - a.highest_score
-				})
 			})
-			.catch((err) => console.log(err))
-	})
+				.then((res) => res.json())
+				.then((res) => {
+					const result = decrypt(res.result)
+					return result.sort(function (a, b) {
+						return b.highest_score - a.highest_score
+					})
+				})
+				.catch((err) => console.log(err))
+		},
+		{
+			refetchInterval: 3000,
+		}
+	)
 }
 export const useUpdateGamer = (setIsLoading) => {
 	const { data: gamers } = useGetGamers()
@@ -133,24 +139,17 @@ export const useCheckAccount = () => {
 	return false
 }
 export const usePlayFlappyBird = (setIsNotEnough) => {
-	const { data: gamers } = useGetGamers()
-	const [gamerFound, setGamerFound] = React.useState(null)
-
-	React.useEffect(() => {
+	return (gamers) => {
 		try {
 			if (gamers) {
 				const gamer = gamers.find((item) => item.address === window.ethereum.selectedAddress)
-				setGamerFound(gamer)
-			}
-		} catch {
-			console.log('something went wrong')
-		}
-	}, [gamers])
-	return () => {
-		try {
-			if (gamerFound) {
-				if (gamerFound.amount >= 1) {
-					window.open('/ari-bird/game', '_self')
+
+				if (gamer) {
+					if (gamer.amount >= 1) {
+						window.open('/ari-bird/game', '_self')
+					} else {
+						setIsNotEnough(true)
+					}
 				} else {
 					setIsNotEnough(true)
 				}
@@ -168,7 +167,6 @@ export const useFindRank = () => {
 			if (gamers) {
 				const gamer = gamers.find((gamer) => gamer.address === window.ethereum.selectedAddress)
 				const indexTemp = gamers.indexOf(gamer)
-				console.log(gamers, gamer)
 				setIndex(indexTemp + 1)
 			}
 		} catch {

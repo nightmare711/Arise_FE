@@ -102,7 +102,9 @@ export const FlappyBird = () => {
 						) : (
 							<div className='btn-container'>
 								<div
-									onClick={() => playGame()}
+									onClick={() => {
+										playGame(gamers)
+									}}
 									className={`btn-primary btn-play  ${isLoading ? 'loading' : ''}`}
 								>
 									Let's play

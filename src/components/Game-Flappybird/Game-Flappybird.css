@@ -17,22 +17,28 @@
 }
 .game-flappybird iframe {
     width:90vw;
-    height:70vh;
+    height:90vh;
+    max-width: 1800px;
 }
 .game-flappybird  .score {
     background-color: white;
     border-radius: 20px;
     min-height: 100px;
     position:relative;
-    min-width: 450px;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
     padding-top:10px;
     padding-bottom:10px;
     text-align: center;
+    position:absolute;
+    top:100%;
+    left:50%;
+    transform: translate(-50%,-100%);
 }
 .game-flappybird  .score .score-row {
     display: flex;
+    
     flex-direction: row;
     flex:1;
     justify-content: space-around;
@@ -48,8 +54,8 @@
 .game-flappybird .score-value {
     font-weight: 600;
     color:#C01C1C;
-    font-size: 50px;
+    font-size: 30px;
 }
 .game-flappybird .score .rank-value  {
-    font-size: 20px;
+    font-size: 15px;
 }
