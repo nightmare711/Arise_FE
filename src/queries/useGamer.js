@@ -33,7 +33,7 @@ export const useGetGamers = () => {
 		}
 	)
 }
-export const useUpdateGamer = (setIsLoading) => {
+export const useUpdateGamer = (setIsLoading, setIsReceived) => {
 	const { data: gamers } = useGetGamers()
 	return useMutation((quantity) => {
 		try {
@@ -54,7 +54,10 @@ export const useUpdateGamer = (setIsLoading) => {
 						}),
 					})
 						.then((res) => res.json())
-						.then((result) => setIsLoading(false))
+						.then((result) => {
+							setIsReceived(true)
+							setIsLoading(false)
+						})
 						.catch((err) => console.log(err))
 				}
 				return fetch(`${AUTH_API_1}/admin/gamers/details`, {
@@ -74,6 +77,7 @@ export const useUpdateGamer = (setIsLoading) => {
 				})
 					.then((res) => res.json())
 					.then((result) => {
+						setIsReceived(true)
 						return setIsLoading(false)
 					})
 					.catch((err) => {

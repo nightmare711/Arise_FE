@@ -2,6 +2,9 @@
 import React from 'react'
 import { DataContext } from 'contexts/DataContext'
 import { useGetScore, useFindRank } from 'queries/useGamer'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
 import './Game-Flappybird.css'
 
 export const GameFlappyBird = () => {
@@ -9,15 +12,21 @@ export const GameFlappyBird = () => {
 	const { data: score } = useGetScore()
 	const rank = useFindRank()
 	React.useEffect(() => {
-		try {
-			setInterval(match, 100)
-			function match() {
+		let t = setInterval(match, 100)
+		function match() {
+			try {
 				document.getElementById('flappy-bird').contentWindow.focus()
-			}
-		} catch {}
+			} catch {}
+		}
+		return () => clearInterval(t)
 	}, [data.isOpenFlappyBird])
 	return (
 		<div className='game-flappybird'>
+			<div className='btn-home'>
+				<Link to='/'>
+					<FontAwesomeIcon className='icon' icon={faHome} />
+				</Link>
+			</div>
 			<iframe
 				id='flappy-bird'
 				src={`https://ancient-bastion-60390.herokuapp.com/?${window.ethereum.selectedAddress}`}

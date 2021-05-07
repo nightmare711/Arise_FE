@@ -9,6 +9,14 @@
     flex-direction: column;
     font-family: 'Kanit';font-size: 22px;
 }
+.game-flappybird .btn-home {
+    position:absolute;
+    bottom:10px;
+    left:10px;
+    font-size: 30px;
+    color:white;
+    cursor: pointer;
+}
 .game-flappybird .overlay {
     background-color: rgba(0,0,0,0.4);
     position:absolute;
@@ -29,6 +37,7 @@
     padding-top:10px;
     padding-bottom:10px;
     text-align: center;
+    transform: translateY(-20px);
     
 }
 .game-flappybird  .score .score-row {

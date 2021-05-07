@@ -12,7 +12,7 @@ import {
 	onFilterGamers,
 	useFindRank,
 } from 'queries/useGamer'
-import { Message, MessageEnough, MessageBuy } from './components'
+import { Message, MessageEnough, MessageBuy, MessageReceived } from './components'
 import { SpinnerButton } from 'components'
 import { useRequestSend } from 'queries/useRequest'
 import PrizesIcon from 'assets/ari-bird/PrizeIcon.png'
@@ -53,7 +53,9 @@ export const FlappyBird = () => {
 	const [buyError, setBuyError] = React.useState(false)
 	const [isOpenBuy, setIsOpenBuy] = React.useState(false)
 	const [isLoading, setIsLoading] = React.useState(false)
-	const requestSend = useRequestSend(setIsLoading, setBuyError)
+	const [isReceived, setIsReceived] = React.useState(false)
+	const requestSend = useRequestSend(setIsLoading, setBuyError, setIsReceived)
+	const [quantity, setQuantity] = React.useState(1)
 	const { data: score } = useGetScore()
 	const { data: gamers } = useGetGamers()
 	const playGame = usePlayFlappyBird(setIsNotEnough)
@@ -63,12 +65,17 @@ export const FlappyBird = () => {
 			<div className=' flappy-bird card'>
 				{buyError ? <Message onClose={() => setBuyError(false)} /> : null}
 				{isNotEnough ? <MessageEnough onClose={() => setIsNotEnough(false)} /> : null}
+				{isReceived ? (
+					<MessageReceived quantity={quantity} onClose={() => setIsReceived(false)} />
+				) : null}
 				{isOpenBuy ? (
 					<MessageBuy
 						onClose={() => {
 							setIsOpenBuy(false)
 							setIsLoading(false)
 						}}
+						quantity={quantity}
+						setQuantity={setQuantity}
 						setIsLoading={setIsLoading}
 						requestSend={requestSend}
 					/>
@@ -112,6 +119,7 @@ export const FlappyBird = () => {
 								<div
 									id='btn-buy-turn'
 									onClick={() => {
+										setQuantity(1)
 										setIsOpenBuy(true)
 										setIsLoading(true)
 									}}

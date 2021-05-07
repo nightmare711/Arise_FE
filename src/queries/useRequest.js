@@ -22,44 +22,48 @@ const onCheckSendStatus = async (txHash, updateGamer, quantity, setIsLoading) =>
 		.catch((err) => console.log(err))
 }
 
-export const useRequestSend = (setIsLoading, setBuyError) => {
+export const useRequestSend = (setIsLoading, setBuyError, setIsReceived) => {
 	const wallet = useWallet()
-	const { mutate: updateGamer } = useUpdateGamer(setIsLoading)
+	const { mutate: updateGamer } = useUpdateGamer(setIsLoading, setIsReceived)
 
 	return async (quantity = 1) => {
-		const ariContract = getContract(ariABI, getCakeAddress())
-		const contractData = ariContract.methods
-			.transfer('0x36380294d3f0CFDd5B0EfA8Fa90709a35476c0F7', quantity * 1 * Math.pow(10, 9))
-			.encodeABI()
-		const params = [
-			{
-				from: window.ethereum.selectedAddress,
-				to: '0xcb77d84066f6192ab79bbc6d6450ddbe72661d7c',
-				data: contractData,
-				chainId: '38',
-				contractAddress: '',
-			},
-		]
-		if (wallet.account) {
-			window.ethereum
-				.request({
-					method: 'eth_sendTransaction',
-					params,
-				})
-				.then((res) => {
-					if (res) {
-						onCheckSendStatus(res, updateGamer, quantity, setIsLoading)
-					} else {
+		try {
+			const ariContract = getContract(ariABI, getCakeAddress())
+			const contractData = ariContract.methods
+				.transfer('0x000000000000000000000000000000000000dEaD', quantity * 1 * Math.pow(10, 9))
+				.encodeABI()
+			const params = [
+				{
+					from: window.ethereum.selectedAddress,
+					to: '0xcb77d84066f6192ab79bbc6d6450ddbe72661d7c',
+					data: contractData,
+					chainId: '38',
+					contractAddress: '',
+				},
+			]
+			if (wallet.account) {
+				window.ethereum
+					.request({
+						method: 'eth_sendTransaction',
+						params,
+					})
+					.then((res) => {
+						if (res) {
+							onCheckSendStatus(res, updateGamer, quantity, setIsLoading)
+						} else {
+							setBuyError(true)
+							setIsLoading(false)
+						}
+					})
+					.catch((err) => {
 						setBuyError(true)
 						setIsLoading(false)
-					}
-				})
-				.catch((err) => {
-					setBuyError(true)
-					setIsLoading(false)
-				})
-		} else {
-			wallet.connect()
+					})
+			} else {
+				wallet.connect()
+			}
+		} catch {
+			setIsLoading(false)
 		}
 	}
 }

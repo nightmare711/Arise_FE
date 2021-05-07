@@ -3,8 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import { onRebuy } from 'queries/useGamer'
 import './Message.css'
-export const MessageBuy = ({ onClose, requestSend, setIsLoading }) => {
-	const [quantity, setQuantity] = React.useState(1)
+export const MessageBuy = ({ onClose, requestSend, setIsLoading, quantity, setQuantity }) => {
 	return (
 		<div className='connect-wallet message-game'>
 			<div onClick={() => onClose()} className='overlay'></div>
@@ -76,6 +75,32 @@ export const Message = ({ onClose }) => {
 							className='btn-secondary re-ex'
 						>
 							Re-Buy
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	)
+}
+export const MessageReceived = ({ onClose, quantity }) => {
+	return (
+		<div className='connect-wallet message-game'>
+			<div onClick={() => onClose()} className='overlay'></div>
+			<div className='content-container'>
+				<div className='header-primary'>
+					Success
+					<FontAwesomeIcon className='icon' onClick={() => onClose()} icon={faTimes} />
+				</div>
+				<div className='content'>
+					<div className='message'>You have received {quantity} play turns. Enjoy the ride!</div>
+					<div className='btn-container'>
+						<div
+							onClick={() => {
+								onClose()
+							}}
+							className='btn-secondary re-ex'
+						>
+							Okay
 						</div>
 					</div>
 				</div>
