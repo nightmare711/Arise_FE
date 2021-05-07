@@ -1,5 +1,4 @@
 .game-flappybird {
-    width:100vw;
     height:100vh;
     display: flex;
     align-items: center;
@@ -16,14 +15,13 @@
     z-index: -1;
 }
 .game-flappybird iframe {
-    width:90vw;
-    height:90vh;
+    width:80vw;
+    height:80vh;
     max-width: 1800px;
 }
 .game-flappybird  .score {
     background-color: white;
     border-radius: 20px;
-    min-height: 100px;
     position:relative;
     min-width: 300px;
     display: flex;
@@ -31,10 +29,7 @@
     padding-top:10px;
     padding-bottom:10px;
     text-align: center;
-    position:absolute;
-    top:100%;
-    left:50%;
-    transform: translate(-50%,-100%);
+    
 }
 .game-flappybird  .score .score-row {
     display: flex;
