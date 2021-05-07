@@ -7,6 +7,8 @@
     z-index: 100;
     background-image: url('../../assets/ari-bird/bg-game.jpeg');
     background-size: cover;
+    flex-direction: column;
+    font-family: 'Kanit';font-size: 22px;
 }
 .game-flappybird .overlay {
     background-color: rgba(0,0,0,0.4);
@@ -15,5 +17,39 @@
 }
 .game-flappybird iframe {
     width:90vw;
-    height:90vh;
+    height:70vh;
+}
+.game-flappybird  .score {
+    background-color: white;
+    border-radius: 20px;
+    min-height: 100px;
+    position:relative;
+    min-width: 450px;
+    display: flex;
+    flex-direction: column;
+    padding-top:10px;
+    padding-bottom:10px;
+    text-align: center;
+}
+.game-flappybird  .score .score-row {
+    display: flex;
+    flex-direction: row;
+    flex:1;
+    justify-content: space-around;
+    
+}
+.game-flappybird .score .score-row .frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.game-flappybird .score-value {
+    font-weight: 600;
+    color:#C01C1C;
+    font-size: 50px;
+}
+.game-flappybird .score .rank-value  {
+    font-size: 20px;
 }

@@ -28,8 +28,8 @@
 }
 
 .flappy-bird .box .txt-frame .container-img {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .flappy-bird .box .txt-frame .container-img img {
     width:90px;
@@ -365,7 +365,7 @@
     flex-direction: row;
     align-items: flex-start;
     margin-top:90px;
-    max-width: 1000px;
+    max-width: 1200px;
     justify-content: center;
 }
 .flappy-bird .box.box-4 .box-4-content .txt-frame {
@@ -407,4 +407,29 @@
     padding:10px 20px;
     color:#8F80BA;
     font-size: 14px;
+}
+@media only screen and (max-width: 1150px) {
+    .flappy-bird .box.box-3 .box-3-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top:50px;
+    }
+    .flappy-bird .box.box-3 .box-3-content .table-score {
+        margin-top:100px;
+    }
+    .flappy-bird .box.box-4 .box-4-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .flappy-bird .box .txt-frame .container-img {
+        grid-template-columns: 1fr 1fr;
+    }
+    .flappy-bird .box .table-score {
+        width:60%;
+    }
+    .flappy-bird .box.box-4 .box-4-content .txt-frame {
+        max-width: 70%;
+    }
 }
