@@ -38,7 +38,6 @@ const InfoAudit = () => {
 const InfoToken = () => {
 	const totalSupply = useTotalSupply()
 	const { data } = usePrice()
-	console.log(totalSupply.toNumber() * Math.pow(10, -9) - 94842656)
 	return (
 		<div className='card-grid card-value info-token'>
 			<div className='card-heading'>
