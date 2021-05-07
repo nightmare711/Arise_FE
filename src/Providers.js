@@ -18,6 +18,8 @@ const Providers = ({ children }) => {
 	const [isOpenConnectWallet, setIsOpenConnectWallet] = React.useState(false)
 	const [isOpenDetailWallet, setIsOpenDetailWallet] = React.useState(false)
 	const [isOpenFlappyBird, setIsOpenFlappyBird] = React.useState(false)
+	const [countClick, setCountClick] = React.useState(0)
+	const [isAuth, setIsAuth] = React.useState(false)
 	return (
 		<UseWalletProvider
 			chainId={parseInt(REACT_APP_CHAIN_ID)}
@@ -30,6 +32,10 @@ const Providers = ({ children }) => {
 				<RefreshContextProvider>
 					<DataContext.Provider
 						value={{
+							isAuth,
+							setIsAuth,
+							countClick,
+							setCountClick,
 							isOpenOverlayTrans,
 							setIsOpenOverlayTrans,
 							isOpenSidebar,

@@ -1,0 +1,25 @@
+.flappy-bird-coming {
+    margin-left: 250px;
+    margin-top: 75px;
+    box-sizing: border-box;
+    position:relative;
+}
+.flappy-bird-coming img {
+    width:100%;
+    height: calc(100vh - 75px);
+}
+.flappy-bird-coming .count-down {
+    position: absolute;
+    top:50%;
+    left:50%;
+    z-index: 1;
+    transform:translate(-50%,-50%)
+}
+@media only screen and (max-width: 865px) {
+    .flappy-bird {
+        margin-left: 0px;
+    }
+}
+@media only screen and (max-width: 520px) {
+    
+}

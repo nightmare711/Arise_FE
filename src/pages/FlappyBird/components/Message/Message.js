@@ -1,6 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import { DataContext } from 'contexts/DataContext'
 import { onRebuy } from 'queries/useGamer'
 import './Message.css'
 export const MessageBuy = ({ onClose, requestSend, setIsLoading, quantity, setQuantity }) => {
@@ -51,7 +52,41 @@ export const MessageBuy = ({ onClose, requestSend, setIsLoading, quantity, setQu
 		</div>
 	)
 }
-
+export const PasswordOverlay = () => {
+	const data = React.useContext(DataContext)
+	const [code, setCode] = React.useState('')
+	const onConfirm = () => {
+		if (code.trim() === 'make_arise_viral') {
+			data.setIsAuth(true)
+		}
+		data.setCountClick(0)
+	}
+	return (
+		<div className='connect-wallet message-game message-password'>
+			<div onClick={() => data.setCountClick(0)} className='overlay'></div>
+			<div className='content-container'>
+				<div className='header-primary'>
+					Code
+					<FontAwesomeIcon className='icon' onClick={() => data.setCountClick(0)} icon={faTimes} />
+				</div>
+				<div className='content'>
+					<div className='message'>
+						<span className='label'>Enter code: </span>
+						<input value={code} onChange={(e) => setCode(e.target.value)} type='password' />
+					</div>
+					<div className='btn-container'>
+						<div onClick={() => data.setCountClick(0)} className='btn-secondary btn-cancel'>
+							Cancel
+						</div>
+						<div onClick={() => onConfirm()} className='btn-secondary re-ex'>
+							Confirm
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	)
+}
 export const Message = ({ onClose }) => {
 	return (
 		<div className='connect-wallet message-game'>

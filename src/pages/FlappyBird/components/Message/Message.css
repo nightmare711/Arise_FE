@@ -16,6 +16,14 @@
     outline: none;
     
 }
+.message-password .message .label {
+    font-weight: 600;
+}
+.message-password .message input {
+    width:100%;
+    outline: none;
+    padding:5px 20px;
+}
 .message-game .message  input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
