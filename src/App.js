@@ -26,6 +26,7 @@ import {
 	FlappyBird,
 	FlappyBirdComing,
 } from 'pages'
+
 import { Switch, Route } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
 
@@ -59,6 +60,7 @@ function App() {
 
 			<Route exact path='/ari-bird/game' component={GameFlappyBird} />
 			{!data.isAuth ? <Route exact path='/ari-bird' component={FlappyBirdComing} /> : null}
+
 			<PaddingContent>
 				<Switch>
 					<Route exact path='/swap-aggregator' component={Aggregator} />

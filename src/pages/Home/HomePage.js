@@ -10,6 +10,8 @@ import {
 	CardPriceChart,
 	CardVideo,
 } from './Card'
+import NFTsVideo from 'assets/NFTs/NFTs.mp4'
+import Poster from 'assets/NFTs/Poster.jpg'
 import Percent from 'assets/percent.jpg'
 // import BannerMobile from 'assets/banner-mobile.png'
 // import Banner from 'assets/banner.png'
@@ -24,7 +26,7 @@ export const HomePage = () => {
 			<CardInfo />
 			<CardTitle />
 			<CardPriceChart />
-			<CardVideo />
+			<CardVideo video={NFTsVideo} poster={Poster} href={'/my-collection'} />
 			<CardRoadmap />
 			<CardExtendInfo />
 			{/* <CardChart />

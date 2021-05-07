@@ -124,7 +124,7 @@ export const ListSidebarItem = [
 	// },
 	{
 		id: 4,
-		title: 'Game',
+		title: 'GAME - ARI BIRD',
 		icon: faGamepad,
 		child: [],
 		content: 'ari-bird',
