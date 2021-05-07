@@ -4,38 +4,66 @@ import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { useUpdateGamer } from './useGamer'
 import ariABI from 'constants/abi/ari.json'
 
-export const useRequestSend = () => {
-	const wallet = useWallet()
-	const { mutate: updateGamer } = useUpdateGamer()
+const onCheckSendStatus = async (txHash, updateGamer, quantity, setIsLoading) => {
+	const web3 = await getWeb3()
+	web3.eth
+		.getTransactionReceipt(txHash)
+		.then((result) => {
+			if (result) {
+				if (result.status) {
+					updateGamer(quantity)
+				} else {
+					setIsLoading(false)
+				}
+			} else {
+				setTimeout(() => onCheckSendStatus(txHash, updateGamer, quantity), 2000)
+			}
+		})
+		.catch((err) => console.log(err))
+}
 
-	return async () => {
-		const web3 = await getWeb3()
-		const ariContract = getContract(ariABI, getCakeAddress())
-		const contractData = ariContract.methods
-			.transfer('0x36380294d3f0CFDd5B0EfA8Fa90709a35476c0F7', 1)
-			.encodeABI()
-		const params = [
-			{
-				from: window.ethereum.selectedAddress,
-				to: '0xa861f33d8ac80b64c1b8c7b4c99599474b79888a',
-				data: contractData,
-				chainId: '38',
-				contractAddress: '',
-			},
-		]
-		if (wallet.account) {
-			window.ethereum
-				.request({
-					method: 'eth_sendTransaction',
-					params,
-				})
-				.then((res) => {
-					if (res) {
-						updateGamer(window.ethereum.selectedAddress)
-					}
-				})
-		} else {
-			wallet.connect()
+export const useRequestSend = (setIsLoading, setBuyError, setIsReceived) => {
+	const wallet = useWallet()
+	const { mutate: updateGamer } = useUpdateGamer(setIsLoading, setIsReceived)
+
+	return async (quantity = 1) => {
+		try {
+			const ariContract = getContract(ariABI, getCakeAddress())
+			const contractData = ariContract.methods
+				.transfer('0x000000000000000000000000000000000000dEaD', quantity * 1 * Math.pow(10, 9))
+				.encodeABI()
+			const params = [
+				{
+					from: window.ethereum.selectedAddress,
+					to: '0xcb77d84066f6192ab79bbc6d6450ddbe72661d7c',
+					data: contractData,
+					chainId: '38',
+					contractAddress: '',
+				},
+			]
+			if (wallet.account) {
+				window.ethereum
+					.request({
+						method: 'eth_sendTransaction',
+						params,
+					})
+					.then((res) => {
+						if (res) {
+							onCheckSendStatus(res, updateGamer, quantity, setIsLoading)
+						} else {
+							setBuyError(true)
+							setIsLoading(false)
+						}
+					})
+					.catch((err) => {
+						setBuyError(true)
+						setIsLoading(false)
+					})
+			} else {
+				wallet.connect()
+			}
+		} catch {
+			setIsLoading(false)
 		}
 	}
 }

@@ -54,7 +54,6 @@ export const useListToken = () => {
 	const data = React.useContext(DataContext)
 	return (className) => {
 		if (className === 'input-from') {
-			console.log(data.isOpenSelectTokenFrom)
 			if (data.isOpenSelectTokenFrom) {
 				data.setIsOpenSelectTokenFrom(false)
 			} else {
@@ -128,12 +127,13 @@ export const useUpdateActiveFilter = (filter) => {
 	}, [active, preActive])
 }
 export const useScrollTop = (className = 'sidebar') => {
-	React.useEffect(() => {
+	try {
 		document.querySelector(`.${className}`).scrollTop = 0
 		document.querySelector(`body`).scrollTop = 0
 		if (document.querySelector('.home-page')) {
 			document.querySelector('.home-page').scrollTop = 0
 		}
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [])
+	} catch (err) {
+		console.log(err)
+	}
 }
