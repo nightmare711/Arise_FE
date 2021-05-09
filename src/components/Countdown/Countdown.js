@@ -9,8 +9,8 @@ export const Countdown = () => {
 			minute = second * 60,
 			hour = minute * 60,
 			day = hour * 24
-		let saleDay = 1620525283808 - 3600000 * 2 + 60000 * 5 + 6000 * 3 - 2000 + 86400000,
-			countDown = new Date(saleDay).getTime(),
+
+		let countDown = new Date(2021, 4, 12, 19, 0, 0, 0).getTime(),
 			x = setInterval(function () {
 				let now = new Date().getTime()
 				let distance = countDown - now
